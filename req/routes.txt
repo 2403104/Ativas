@@ -1,0 +1,41 @@
+/atvas (root directory)
+|-- /models
+|   |-- Product.js
+|   |-- Order.js
+|   |-- User.js
+|   |-- Cart.js
+|   |-- Address.js
+|
+|-- /routes
+|   |-- authRoutes.js
+|   |-- productRoutes.js
+|   |-- orderRoutes.js
+|   |-- cartRoutes.js
+|   |-- wishlistRoutes.js
+|   |-- adminRoutes.js
+|   |-- reviewRoutes.js
+|   |-- paymentRoutes.js
+|
+|-- /controllers
+|   |-- authController.js
+|   |-- productController.js
+|   |-- orderController.js
+|   |-- cartController.js
+|   |-- reviewController.js
+|   |-- wishlistController.js
+|
+|-- /middlewares
+|   |-- authMiddleware.js
+|   |-- adminMiddleware.js
+|   |-- validationMiddleware.js
+|
+|-- /config
+|   |-- db.js
+|   |-- env.js
+|
+|-- /public (static files like images, stylesheets, etc.)
+|
+|-- /views (EJS templates if you want to use server-rendered HTML)
+|
+|-- app.js (main file to setup your server)
+|-- package.json

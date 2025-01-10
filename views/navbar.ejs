@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgb(74, 74, 255);
+            width: 100vw;
+            height: 60px;
+        }
+
+        .content {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 36px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .mainInput {
+            width: 400px;
+            height: 30px;
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-left: 10px;
+        }
+
+        .mainInput:focus {
+            outline: none;
+        }
+
+        .searchBtn {
+            width: 70px;
+            height: 32px;
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-left: -1px;
+        }
+
+        .becomeSeller {
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-section>div {
+            margin-left: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-section i {
+            margin-right: 15px;
+            color: blue;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(74, 74, 255);
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            top: 100%;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            background-color: white;
+            padding: 15px;
+            text-decoration: none;
+            width: 200px;
+            height: 50px;
+            font-size: 15px;
+            align-items: center;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: blue;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .itemCounts {
+            background-color: rgba(252, 20, 20, 0.884);
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            position: relative;
+            left: 42%;
+            top: -16px;
+            border: 1px solid white;
+            color: white;
+            font-size: 10px;
+            text-align: center;
+            padding-top: 3px;
+        }
+
+        .suggestions {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            background-color: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 400px;
+            z-index: 1000;
+            display: none;
+            border-top: none;
+        }
+
+        .suggestions li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="content">
+                <div class="logo"><i>Ativas</i></div>
+                <div class="search">
+                    <input type="text" id="liveInput" placeholder="Search for products, brands and more" name="search"
+                        class="mainInput">
+                    <ul id="suggestions-list" class="suggestions"></ul>
+                    <button class="searchBtn">Search</button>
+                </div>
+                <div class="navbar-section">
+                    <div class="becomeSeller">
+                        <a href="/becomeSeller" style="text-decoration: none; color: white;">Become a Seller</a>
+                    </div>
+
+                    <div>
+                        <div class="itemCounts">
+                            <%=cartProducts.length%>
+                        </div>
+                        <i class="fas fa-shopping-cart" style="color: white; margin-right:5px; font-size: 28px;"></i><a
+                            href="/viewCart" style="color: white; text-decoration: none;"><strong>Cart</strong></a>
+                    </div>
+
+                    <div class="dropdown">
+                        <div>
+                            <i class="fas fa-user"
+                                style="color: white; margin-right:5px; font-size: 25px;"></i><strong>User</strong>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user-circle"></i>My Profile</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-box"></i>Orders</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-heart"></i>Wishlists</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-ticket-alt"></i>Coupons</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-bell"></i>Notifications</a>
+                            <hr>
+                            <a href="/" onclick="confirmLogOut(event)">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        async function confirmLogOut(event) {
+            event.preventDefault();
+            const isConfirm = confirm("Are you sure want to log out?");
+            if (isConfirm) {
+                try {
+                    const response = await fetch('/auth/logout', { method: 'post' });
+                    const result = await response.json();
+                    console.log(result)
+                    if (result.success) {
+                        alert("Logged out successfully!!");
+                        window.location.href = result.redirectTo;
+                    } else {
+                        alert("Logout failed !!", result.message);
+                    }
+                } catch (err) {
+                    alert("An unexpected error occurred !!");
+                }
+            }
+        }
+        document.getElementById('liveInput').addEventListener("input", async (event) => {
+            const inputValue = event.target.value;
+            try {
+                const response = await fetch("/input", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: inputValue }),
+                });
+
+                if (!response.ok) {
+                    console.error("Failed to send input:", await response.text());
+                }
+            } catch (err) {
+                console.error("Error while sending input:", err);
+            }
+        })
+        const liveInput = document.getElementById('liveInput');
+        const suggestionsList = document.getElementById('suggestions-list');
+
+        liveInput.addEventListener('input', async (event) => {
+            const inputValue = event.target.value;
+            if (!inputValue.trim()) {
+                suggestionsList.style.display = 'none';
+                suggestionsList.innerHTML = '';
+                return;
+            }
+            try {
+                const response = await fetch("/input", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: inputValue }),
+                });
+                if (response.ok) {
+                    const { suggestions } = await response.json();
+                    renderSuggestions(suggestions);
+                } else {
+                    console.error("Failed to fetch suggestions:", await response.text());
+                }
+            } catch (err) {
+                console.error("Error while fetching suggestions:", err);
+            }
+        })
+        const renderSuggestions = (suggestions) => {
+            suggestionsList.innerHTML = '';
+
+            if (Array.isArray(suggestions) && suggestions.length > 0) {
+                suggestionsList.style.display = 'block';
+                suggestions.forEach((item) => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name || 'Unnamed'} (${item.brand || 'Unknown'})`;
+
+                    li.addEventListener('click', () => {
+                        liveInput.value = item.name || '';
+                        suggestionsList.style.display = 'none';
+                        const queryParams = new URLSearchParams();
+                        // if (item.name) queryParams.append('name', item.name);
+                        if (item.category) queryParams.append('category', item.category);
+                        if (item.brand) queryParams.append('brand', item.brand);
+                        console.log(queryParams)
+                        window.location.href = `/productType/?${queryParams.toString()}`;
+                    });
+
+                    suggestionsList.appendChild(li);
+                });
+            } else {
+                suggestionsList.style.display = 'none';
+            }
+        };
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.search')) {
+                suggestionsList.style.display = 'none';
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+            if (searchQuery) {
+                document.getElementById('liveInput').value = searchQuery;
+            }
+        })
+    </script>
+
+</body>
+
+</html>

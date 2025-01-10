@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Produc</title>
+    <style>
+        .containerMainPhone {
+            width: 95%;
+            height: 400px;
+            margin: 20px 50px 20px 35px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cardPhone {
+            width: 11%;
+            height: 80%;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cardPhone .imgPhone {
+            width: 100%;
+            height: 100%   ;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .cardPhone:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        h1 {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Best Deals On Smartphones</h1>
+    <div class="containerMainPhone">
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Samsung')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/q/k/h/-original-imagzm8qmr7qxfhq.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>Samsung </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Redmi')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/f/w/-original-imags37hy7uz2usv.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>REDMI </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Realme')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/f/k/x/narzo-n61-narzo-n61-realme-original-imah4ffg7bhkzbqv.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>REALME </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Motorolla')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>MOTOROLLA </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Infinix')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/t/s/a/-original-imah4dyjxthbhygh.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>INFINIX </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Vivo')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/w/3/4/-original-imahyytukhkky5ew.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>VIVO </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('OnePlus')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/p/m/o/-original-imah5wxz4y4qfgdq.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>ONEPLUS </strong></p>
+        </div>
+        <div class="cardPhone" onclick="redirectToCategoryPhone('Iphone')">
+            <img class="imgPhone"
+                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/q/n/s/-original-imah4jyfrgsbebg9.jpeg?q=70"
+            style="object-fit: contain;"    alt="Poco Phones">
+            <p><strong>IPHONE </strong></p>
+        </div>
+
+    </div>
+    <script>
+        function redirectToCategoryPhone(phoneBrand) {
+            window.location.href = `/productType?brand=${encodeURIComponent(phoneBrand)}&category=Phone`;
+        }
+    </script>
+</body>
+
+</html>

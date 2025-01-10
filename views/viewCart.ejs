@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f1f3f6;
+        }
+
+        .cartMain {
+            width: 90%;
+            margin: auto;
+            /* background-color: red; */
+            display: flex;
+
+        }
+
+        .cartItemList {
+            margin-top: 10px;
+            box-sizing: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            background: 0px 5px 12px rgba(0, 0, 0, 0.2);
+            /* background-color: green; */
+        }
+
+        .totalCost {
+            width: 30%;
+            height: 300px;
+            background-color: white;
+            margin: 10px auto
+        }
+
+        .item {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            background-color: white;
+            height: 180px;
+        }
+
+        .image {
+            width: 25%;
+            height: 95%;
+        }
+
+        img {
+            width: 80%;
+            height: 90%;
+            object-fit: contain;
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        .btn a {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            color: #333;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('navbar')%>
+        <div class="cartMain">
+            <div class="cartItemList">
+                <% cartProd.forEach((prod)=>{%>
+                    <div class="item" onclick="goToProduct('<%=prod.name%>','<%=prod.category%>')">
+                        <div class="image">
+                            <img src="<%=prod.images[0]%>" alt="<%=prod.name%>">
+                        </div>
+                        <div class="detail">
+                            <p style="font-size: 18px; margin-top: 15px; ">
+                                <%=prod.name%>
+                            </p>
+                            <% if (prod.availability=='In Stock' ){%>
+                                <p style="color: green; font-size: 22px; margin-top:10px;">
+                                    <%=prod.availability%>
+                                </p>
+                                <%}else{%>
+                                    <p style="color: red; font-size: 22px; margin-top:10px;">
+                                        <%=prod.availability%>
+                                    </p>
+                                    <%}%>
+                                        <div class="btn" style="display: flex;">
+                                            <a href="/"><strong>SAVE FOR LATER</strong></a>
+                                            <a href="/"><strong>REMOVE</strong></a>
+                                        </div>
+                        </div>
+                    </div>
+                    <hr style="width: 95%; margin: auto; color: rgb(255, 255, 255);">
+                    <%})%>
+            </div>
+            <div class="totalCost">
+                <% let price=0; let discount=0; %>
+                    <% cartProd.forEach((prod)=> { %>
+                        <% price +=Number(prod.price.originalPrice); %>
+                            <% discount+=Number(prod.price.discountedPrice);%>
+                                <% })%>
+                                    <div style="font-size: 22px;color: grey; margin-left: 20px; padding: 12px;">
+                                        <strong>Price Details</strong></div>
+                                    <hr style="color: grey;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; padding: 10px; margin: 10px;font-size: 20px;">
+                                        <p>Price (<%=cartProd.length%> items)</p>
+                                        <p><i class="fa-solid fa-indian-rupee-sign"></i>
+                                            <%=price%>
+                                        </p>
+                                    </div>
+                                    <div
+                                        style="display: flex; justify-content: space-between;padding: 10px; margin: 10px;font-size: 20px;">
+                                        <p>Discount</p>
+                                        <p style="color: green;"><i class="fa-solid fa-minus"
+                                                style="font-size: 12px;"></i> <i
+                                                class="fa-solid fa-indian-rupee-sign"></i> <%=price-discount%></p>
+                                    </div>
+                                    <hr style="color: grey;">
+                                    <div
+                                        style="font-size: 20px; font-family:'Times New Roman', Times, serif; padding: 20px; display: flex; justify-content: space-between;">
+                                        <p><strong>Total Amount</strong></p>
+                                        <p><i class="fa-solid fa-indian-rupee-sign"></i>
+                                            <%=discount%>
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div
+                                        style="font-size: 22px;color: green; margin-left: 20px; padding: 10px 0px 10px 0px;">
+                                        <strong>You will save <i class="fa-solid fa-indian-rupee-sign"></i>
+                                            <%=price-discount%> on this product.</strong></div>
+
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-left">
+                <p>
+                    Policies:
+                    <a href="#">Returns Policy</a> |
+                    <a href="#">Terms of Use</a> |
+                    <a href="#">Security</a> |
+                    <a href="#">Privacy</a>
+                </p>
+                <p>© 2024-2025 Ativas.com</p>
+            </div>
+            <div class="footer-right">
+                <p>
+                    Need help? Visit the
+                    <a href="#">Help Center</a> or
+                    <a href="#">Contact Us</a>
+                </p>
+            </div>
+        </footer>
+        <script>
+            function goToProduct(name, category) {
+                console.log(name, category)
+                window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+            }
+        </script>
+</body>
+
+</html>

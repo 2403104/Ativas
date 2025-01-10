@@ -1,0 +1,56 @@
+Ativas/
+│
+├── public/                     # Static files (frontend)
+│   ├── css/                    # CSS files
+│   │   ├── main.css            # Main styles
+│   │   └── product.css         # Styles for product pages
+│   ├── js/                     # JavaScript files
+│   │   ├── main.js             # Main client-side JavaScript
+│   │   └── cart.js             # Cart functionality
+│   ├── images/                 # Product images and logo
+│   │   └── logo.png
+│   ├── fonts/                  # Fonts (if any custom fonts are used)
+│   └── favicon.ico             # Website favicon
+│
+├── views/                      # EJS templates
+│   ├── layouts/                # Layout files
+│   │   └── layout.ejs          # Base layout with header, footer, etc.
+│   ├── pages/                  # EJS for specific pages
+│   │   ├── home.ejs            # Homepage
+│   │   ├── product.ejs         # Product details page
+│   │   ├── cart.ejs            # Shopping cart page
+│   │   ├── login.ejs           # Login page
+│   │   └── register.ejs        # Register page
+│   └── partials/               # Partial reusable EJS files
+│       ├── header.ejs          # Header navigation
+│       └── footer.ejs          # Footer
+│
+├── routes/                     # Express routes
+│   ├── index.js                # Main routes for pages
+│   ├── product.js              # Routes for product-related operations
+│   ├── user.js                 # User-related routes
+│   └── api/                    # API-specific routes
+│       └── cart.js             # Cart-related API
+│
+├── models/                     # Mongoose models
+│   ├── User.js                 # User model
+│   ├── Product.js              # Product model
+│   ├── Cart.js                 # Cart model
+│   └── Order.js                # Order model
+│
+├── controllers/                # Controllers for business logic
+│   ├── userController.js       # Handles user-related logic
+│   ├── productController.js    # Product-related logic
+│   └── cartController.js       # Cart and order management
+│
+├── config/                     # Configuration files
+│   ├── db.js                   # MongoDB connection setup
+│   └── env.js                  # Environment variables setup
+│
+├── .env                        # Environment variables (e.g., DB_URI, PORT)
+├── package.json                # NPM dependencies and scripts
+├── package-lock.json           # Locked NPM versions
+├── app.js                      # Main Express application
+├── server.js                   # Entry point for starting the app
+├── README.md                   # Documentation
+└── .gitignore                  # Files and directories to ignore in Git

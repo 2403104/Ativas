@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Type</title>
+    <style>
+        .allProductContainer {
+            margin-top: 5px;
+            width: 83vw;
+
+
+        }
+
+        .item {
+            width: 98%;
+            margin: 0px 0px 10px 5px;
+            padding: 20px;
+            border: 2px solid grey;
+            display: flex;
+        }
+
+        .productSpecifications {
+            width: 50%;
+            height: 100%;
+        }
+
+        .img {
+            width: 25%;
+            height: 100%;
+
+        }
+
+        .amount {
+            width: 25%;
+            height: 100%;
+        }
+
+        .ratings {
+            width: 50px;
+            height: 20px;
+            margin-top: 10px;
+            font-size: 1.0rem;
+            font-weight: 500;
+            margin-left: 20px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding-top: 1px;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('navbar')%>
+        <div style="display: flex;">
+            <%-include('sidebar')%>
+                <div class="allProductContainer">
+                    <% products.forEach((product)=>{%>
+                        <div class="item" onclick="goToProduct('<%=product.name%>','<%=product.category%>')">
+                            <div class="img">
+                                <img src="<%=product.images[0]%>" alt="<%=product.name%>" width="180px"
+                                    style="border-radius: 15px; margin-left:40px; margin-top: 30px;">
+                            </div>
+                            <div class="productSpecifications">
+                                <p>
+                                    <strong>
+                                        <%=product.name%> (<%=product.category%>)
+                                    </strong>
+                                </p>
+                                <div style="display: flex;">
+                                    <div class="ratings">
+                                        <%=product.seller.rating%> <i class="fa-solid fa-star"
+                                                style="font-size: 15px;"></i>
+                                    </div>
+                                    <p style="font-size: 20px; font-weight: 400;">
+                                        <i><strong>
+                                                <%=product.seller.totalRatings%> Ratings & <%=product.seller.reviews%>
+                                                        Reviews
+                                            </strong></i>
+                                    </p>
+                                </div>
+                                <br>
+                                <% for (let i in product.specifications) { %>
+                                    <p style="font-size: 18px; margin-top: 1px;"><strong style="color: grey;">
+                                            <%=i%>
+                                        </strong>: <strong style="color: rgb(85, 85, 85);">
+                                            <%=product.specifications[i]%>
+                                        </strong></p>
+
+                                    <% } %>
+                                        <div style="display: flex;">
+                                            <% if (product.warranty){%>
+                                                <strong style="font-size: 18px; margin-top: 1px; margin-left: 20px;">
+                                                    <%=product.warranty%>
+                                                        warranty
+                                                </strong>
+                                                <%}%>
+                                                    <% if (product.returnPolicy){%>
+                                                        <strong
+                                                            style="font-size: 18px; margin-top: 1px; margin-left: 5px;">with
+                                                            <%=product.returnPolicy%>
+                                                        </strong>
+                                                        <%}%>
+                                        </div>
+
+                            </div>
+                            <div class="amount">
+                                <div style="text-align: center; margin-top: 50px;">
+                                    <strong style="font-size: 40px; ">₹<%=product.price.discountedPrice%></strong>
+                                    <div style="display: flex; width: 100%; justify-content: space-evenly;">
+                                        <p style="text-decoration: line-through; font-size: 25px; color: grey;">
+                                            <i class="fa-solid fa-indian-rupee-sign" style="font-size: 18px;"></i>
+                                            <strong>
+                                                <%= product.price.originalPrice %>
+                                            </strong>
+                                        </p>
+                                        <strong
+                                            style="color: green; font-size: 25px; margin-left: 5px; margin-top: 11px; margin-bottom: 0px;">
+                                            <%=
+                                                Math.round((product.price.originalPrice-product.price.discountedPrice)*100/product.price.originalPrice)%>
+                                                % off
+                                        </strong>
+                                    </div>
+                                    <% if (product.paymentOptions.cashOnDelivery){%>
+                                        <strong
+                                            style="display: block; font-size: 18px; text-align: center; color: green; margin-top: 10px;">Cash
+                                            On Delivery Available</strong>
+                                        <%}%>
+                                            <% product.availableOffers.forEach((offer)=>{%>
+                                                <strong style="display: block; text-align: center; font-size: 18px;">
+                                                    <%=offer.description%>
+                                                </strong>
+                                                <%})%>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                </div>
+        </div>
+        <%-include('categoryProduct')%>
+            <%-include('footer')%>
+            <script>
+                function goToProduct(name,category){
+                    window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                }
+            </script>
+</body>
+
+</html>

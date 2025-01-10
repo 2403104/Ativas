@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .container {
+
+            width: 90vw;
+            height: 100%;
+            margin-left: 70px;
+            display: flex;
+        }
+
+        .product {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .image {
+            margin-top: 10px;
+            margin-right: 10px;
+            width: 40%;
+            height: 50%;
+            border: 1px solid rgb(223, 223, 223);
+        }
+
+        .productContent {
+            width: 60%;
+            height: 100%;
+            background-color: white;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        .ratings {
+            width: 50px;
+            height: 20px;
+            margin-top: 10px;
+            font-size: 1.0rem;
+            font-weight: 500;
+            margin-left: 20px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding-top: 1px;
+            border-radius: 3px;
+        }
+
+        .specifications {
+            display: flex;
+        }
+
+        .productSpecifications {
+            margin-left: 20px;
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .cart,
+        .buy {
+            margin: 10px;
+            width: 40%;
+            height: 50px;
+            font-size: 15px;
+            border: none;
+            color: white;
+        }
+
+        .like {
+            width: 30px;
+            height: 30px;
+            margin-left: 92%;
+            margin-top: 8px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 6px;
+            z-index: 10;
+        }
+
+        #heartIcon {
+            font-size: 20px;
+            color: rgb(196, 196, 196);
+        }
+
+        #heartIcon.active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <%-include('navbar')%>
+        <div class="container">
+            <div class="image">
+                <div class="like"><i class="fa-solid fa-heart" id="heartIcon"></i></div>
+                <img src="<%=product.images[0]%>" alt="<%=product.name%>"
+                    style="width: 100%; height: 100%; object-fit: contain; padding: 30px;" />
+
+                <div style="display: flex; justify-content: space-evenly; margin-top: 10px;">
+                    <button class="cart" onclick="addToCart('<%=product._id%>')" style="background-color: orange;"><i
+                            class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    <button class="buy" onclick="buyNow()" style="background-color: rgb(255, 75, 10);"><i
+                            class="fa-solid fa-bolt"></i> BUY NOW</button>
+                </div>
+            </div>
+            <div class="productContent">
+                <p>
+                    <%=product.name%> (<%=product.category%>)
+                </p>
+                <div style="display: flex;">
+                    <div class="ratings">
+                        <%=product.seller.rating%> <i class="fa-solid fa-star" style="font-size: 15px;"></i>
+                    </div>
+                    <p style="font-size: 20px;">
+                        <%=product.seller.totalRatings%> Ratings & <%=product.seller.reviews%> Reviews
+                    </p>
+                </div>
+                <p style="font-size: 20px; color: green;"><strong>Extra <i class="fa-solid fa-indian-rupee-sign"
+                            style="font-size: 18px;"></i>
+                        <%=product.price.originalPrice - product.price.discountedPrice%> off
+                    </strong></p>
+                <div style="display: flex;">
+                    <strong style="font-size: 30px; margin-left: 20px;"><i class="fa-solid fa-indian-rupee-sign"
+                            style="font-size: 25px;"></i>
+                        <%=product.price.discountedPrice%>
+                    </strong>
+                    <p style="text-decoration: line-through; margin-top:5px;"><i class="fa-solid fa-indian-rupee-sign"
+                            style="font-size: 18px"></i>
+                        <%=product.price.originalPrice%>
+                    </p>
+                    <strong
+                        style="color: green; font-size: 20px; margin-left: 20px; margin-top: 5px; margin-bottom: 20px;">
+                        <%=
+                            Math.round((product.price.originalPrice-product.price.discountedPrice)*100/product.price.originalPrice)%>
+                            % off
+                    </strong>
+                </div>
+
+                <% if (product.availability=='In Stock' ){%>
+
+                    <strong
+                        style="margin-left: 20px; font-size: 20px; margin-top: 10px; margin-bottom:10px;display:block;color: green;">
+                        In Stock</strong>
+                    <%}else{ %>
+                        <strong
+                            style="margin-left: 20px; font-size: 20px; margin-top: 10px; margin-bottom:10px;display:block;color: red;">
+                            Out of Stock</strong>
+                        <% } %>
+                            <% if(product.paymentOptions.cashOnDelivery ){ %>
+                                <strong
+                                    style="margin-left: 20px; font-size: 20px; margin-top: 10px; margin-bottom:10px;display:block;color: green;">Cash
+                                    on delivery available</strong>
+                                <% }else{ %>
+                                    <strong
+                                        style="margin-left: 20px; font-size: 20px; margin-top: 10px; margin-bottom:10px;display:block;color: red;">Cash
+                                        on delivery not available</strong>
+                                    <% } %>
+                                        %>
+
+                                        <strong style="margin-left: 20px; font-size: 20px; margin-top: 50px;">Available
+                                            offers</strong>
+                                        <% product.availableOffers.forEach(offer=> { %>
+                                            <div style="display: flex;">
+                                                <img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                                                    width="18" height="18" class="yNKwUY"
+                                                    style="margin: 10px 5px 20px 20px ;">
+                                                <strong style="margin-top: 8px;  font-size: 20px;">
+                                                    <%=offer.offerType%>
+                                                </strong>
+                                                <p style="margin-left: 5px; margin-top: 10px; font-size: 18px;">
+                                                    <%=offer.description%>
+                                                </p>
+                                                <p style="font-size: 16px; margin-top: 13px;">
+                                                    <strong style="margin-top: 15px;">Valid Till: </strong>
+                                                    <%= new Date(offer.validTill).toLocaleDateString('en-US', {
+                                                        year: 'numeric' , month: 'long' , day: 'numeric' }) %>
+                                                        <strong> </strong>
+                                                        <%= new Date(offer.validTill).toLocaleTimeString('en-US', {
+                                                            hour: '2-digit' , minute: '2-digit' , second: '2-digit' ,
+                                                            hour12: true }) %>
+                                                </p>
+                                            </div>
+                                            <% }) %>
+                                                <strong
+                                                    style="display: block; margin-left: 20px; margin-bottom: 10px; font-size: 20px;color: green;">
+                                                    <%=product.returnPolicy%> <strong style="color: blue;">
+                                                            <%=product.warranty%> warranty
+                                                        </strong>
+                                                </strong>
+                                                <div class="specifications">
+                                                    <div class="productSpecifications" style="display: flex;">
+                                                        <div class="specifications"
+                                                            style="width: 100px; color: grey; font-size: 15px;">
+                                                            <strong>Highlights</strong>
+                                                        </div>
+                                                        <div class="specificationOptions" style="margin-left: 5px;">
+                                                            <% for (let i in product.specifications){%>
+                                                                <div style="display: flex;">
+                                                                    <strong><i class="fa-solid fa-circle"
+                                                                            style="font-size: 5px; margin-bottom:8px; color: grey;"></i>
+                                                                        <p
+                                                                            style="display: inline; font-size: 19px;margin-left: 3px; color: gray;">
+                                                                            <%=i%>
+                                                                        </p> : <strong
+                                                                            style="font-size: 19px; color: grey;">
+                                                                            <%=product.specifications[i]%>
+                                                                        </strong>
+                                                                    </strong>
+                                                                </div>
+
+                                                                <%}%>
+                                                        </div>
+                                                    </div>
+                                                    <div class="paymentOptions" style="display: flex;">
+                                                        <div class="paymentHeading"
+                                                            style="width: 100px; color: grey; font-size: 15px;">
+                                                            <strong>Easy Payment Options</strong>
+                                                        </div>
+                                                        <div class="paymentOptions">
+                                                            <div><i class="fa-solid fa-circle"
+                                                                    style="font-size: 5px; margin-bottom:8px; color: grey;"></i>
+                                                                <strong>Emi</strong>
+                                                                <p style="font-size: 18px; color: grey;">with
+                                                                    <strong>Down Payment </strong>of <i
+                                                                        class="fa-solid fa-indian-rupee-sign"
+                                                                        style="font-size: 15px;"></i>
+                                                                    <%=product.paymentOptions.emi.downPayment%>
+                                                                </p>
+                                                                <%
+                                                                    product.paymentOptions.emi.emiOptions.forEach(emiOption=>
+                                                                    { %>
+                                                                    <p
+                                                                        style="font-size: 18px; margin: 2px 0px 5px 20px; color: grey;">
+                                                                        <i class="fa-solid fa-indian-rupee-sign"
+                                                                            style="font-size: 15px;"></i><strong>
+                                                                            <%=emiOption.amount%> <strong>
+                                                                                    <%=emiOption.period%>
+                                                                                </strong> for <%=emiOption.tenure%>.
+                                                                    </p>
+                                                                    <% }) %>
+                                                            </div>
+                                                            <% if(product.paymentOptions.cashOnDelivery ){ %>
+                                                                <div><i class="fa-solid fa-circle"
+                                                                        style="font-size: 5px; margin-bottom:10px; margin-right: 5px; color: grey;"></i>
+                                                                    Cash On Delivery</div>
+                                                                <% } %>
+                                                                    <% if(product.paymentOptions.netBanking ){ %>
+                                                                        <div><i class="fa-solid fa-circle"
+                                                                                style="font-size: 5px; margin-bottom:10px; margin-right: 5px; color: grey;"></i>
+                                                                            Net Banking</div>
+                                                                        <% } %>
+                                                                            <% if(product.paymentOptions.debitCreditCard
+                                                                                ){ %>
+                                                                                <div><i class="fa-solid fa-circle"
+                                                                                        style="font-size: 5px; margin-bottom:10px; margin-right: 8px; color: grey;"></i>Debit
+                                                                                    Credit Card</div>
+                                                                                <% } %>
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
+                                                    <strong style=" font-size: 20px; color: green; ">Features</strong>
+                                                    <div class="features">
+                                                        <% product.features.forEach(feature=> { %>
+                                                            <div style="display: flex;">
+
+                                                                <strong style="margin-top: 8px;   font-size: 18px;">
+                                                                    <%=feature.featureName%>
+                                                                </strong>
+                                                                <p
+                                                                    style="margin-left: 5px; margin-top: 10px; font-size: 18px;">
+                                                                    <%=feature.featureDescription%>
+                                                                </p>
+                                                            </div>
+                                                            <% }) %>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
+                                                    <strong style=" font-size: 20px; color: green; ">Highlights</strong>
+                                                    <div class="features">
+                                                        <% product.highlights.forEach(function(highlight, index) { %>
+                                                            <div style="display: flex;">
+                                                                <strong style="font-size: 19px; margin-top: 5px;">
+                                                                    <%= index %>
+                                                                </strong>
+                                                                <p
+                                                                    style="font-size: 17px; margin-top: 5px; margin-left: 5px;">
+                                                                    <%= highlight %>
+                                                                </p>
+                                                            </div>
+                                                            <% }); %>
+                                                    </div>
+                                                </div>
+                                                <div style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); ">
+                                                    <strong
+                                                        style="margin-left: 20px; font-size: 20px; padding-top: 20px;  color: green;">Description</strong>
+                                                    <p style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
+                                                        <%=product.description%>
+                                                    </p>
+                                                    <p style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
+                                                        <%=product.importantNotes%>
+                                                    </p>
+                                                </div>
+                                                
+                                                <div class="reviews" id="review-container">
+                                                    <div style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
+                                                        <strong style="font-size: 20px; color: green;">Reviews and Ratings</strong>
+                                                        <% reviews.slice(0, 3).forEach(review => { %>
+                                                            <div style="display: flex; align-items: center;">
+                                                                <div class="ratings">
+                                                                    <%= review.rating %> <i class="fa-solid fa-star" style="font-size: 14px;"></i>
+                                                                </div>
+                                                                <% if (review.rating === 1) { %>
+                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Poor</strong>
+                                                                <% } else if (review.rating === 2) { %>
+                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Fair</strong>
+                                                                <% } else if (review.rating === 3) { %>
+                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Good</strong>
+                                                                <% } else if (review.rating === 4) { %>
+                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Very Good</strong>
+                                                                <% } else if (review.rating === 5) { %>
+                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Excellent</strong>
+                                                                <% } %>
+                                                            </div>
+                                                            <div style="margin-top: 10px;">
+                                                                <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                                                    <%= review.description %>
+                                                                </p>
+                                                            </div>
+                                                            <hr>
+                                                        <% }) %>
+                                                
+                                                        <% if (reviews.length > 3) { %>
+                                                            <div style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
+                                                                <button id="toggle-reviews-btn" onclick="toggleReviews()"
+                                                                        style="background-color: transparent; color: blue; font-size: 20px; border: none;">
+                                                                    Show All
+                                                                </button>
+                                                            </div>
+                                                        <% } %>
+                                                    </div>
+                                                </div>
+                                                
+
+
+            </div>
+
+
+            <script>
+                let allReviews = <%- JSON.stringify(reviews) %>;
+                let showingAll = false;
+            
+                function toggleReviews() {
+                    const reviewContainer = document.getElementById("review-container");
+                    const toggleButton = document.getElementById("toggle-reviews-btn");
+            
+                    if (!showingAll) {
+                        reviewContainer.innerHTML = `
+                            <div style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
+                                <strong style="font-size: 20px; color: green;">Reviews and Ratings</strong>
+                            ${allReviews.map(review => `
+                                <div style=" align-items: center;">
+                                    <div style="display:flex">
+                                        <div class="ratings" >
+                                        ${review.rating} <i class="fa-solid fa-star" style="font-size: 14px;"></i>
+                                        </div>
+                                        <strong style=" margin-left: 10px; color:black; margin-top:10px;">${getRatingText(review.rating)}</strong>
+                                        </div>
+                                    <div style="margin-top: 10px;">
+                                        <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                            ${review.description}
+                                        </p>
+                                    </div>
+                                    <hr>
+                                </div>
+                            `).join('')}
+                            </div>
+                            <div style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
+                                <button id="toggle-reviews-btn" onclick="toggleReviews()"
+                                        style="background-color: transparent; color: blue; font-size: 20px; border: none;">
+                                    Show Less
+                                </button>
+                            </div>
+                        `;
+                    } else {
+                        reviewContainer.innerHTML = `
+                            <strong style="font-size: 20px; color: green;">Reviews and Ratings</strong>
+                            ${allReviews.slice(0, 3).map(review => `
+                                <div style="display: flex; align-items: center;">
+                                    <div class="ratings">
+                                        ${review.rating} <i class="fa-solid fa-star" style="font-size: 14px;"></i>
+                                    </div>
+                                    <strong style="margin-top: 10px; margin-left: 10px;">${getRatingText(review.rating)}</strong>
+                                    <div style="margin-top: 10px;">
+                                        <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                            ${review.description}
+                                        </p>
+                                    </div>
+                                    <hr>
+                                </div>
+                            `).join('')}
+                            <div style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
+                                <button id="toggle-reviews-btn" onclick="toggleReviews()"
+                                        style="background-color: transparent; color: blue; font-size: 20px; border: none; ">
+                                    Show All
+                                </button>
+                            </div>
+                        `;
+                    }
+            
+                    showingAll = !showingAll;
+                }
+            
+                function getRatingText(rating) {
+                    switch (rating) {
+                        case 1: return "Poor";
+                        case 2: return "Fair";
+                        case 3: return "Good";
+                        case 4: return "Very Good";
+                        case 5: return "Excellent";
+                        default: return "";
+                    }
+                }
+            </script>
+            
+</body>
+
+</html>

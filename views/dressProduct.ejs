@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Product</title>
+    <style>
+        .containerMainDress {
+            width: 48%;
+            height: 85vh;
+            justify-content: space-evenly;
+            align-items: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            border: 2px solid grey;
+        }
+
+        .cardDress {
+            margin-left: 12px;
+            margin-bottom: 10px;
+            width: 48%; 
+            height: 48%;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .cardDress .imgDress {
+            
+            width: 48%; 
+            height: 48%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .cardDress:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        h1 {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="containerMainDress">
+        <h1 style="margin-top: 10px; margin-bottom: 10px;">Best Dresses For You</h1>
+        <div style="display: flex;">
+            <div class="cardDress" onclick="redirectToCategoryDress('Adidas')">
+                <img class="imgDress" src="https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/e/a/4/xl-men-night-suit-top-shorts-digital-printed-flying-queen-original-imah6ycffhuhwj6u.jpeg?q=70" alt="HP Printer" style="object-fit: contain;">
+                <p><strong>Adidas</strong></p>
+            </div>
+            <div class="cardDress" onclick="redirectToCategoryDress('Biba')">
+                <img class="imgDress" src="https://rukminim2.flixcart.com/image/612/612/l0mr7gw0/kurta/c/h/t/m-white-spoque-original-imagccwafm4hznzc.jpeg?q=70" alt="HP Printer" style="object-fit: contain;">
+                <p><strong>Biba</strong></p>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="cardDress" onclick="redirectToCategoryDress('Fabinda')">
+                <img class="imgDress" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/i/r/a/-original-imagt853unzw3uar.jpeg?q=70" alt="HP Printer" style="object-fit: contain;">
+                <p><strong>Fabinda</strong></p>
+            </div>
+            <div class="cardDress" onclick="redirectToCategoryDress('Peter England')">
+                <img class="imgDress" src="https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/3/q/r/xl-mens-night-dress-randomstyle-original-imagmh43spzabgtv.jpeg?q=70" alt="HP Printer" style="object-fit: contain;">
+                <p><strong>Peter England</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToCategoryDress(dressBrand) {
+            window.location.href = `/productType?brand=${encodeURIComponent(dressBrand)}&category=Dress`;
+        }
+    </script>
+</body>
+
+</html>

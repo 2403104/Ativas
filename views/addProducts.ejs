@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: black;
+        }
+
+        h2 {
+            font-size: 25px;
+            text-align: left;
+            color: black;
+            margin-left: 60px;
+        }
+
+        .formContainer {
+            width: 90vw;
+            height: 100%;
+            margin: auto;
+        }
+
+
+
+        input, textarea, select {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+        }
+
+        .highlight {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 20px;
+        }
+        #specificationSection{
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 20px;
+        }
+        .btn{
+            width: 200px; 
+            height: 40px ; 
+            font-size: 20px; 
+            margin-top: 18px; 
+            margin-left: 50px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formContainer">
+        <h1>Add new products</h1>
+        <form action="/addProducts" method="post">
+            <div class="section">
+                <h2>Product Details</h2>
+                <input type="text" name="productName" id="productName" placeholder="Product Name" required />
+                 
+                <input type="text" name="brand" id="brand" placeholder="Product Brand" required />
+                 
+                <input type="text" name="category" id="category" placeholder="Product Category" required />
+                 
+                <input type="text" name="description" id="description" placeholder="Description" required />
+                 
+            </div>
+            <div class="section">
+                <h2>Price Details</h2>
+                <input type="number" name="originalPrice" id="originalPrice" placeholder="Original Price" required />
+                 
+                <input type="number" name="discountedPrice" id="discountedPrice" placeholder="Discounted Price"
+                    required />
+                 
+                <input type="number" name="discountPercentage" id="discountPercentage" placeholder="Discount Percentage"
+                    required />
+                 
+            </div>
+            <div class="section">
+                <h2>Seller Details</h2>
+                <input type="text" name="sellerName" id="sellerName" placeholder="Seller Name" />
+                 
+                <input type="number" step="0.1" name="sellerRating" id="sellerRating"
+                    placeholder="Seller Ratings (Out of 5)" />
+                 
+                    
+                    <input type="number" name="totalRatings" id="totalRatings" placeholder="Total Ratings Count" />
+                    <input type="number" name="sellerReviews" id="sellerReviews" placeholder="Seller Reviews Count" />
+            </div>
+            <div class="section">
+                <h2>Available Offers</h2>
+                <div id="offersContainer">
+                    <div class="offer">
+                        <h2>Offer 1</h2>
+                        <input type="text" name="offerType[]" placeholder="Offer Type (e.g., Discount, Cashback)" />
+                         
+                        <input type="text" name="offerDescription[]" placeholder="Offer Description" />
+                         
+                        <input type="date" name="offerValidTill[]" placeholder="Valid Till" />
+                         
+                    </div>
+                </div>
+                <button type="button" id="addOfferButton"
+                    class="btn">Add Another Offer</button>
+                
+            </div>
+            <div class="section">
+                <h2>Add Images</h2>
+                <div id="imagesContainer">
+                    <div class="image">
+                        <h2>Image 1</h2>
+                        <input type="url" name="imageURL[]" placeholder="Image URL" />
+                         
+                    </div>
+                </div>
+                <button type="button" id="addImageButton"
+                    class="btn">Add Another Image</button>
+                
+            </div>
+            <div class="section">
+                <h2>Availability Details</h2>
+                <select name="availability" id="availability"
+                    style="margin-left: 60px; padding: 10px; width: 90%; font-size: 20px;">
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                </select>
+                <input type="text" name="warranty" id="warranty" placeholder="Warranty Details" />
+                 
+                <textarea name="text" id="importantNote" placeholder="Important Note"
+                    style="margin-left: 60px; padding: 10px; width: 90%; font-size: 20px; height: 100px;"></textarea>
+                <input type="text" name="returnPolicy" id="returnPolicy" placeholder="Return Policy Details" />
+                 
+            </div>
+            <div class="section">
+                <h2>Product Highlights</h2>
+                <div class="highlightContainer">
+                    <div id="highlightsContainer">
+                        <div class="highlight">
+                            <h1 style="margin-top: 20px;">1</h1>
+                            <div class="key">
+                                <input type="text" name="highlightKey[]" placeholder="Key" style="width: 80%;"
+                                    required />
+                               
+                            </div>
+                            <div class="value">
+                                <input type="text" name="highlightValue[]" placeholder="Value" style="width: 80%;"
+                                    required />
+                               
+                            </div>
+                            <div>
+                                <button type="button" onclick="removeHighlight(this)"
+                                    class="btn">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addHighlightButton"
+                        class="btn">Add New Highlight</button>
+                </div>
+            </div>
+            <div class="section">
+                <select name="productType" id="productType">
+                    <option value="">Select product type</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Printer">Printer</option>
+                    <option value="Dress">Dress</option>
+                    <option value="Locket">Locket</option>
+                    <option value="Toy">Toy</option>
+                    <option value="FoodItems">Food Items</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Spectacles">Spectacles</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Books">Books</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Stationery">Stationery</option>
+                    <option value="Bluetooths">Bluetooths and Earbuds</option>
+                </select>
+            </div>
+            <div id="specificationSection">
+
+            </div>
+
+
+        </form>
+    </div>
+    <script src="/js/addProduct.js"></script>
+
+</body>
+
+</html>
