@@ -61,6 +61,9 @@ app.get('/productType',async (req,res)=>{
     
     return res.render('productType',{products:allProduct,offerList,categoryProduct})
 })
+app.get('/orderProduct',(req,res)=>{
+    return res.render('order')
+})
 
 app.use('/auth',authRouter)
 app.use(authenticatedMiddleware);
