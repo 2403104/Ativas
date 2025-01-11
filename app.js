@@ -42,7 +42,32 @@ app.use(session({
     }
 }))
 app.use(populateCardProduct)
+const calculateDiscountedPercentage = (price) => {
+    if (price.originalPrice > 0) {
+        return ((price.originalPrice - price.discountedPrice) / price.originalPrice) * 100;
+    }
+    return 0;
+};
 
+const saveDiscountedPercentageMiddleware = async (req, res, next) => {
+    try {
+        const products = await Product.find({brand:'Samsung'}); 
+        
+        for (let product of products) {
+            if (product.price && product.price.discountedPrice && product.price.originalPrice) {
+                const discountedPercentage = calculateDiscountedPercentage(product.price);
+                product.price.discountPercentage= Math.round(discountedPercentage);
+                await product.save(); 
+            }
+        }
+
+        next(); 
+    } catch (error) {
+        console.error("Error saving discounted percentage:", error);
+        res.status(500).send("Internal Server Error");
+    }
+};
+// app.use(saveDiscountedPercentageMiddleware);
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/wishlistProducts',async(req,res)=>{

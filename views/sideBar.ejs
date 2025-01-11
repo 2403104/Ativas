@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>side bar</title>
     <style>
-        .sidebar{
+        .sidebar {
             margin: 5px;
             width: 17vw;
             border: 1px solid grey;
         }
-        hr{
+
+        hr {
             margin-top: 10px;
             color: rgb(255, 255, 255);
         }
-        select{
+
+        select {
             width: 80px;
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="sidebar">
         <h2 style="font-size: 20px; font: bold;padding: 7px;">Filters</h2>
         <hr>
         <strong style="margin: 10px; font-size: 14px; display: block;">CATEGORIES</strong>
-        <strong style="margin-left: 40px; font-size: 18px;"><%=categoryProduct[0].category%></strong>
+        <strong style="margin-left: 40px; font-size: 18px;">
+            <%=categoryProduct[0].category%>
+        </strong>
         <hr>
         <strong style="margin: 10px; font-size: 14px; display: block;">PRICE</strong>
         <div style="display: flex; justify-content: space-evenly;">
@@ -46,103 +52,95 @@
         </div>
         <hr>
         <strong style="margin: 10px; font-size: 14px; display: block;">BRAND</strong>
-        <div style="padding-left: 10px;"><input type="checkbox" id="ativasAssured"  style="margin-top: 15px;">      <strong style="font-size: 20px;"><i style="color: blue;">Ativas Assured</i></strong></div>
+        <div style="padding-left: 10px;"><input type="checkbox" id="ativasAssured" style="margin-top: 15px;"> <strong
+                style="font-size: 20px;"><i style="color: blue;">Ativas Assured</i></strong></div>
         <hr>
         <strong style="margin: 10px; font-size: 14px; display: block;">CUSTOMER RATINGS</strong>
-        <div style="padding-left: 10px;"><input type="checkbox" id="4andAboveRating"  style="margin-top: 15px;"> 4 <i class="fa-solid fa-star" style="font-size: 12px;"></i> & above </div>
-        <div style="padding-left: 10px;"><input type="checkbox" id="3andAboveRating"  style="margin-top: 15px;"> 3 <i class="fa-solid fa-star" style="font-size: 12px;"></i> & above </div>
+        <div style="padding-left: 10px;"><input type="checkbox" id="4andAboveRating" style="margin-top: 15px;"> 4 <i
+                class="fa-solid fa-star" style="font-size: 12px;"></i> & above </div>
+        <div style="padding-left: 10px;"><input type="checkbox" id="3andAboveRating" style="margin-top: 15px;"> 3 <i
+                class="fa-solid fa-star" style="font-size: 12px;"></i> & above </div>
         <hr>
 
         <strong style="margin: 10px; font-size: 14px; display: block;">OFFERS</strong>
         <% offerList.forEach((offer)=>{%>
-            <div style="padding-left: 10px;"><input type="checkbox" id="<%=offer%>"  style="margin-top: 15px;">     <%=offer%></div>
-        <%})%>
-        <hr>
+            <div style="padding-left: 10px;"><input type="checkbox" id="<%=offer%>" style="margin-top: 15px;">
+                <%=offer%>
+            </div>
+            <%})%>
+                <hr>
 
-        <strong style="margin: 10px; font-size: 14px; display: block;">AVAILABILITY</strong>
-        <div style="padding-left: 10px;"><input type="checkbox" id="excludeOutOfStock"  style="margin-top: 15px;">  Exclude Out Of Stock</div>
-        <hr>
+                <strong style="margin: 10px; font-size: 14px; display: block;">AVAILABILITY</strong>
+                <div style="padding-left: 10px;"><input type="checkbox" id="excludeOutOfStock"
+                        style="margin-top: 15px;"> Exclude Out Of Stock</div>
+                <hr>
 
-        <strong style="margin: 10px; font-size: 14px; display: block;">DISCOUNT</strong>
-        <div style="padding-left: 10px;"><input type="checkbox" id="40%OrMoreDiscount"  style="margin-top: 15px;">  40% or more</div>
-        <div style="padding-left: 10px;"><input type="checkbox" id="30%OrMoreDiscount"  style="margin-top: 15px;">  30% or more</div>
-        <div style="padding-left: 10px;"><input type="checkbox" id="20%OrMoreDiscount"  style="margin-top: 15px;">  20% or more</div>
-        <div style="padding-left: 10px;"><input type="checkbox" id="10%OrMoreDiscount"  style="margin-top: 15px;">  10% or more</div>
-        <hr>
+                <strong style="margin: 10px; font-size: 14px; display: block;">DISCOUNT</strong>
+                <div style="padding-left: 10px;"><input type="checkbox" id="40PercentOrMoreDiscount"
+                        style="margin-top: 15px;"> 40% or more</div>
+                <div style="padding-left: 10px;"><input type="checkbox" id="30PercentOrMoreDiscount"
+                        style="margin-top: 15px;"> 30% or more</div>
+                <div style="padding-left: 10px;"><input type="checkbox" id="20PercentOrMoreDiscount"
+                        style="margin-top: 15px;"> 20% or more</div>
+                <div style="padding-left: 10px;"><input type="checkbox" id="10PercentOrMoreDiscount"
+                        style="margin-top: 15px;"> 10% or more</div>
+                <hr>
     </div>
     <script>
-        const checkboxes = document.querySelectorAll('[type="checkbox"]'); 
-        const url = new URL(window.location.href); 
-        const params = url.searchParams; 
-    
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                if (this.checked) {
-                    switch (this.id) {
-                        case '4andAboveRating':
-                            params.set('seller.rating[gte]', '4');
-                            break;
-                        case '3andAboveRating':
-                            params.set('seller.rating[gte]', '3');
-                            break;
-                        case 'excludeOutOfStock':
-                            params.set('excludeOutOfStock', 'true');
-                            break;
-                        case '40%OrMoreDiscount':
-                            params.set('discount[gte]', '40');
-                            break;
-                        case '30%OrMoreDiscount':
-                            params.set('discount[gte]', '30');
-                            break;
-                        case '20%OrMoreDiscount':
-                            params.set('discount[gte]', '20');
-                            break;
-                        case '10%OrMoreDiscount':
-                            params.set('discount[gte]', '10');
-                            break;
-                        default:
-                            break;
-                    }
-                } else {
-                    switch (this.id) {
-                    case '4andAboveRating':
-                        params.delete('seller.rating[gte]');
-                        break;
-                    case '3andAboveRating':
-                        params.delete('seller.rating[gte]');
-                        break;
-                    case 'excludeOutOfStock':
-                        params.delete('excludeOutOfStock');
-                        break;
-                    case '40%OrMoreDiscount':
-                        params.delete('discount[gte]');
-                        break;
-                    case '30%OrMoreDiscount':
-                        params.delete('discount[gte]');
-                        break;
-                    case '20%OrMoreDiscount':
-                        params.delete('discount[gte]');
-                        break;
-                    case '10%OrMoreDiscount':
-                        params.delete('discount[gte]');
-                        break;
-                    default:
-                        break;
-                }
-                }
-            params.forEach((value,key)=>{
-                let decodedKey=decodeURIComponent(key);
-                let decodedValue=decodeURIComponent(value);
-                params.set(decodedKey,decodedValue)
+        const checkboxes = document.querySelectorAll('[type="checkbox"]');
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        checkboxes.forEach((checkbox)=>{
+            if (localStorage.getItem(checkbox.id)==='true'){
+                checkbox.checked=true;
+            }
+            checkbox.addEventListener('change',()=>{
+                localStorage.setItem(checkbox.id,checkbox.checked);
             })
-                console.log(params.toString())
-    
+        })
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    params.set(checkbox.id, 'true');
+                } else {
+                    params.delete(checkbox.id);
+                }
                 window.history.replaceState({}, '', `${url.pathname}?${params.toString()}`);
+                window.location.reload();
             });
         });
+        const minSelect = document.querySelector('#min');
+        const maxSelect = document.querySelector('#max');
+
+        minSelect.value=localStorage.getItem('min')||minSelect.value;
+        maxSelect.value=localStorage.getItem('max')||maxSelect.value;
+
+
+
+        [minSelect, maxSelect].forEach((select) => {
+            select.addEventListener('change', () => {
+
+                localStorage.setItem(select.name, select.value);
+
+                const min = minSelect.value !== '0' ? minSelect.value : '0'; 
+                const max = maxSelect.value !== '35000+' ? maxSelect.value : null;
+
+                if (min) params.set('min', min);
+                else params.delete('min');
+
+                if (max) params.set('max', max);
+                else params.delete('max');
+
+                window.history.replaceState({}, '', `${url.pathname}?${params.toString()}`);
+                window.location.reload();
+            });
+        });
+        
     </script>
-    
-    
-    
+
+
+
+
 </body>
+
 </html>
