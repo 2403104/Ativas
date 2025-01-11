@@ -39,10 +39,9 @@ exports.getCartInterface=async(req,res)=>{
     const productDetails = await Promise.all(
         cartProd.items.map(async (item) => {
             const prod = await Product.findOne({ _id: item.productId });
-            return { ...prod._doc, quantity: item.quantity }; // Include quantity from cart
+            return { ...prod._doc, quantity: item.quantity };
         })
     );
-    console.log(productDetails)
     return res.render('viewCart',{cartProd:productDetails})
 }
 const ObjectId = mongoose.Types.ObjectId;
@@ -56,7 +55,6 @@ exports.reviewsAndRatings = async (req, res) => {
 
     try {
         const added = await Review.create(review);
-        console.log(added);
         return res.send("Review added successfully");
     } catch (error) {
         console.error("Error adding review:", error);
