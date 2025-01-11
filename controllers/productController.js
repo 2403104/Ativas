@@ -66,3 +66,6 @@ exports.addWishlist= async (req, res) => {
 exports.orderProduct=(req,res)=>{
     return res.render('order')
 }
+// exports.wishlistProducts=(req,res)=>{
+//     return res.render('wishlistProducts')
+// }

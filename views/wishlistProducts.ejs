@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f1f3f6;
+        }
+
+        .wishlistMain {
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+
+        .wishlistItemList {
+            margin-top: 15px;
+            box-sizing: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            background: 0px 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .wishlistItem {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            background-color: white;
+            height: 180px;
+            box-sizing: border-box;
+        }
+
+        .image {
+            width: 25%;
+            height: 95%;
+            display: flex;
+            padding: 10px;
+
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image img {
+            border-radius: 5px;
+            max-width: 100%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        img {
+            object-fit: contain;
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        .btn a {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            color: #333;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .options {
+            margin-top: 15px;
+            background-color: white;
+            width: 25%;
+        }
+
+        .empty {
+            background-color: white;
+            margin-left: 10px;
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .empty img {
+            background-color: white;
+            width: 250px;
+            height: 250px;
+        }
+
+        .empty p {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <%-include('navbar')%>
+        <div class="wishlistMain">
+            <div class="options">
+
+            </div>
+            <div class="wishlistItemList">
+                <% if (wishlistProducts.length> 0) { %>
+                    <% wishlistProducts.forEach(function(product) { %>
+                        <div class="wishlistItem"
+                            onclick="goToProduct('<%= product.name %>', '<%= product.category %>')">
+                            <div class="image">
+                                <img src="<%= product.images[0] %>" alt="<%= product.name %>">
+                            </div>
+                            <div class="detail">
+                                <p style="font-size: 18px; margin-top: 15px;">
+                                    <%= product.name %>
+                                </p>
+                                <% if (product.availability=='In Stock' ) { %>
+                                    <p style="color: green; font-size: 22px; margin-top: 10px;">
+                                        <%= product.availability %>
+                                    </p>
+                                    <% } else { %>
+                                        <p style="color: red; font-size: 22px; margin-top: 10px;">
+                                            <%= product.availability %>
+                                        </p>
+                                        <% } %>
+                                            <div class="btn" style="display: flex;">
+                                                <a href="/"><strong>REMOVE</strong></a>
+                                            </div>
+                            </div>
+                        </div>
+                        <hr style="width: 95%; margin: auto; color: rgb(255, 255, 255);">
+                        <% }); %>
+                            <% } else { %>
+                                <div class="empty">
+                                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/mywishlist-empty_39f7a5.png"
+                                        alt="Empty Wishlist">
+                                    <p>You have no items in your wishlist. Start adding!</p>
+                                </div>
+                                <% } %>
+            </div>
+        </div>
+        <script>
+            function goToProduct(name, category) {
+                console.log(name, category)
+                window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+            }
+        </script>
+</body>
+
+</html>

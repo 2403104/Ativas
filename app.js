@@ -45,6 +45,17 @@ app.use(populateCardProduct)
 
 app.set('views', path.join(__dirname, 'views'));
 
+app.get('/wishlistProducts',async(req,res)=>{
+    const wishlistIds=await Wishlist.findOne({userId:req.session.user._id});
+    const wishlistProducts=wishlistIds.wishlist;
+    const wishlist=await Promise.all(
+        wishlistProducts.map(async(item)=>{
+            const product=await Product.findOne(item.productId);
+            return product
+        })
+    )
+    return res.render('wishlistProducts',{wishlistProducts:wishlist})
+})
 app.use('/auth', authRouter)
 app.use(authenticatedMiddleware);
 app.use('/login', ativasHomeRouter)
