@@ -34,16 +34,34 @@ exports.addProductToCart=async  (req,res)=>{
     }
 }
 
-exports.getCartInterface=async(req,res)=>{
-    const cartProd=await Cart.findOne({userId:req.session.user._id});
-    const productDetails = await Promise.all(
-        cartProd.items.map(async (item) => {
-            const prod = await Product.findOne({ _id: item.productId });
-            return { ...prod._doc, quantity: item.quantity };
-        })
-    );
-    return res.render('viewCart',{cartProd:productDetails})
-}
+exports.getCartInterface = async (req, res) => {
+    try {
+        if (!req.session || !req.session.user || !req.session.user._id) {
+            return res.status(400).send('User session is missing.');
+        }
+
+        const cartProd = await Cart.findOne({ userId: req.session.user._id });
+        if (!cartProd || !cartProd.items || !Array.isArray(cartProd.items)) {
+            return res.render('viewCart', { cartProd: [] }); 
+        }
+        const productDetails = await Promise.all(
+            cartProd.items.map(async (item) => {
+                const prod = await Product.findOne({ _id: item.productId });
+                if (!prod) {
+                    throw new Error(`Product with ID ${item.productId} not found.`);
+                }
+                return { ...prod._doc, quantity: item.quantity };
+            })
+        );
+
+        return res.render('viewCart', { cartProd: productDetails });
+
+    } catch (error) {
+        console.error('Error fetching cart interface:', error.message);
+        return res.status(500).send('An error occurred while fetching the cart.');
+    }
+};
+
 const ObjectId = mongoose.Types.ObjectId;
 exports.reviewsAndRatings = async (req, res) => {
     const review = {

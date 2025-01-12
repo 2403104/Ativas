@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category Product</title>
+
     <style>
         .fourItemBox {
-            display: flex; 
+            display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; 
+            justify-content: space-between;
             width: 100%;
             height: auto;
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
         }
+
         .singleCard {
-            width: 15%;
-            flex: 1 1 24%;
+            width: 100%;
+            flex: 1 1 calc(33.333% - 20px);
             margin: 10px;
-            color: white; 
-            font-size: 16px; 
+            color: white;
+            font-size: 16px;
             box-sizing: border-box;
             align-items: center;
         }
+
         .singleCard img {
             padding: 10px;
-            width: 50%;
+            width: 100%;
             margin: 0 auto;
             display: block;
             border-radius: 15px;
             object-fit: contain;
         }
+
         .singleCard:hover {
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
         }
+
         .ratings {
             width: 50px;
             height: 20px;
@@ -46,10 +52,11 @@
             padding-top: 1px;
             border-radius: 3px;
         }
+
         .like {
             width: 30px;
             height: 30px;
-            margin-left: 92%;
+            margin-left: auto;
             margin-top: 8px;
             border-radius: 50%;
             text-align: center;
@@ -57,27 +64,50 @@
             z-index: 10;
             border: none;
         }
-        #heartIcon{
+
+        #heartIcon {
             font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .singleCard {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .singleCard {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
+
 <body>
-    <% for (let i = 0; i < categoryProduct.length; i += 3) { %>
+    <% for (let i=0; i < categoryProduct.length; i +=3) { %>
         <div class="fourItemBox">
-            <% for (let j = i; j < i + 3 && j < categoryProduct.length; j++) { %>
-                <div class="singleCard" onclick="goToDetails('<%= categoryProduct[j].name %>', '<%= categoryProduct[j].category %>')">
-                    
-                    <div class="like" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i style="color: <%= wishlistProducts.includes(categoryProduct[j]._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;" class="fa-solid fa-heart" id="heartIcon"></i></div>
-                    
+            <% for (let j=i; j < i + 3 && j < categoryProduct.length; j++) { %>
+                <div class="singleCard"
+                    onclick="goToDetails('<%= categoryProduct[j].name %>', '<%= categoryProduct[j].category %>')">
+
+                    <div class="like" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i
+                            style="color: <%= wishlistProducts.includes(categoryProduct[j]._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;"
+                            class="fa-solid fa-heart" id="heartIcon"></i></div>
+
                     <img src="<%=categoryProduct[j].images[0]%>" alt="<%=categoryProduct[j].name%>">
-                    <strong style="display: block; font-size: 20px; text-align: center; color:black; margin: 10px;"><%=categoryProduct[j].name%></strong>
+                    <strong style="display: block; font-size: 20px; text-align: center; color:black; margin: 10px;">
+                        <%=categoryProduct[j].name%>
+                    </strong>
                     <div style="display: flex;">
                         <div class="ratings">
-                            <%=categoryProduct[j].seller.rating%> <i class="fa-solid fa-star" style="font-size: 15px;"></i>
+                            <%=categoryProduct[j].seller.rating%> <i class="fa-solid fa-star"
+                                    style="font-size: 15px;"></i>
                         </div>
                         <p style="font-size: 16px; font-weight: 400; color: black;">
-                            <i><strong><%=categoryProduct[j].seller.totalRatings%> Ratings & <%=categoryProduct[j].seller.reviews%> Reviews</strong></i>
+                            <i><strong>
+                                    <%=categoryProduct[j].seller.totalRatings%> Ratings &
+                                        <%=categoryProduct[j].seller.reviews%> Reviews
+                                </strong></i>
                         </p>
                     </div>
                     <div style="text-align: center; margin-top: 10px; color: black;">
@@ -101,23 +131,24 @@
                                 style="display: block; font-size: 18px; text-align: center; color: green; margin-top: 10px;">Cash
                                 On Delivery Available</strong>
                             <%}%>
-                            <% categoryProduct[j].availableOffers.forEach((offer)=>{%>
-                                <strong style="display: block; text-align: center; font-size: 18px; color: rgb(2, 161, 2);">
-                                    <%=offer.description%>
-                                </strong>
-                                <%})%>
+                                <% categoryProduct[j].availableOffers.forEach((offer)=>{%>
+                                    <strong
+                                        style="display: block; text-align: center; font-size: 18px; color: rgb(2, 161, 2);">
+                                        <%=offer.description%>
+                                    </strong>
+                                    <%})%>
                     </div>
                 </div>
-            <% } %>
+                <% } %>
         </div>
-    <% } %>
-    <script>
-        const heartIcon=document.querySelector('#heartIcon');
-                heartIcon.addEventListener('click',()=>{
+        <% } %>
+            <script>
+                const heartIcon = document.querySelector('#heartIcon');
+                heartIcon.addEventListener('click', () => {
                     heartIcon.classList.toggle('active');
-                    
+
                 })
-                function addWishlist(productId,userId){
+                function addWishlist(productId, userId) {
                     fetch('/addToWishlist', {
                         method: 'POST',
                         headers: {
@@ -125,22 +156,23 @@
                         },
                         body: JSON.stringify({ productId, userId })
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            window.location.reload();
-                        } else {
-                            alert(data.message);
-                        }
-                    })
-                    .catch(error => {
-                        console.log('Error:', error);
-                        alert('An error occurred while adding the product to wishlist.');
-                    });
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                window.location.reload();
+                            } else {
+                                alert(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.log('Error:', error);
+                            alert('An error occurred while adding the product to wishlist.');
+                        });
                 }
-        function goToDetails(name,category){
-            window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
-        }
-    </script>
+                function goToDetails(name, category) {
+                    window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                }
+            </script>
 </body>
+
 </html>

@@ -4,6 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>footer</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      footer {
+        background-color: #172337;
+        color: white;
+        padding: 20px;
+      }
+
+      footer div {
+        margin-bottom: 20px;
+      }
+
+      footer h4 {
+        margin-bottom: 10px;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      footer ul li {
+        margin-bottom: 5px;
+      }
+
+      footer ul li a {
+        color: lightgray;
+        text-decoration: none;
+      }
+
+      footer p {
+        color: lightgray;
+      }
+
+      @media (max-width: 768px) {
+        footer div {
+          flex: 1 1 100%;
+          margin-bottom: 20px;
+        }
+
+        footer {
+          text-align: center;
+        }
+
+        footer div:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (min-width: 769px) {
+        footer div {
+          flex: 1 1 30%;
+        }
+      }
+    </style>
 </head>
 <body>
     

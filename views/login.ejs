@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ativas E-Commerce Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativas E-Commerce Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .login-container{
+
+        .login-container {
             display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
         }
-        .logo{
+
+        .logo {
             background-color: rgb(33, 33, 202);
             width: 40%;
             text-align: center;
@@ -22,18 +29,21 @@
             height: 100vh;
             color: white;
             font-size: 30px;
-            font: bold;
+            font-weight: bold;
         }
-        .login-header{
-            background-color:white;
+
+        .login-header {
+            background-color: white;
             width: 60%;
             height: 100vh;
         }
-        h1{
+
+        h1 {
             text-align: center;
             padding-top: 20px;
             font-size: 50px;
         }
+
         input {
             margin-left: 50px;
             padding-left: 10px;
@@ -43,12 +53,14 @@
             font-size: 20px;
             margin-top: 20px;
         }
-        hr{
+
+        hr {
             width: 80%;
             border: 1px solid #b0aeae;
             margin-left: 50px;
             margin-bottom: 30px;
         }
+
         .login {
             width: 80%;
             height: 55px;
@@ -56,9 +68,10 @@
             margin-left: 50px;
             font-size: 25px;
             border: none;
-            background:linear-gradient(to bottom, rgb(251, 183, 58), rgb(255, 166, 0));
+            background: linear-gradient(to bottom, rgb(251, 183, 58), rgb(255, 166, 0));
         }
-        .otp{
+
+        .otp {
             width: 80%;
             height: 55px;
             margin-top: 30px;
@@ -66,39 +79,94 @@
             font-size: 20px;
             border: none;
             background-color: white;
-            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
         }
-        input:focus{
+
+        input:focus {
             border: none;
             outline: none;
         }
+
+        footer {
+            position: absolute;
+            bottom: 30px;
+            text-align: center;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        a {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 100%;
+                padding-top: 30vh;
+            }
+
+            .login-header {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            input {
+                width: 90%;
+                font-size: 18px;
+            }
+
+            .login,
+            .otp {
+                width: 90%;
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 16px;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
     </style>
 </head>
+
 <body>
-  <div class="login-container" >
-    <div class="logo">
-        <div style="font-size: 80px;">ATIVAS</div>
-        <div>E-Commerce</div>
-        
+    <div class="login-container">
+        <div class="logo">
+            <div style="font-size: 80px;">ATIVAS</div>
+            <div>E-Commerce</div>
+        </div>
+        <div class="login-header">
+            <h1>Login</h1>
+            <form action="/auth/login" method="post">
+                <input type="text" name="username" placeholder="Enter Email/Mobile Number" required />
+                <hr>
+                <div>
+                    <input type="password" name="password" placeholder="Enter Password" required />
+                    <a href="/auth/forgotPassword" style="text-decoration: none; font-size: 20px;">Forgot?</a>
+                </div>
+                <hr>
+                <button class="login" type="submit"> Login</button>
+            </form>
+            <div style="width: 80%; height: 20px; padding-top: 25px; text-align: center; margin-left: 50px;">OR</div>
+            <button class="otp" type="button" onclick="requestOTP()"> Request OTP</button>
+            <footer>
+                <a href="/auth/signup" style="text-decoration: none;">New to Ativas? Create an account.</a>
+            </footer>
+        </div>
     </div>
-    <div class="login-header">
-        <h1>Login</h1>
-        <form action="/auth/login" method="post" >
-            <input type="text" name="username" placeholder="Enter Email/Mobile Number" required/>
-            <hr>
-            <div>
-                <input type="password" name="password" placeholder="Enter Password" required/>
-                <a href="/auth/forgotPassword" style="text-decoration: none; font-size: 20px;">Forgot?</a>
-            </div>
-            <hr>
-            <button class="login" type="submit"> Login</button>
-        </form>
-        <div style="width: 80%; height: 20px; padding-top: 25px; text-align: center; margin-left: 50px;">OR</div>
-        <button class="otp" type="button" onclick="requestOTP()" > Request OTP</button>
-        <footer>
-            <a href="/auth/signup" style=" position:absolute;bottom:  30px; font-size: 20px;margin-left: 250px; text-decoration: none;">New to Ativas? Create an account.</a>
-        </footer>        
-    </div>
-  </div>
 </body>
+
 </html>

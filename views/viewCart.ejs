@@ -97,6 +97,42 @@
         .footer-right {
             text-align: right;
         }
+        @media (max-width: 768px) {
+            .cartMain {
+            flex-direction: column;
+            width: 100%;
+            }
+
+            .cartItemList, .totalCost {
+            width: 100%;
+            margin: 10px 0;
+            }
+
+            .item {
+            flex-direction: column;
+            height: auto;
+            }
+
+            .image, img {
+            width: 100%;
+            height: auto;
+            }
+
+            .btn a {
+            margin: 10px 0;
+            }
+
+            .footer {
+            flex-direction: column;
+            text-align: center;
+            }
+
+            .footer-left, .footer-right {
+            flex-direction: row;
+            justify-content: center;
+            margin: 5px 0;
+            }
+        }
     </style>
 </head>
 

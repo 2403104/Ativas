@@ -57,6 +57,57 @@
             font-weight: 500;
             margin-left: 20px;
         }
+        @media (max-width: 768px) {
+            .allProductContainer {
+            width: 100vw;
+            margin-top: 10px;
+            }
+
+            .item {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            }
+
+            .img, .productSpecifications, .amount {
+            width: 100%;
+            text-align: center;
+            }
+
+            .img img {
+            margin: 0;
+            width: 80%;
+            }
+
+            .ratings, p {
+            margin-left: 0;
+            font-size: 1rem;
+            }
+
+            .ratings {
+            margin: 10px auto;
+            }
+
+            .productSpecifications p {
+            font-size: 1rem;
+            }
+
+            .amount {
+            margin-top: 20px;
+            }
+
+            .amount strong {
+            font-size: 1.5rem;
+            }
+
+            .amount p {
+            font-size: 1rem;
+            }
+
+            .amount strong:nth-child(2) {
+            font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
