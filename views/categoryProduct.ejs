@@ -14,23 +14,51 @@
             margin-bottom: 20px; 
         }
         .singleCard {
+            width: 15%;
             flex: 1 1 24%;
             margin: 10px;
-            padding: 10px;
             color: white; 
             font-size: 16px; 
             box-sizing: border-box;
             align-items: center;
         }
         .singleCard img {
-            
             padding: 10px;
-            width: 80%;
-            margin: auto;
+            width: 50%;
+            margin: 0 auto;
+            display: block;
             border-radius: 15px;
+            object-fit: contain;
         }
         .singleCard:hover {
             box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+        }
+        .ratings {
+            width: 50px;
+            height: 20px;
+            margin-top: 10px;
+            font-size: 1.0rem;
+            font-weight: 500;
+            margin-left: 20px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding-top: 1px;
+            border-radius: 3px;
+        }
+        .like {
+            width: 30px;
+            height: 30px;
+            margin-left: 92%;
+            margin-top: 8px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 6px;
+            z-index: 10;
+            border: none;
+        }
+        #heartIcon{
+            font-size: 22px;
         }
     </style>
 </head>
@@ -39,6 +67,9 @@
         <div class="fourItemBox">
             <% for (let j = i; j < i + 3 && j < categoryProduct.length; j++) { %>
                 <div class="singleCard" onclick="goToDetails('<%= categoryProduct[j].name %>', '<%= categoryProduct[j].category %>')">
+                    
+                    <div class="like" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i style="color: <%= wishlistProducts.includes(categoryProduct[j]._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;" class="fa-solid fa-heart" id="heartIcon"></i></div>
+                    
                     <img src="<%=categoryProduct[j].images[0]%>" alt="<%=categoryProduct[j].name%>">
                     <strong style="display: block; font-size: 20px; text-align: center; color:black; margin: 10px;"><%=categoryProduct[j].name%></strong>
                     <div style="display: flex;">
@@ -81,6 +112,32 @@
         </div>
     <% } %>
     <script>
+        const heartIcon=document.querySelector('#heartIcon');
+                heartIcon.addEventListener('click',()=>{
+                    heartIcon.classList.toggle('active');
+                    
+                })
+                function addWishlist(productId,userId){
+                    fetch('/addToWishlist', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ productId, userId })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.reload();
+                        } else {
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Error:', error);
+                        alert('An error occurred while adding the product to wishlist.');
+                    });
+                }
         function goToDetails(name,category){
             window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
         }

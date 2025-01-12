@@ -18,6 +18,7 @@ exports.prodInfo = async (req, res) => {
 }
 
 exports.prodTypeInfo = async (req, res) => {
+    const wishlistProducts = req.wishlistProducts;
     const offerList = ['Discount', 'Cashback', 'Combo', 'Free Shipping', 'Buy One Get One']
 
     const brand = req.query.brand;
@@ -34,7 +35,6 @@ exports.prodTypeInfo = async (req, res) => {
             console.error(`Error decoding key "${key}":`, error);
         }
     }
-    console.log(totalQuery)
 
     if (totalQuery['4andAboveRating'] === 'true') {
         totalQuery['seller.rating'] = { $gte: 4 };
@@ -96,12 +96,11 @@ exports.prodTypeInfo = async (req, res) => {
         }
     }
 
-    console.log(totalQuery)
     const categoryProduct = await Product.find({ category })
     const allProduct = await Product.find(totalQuery)
 
 
-    return res.render('productType', { products: allProduct, offerList, categoryProduct })
+    return res.render('productType', { products: allProduct, offerList, categoryProduct,wishlistProducts ,userId: req.session.user._id})
 }
 
 exports.addWishlist = async (req, res) => {
@@ -143,3 +142,21 @@ exports.orderProduct = (req, res) => {
 // exports.wishlistProducts=(req,res)=>{
 //     return res.render('wishlistProducts')
 // }
+exports.getRandomImage=async (req,res)=>{
+    const data=await Product.find({category:'Phone'})
+    const imgList=data.map((prod)=>{
+        return prod.images[0];
+    })
+    return res.status(200).json({images:imgList})
+};
+exports.wishlistProdInfo=async(req,res)=>{
+    const wishlistIds=await Wishlist.findOne({userId:req.session.user._id});
+    const wishlistProducts=wishlistIds.wishlist;
+    const wishlist=await Promise.all(
+        wishlistProducts.map(async(item)=>{
+            const product=await Product.findOne(item.productId);
+            return product
+        })
+    )
+    return res.render('wishlistProducts',{wishlistProducts:wishlist})
+}

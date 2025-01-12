@@ -3,22 +3,22 @@ const router=express.Router();
 
 const authController=require('./../controllers/authController')
 
-router.route('/login')
+router.route('/auth/login')
     .get(authController.login)
     .post(authController.verifyLogin)
     
-router.route('/signup')
+router.route('/auth/signup')
     .get(authController.signup)
     .post(authController.registerAccount)
 
-router.route('/logout')
+router.route('/auth/logout')
     .post(authController.logout)
 
-router.route('/forgotPassword')
+router.route('/auth/forgotPassword')
     .get(authController.fpInterface)
     .post(authController.forgotPassword)
 
-router.route('/reset-password/:token')
+router.route('/auth/reset-password/:token')
     .get(authController.rpInterface)
     .post(authController.resetPassword);
     

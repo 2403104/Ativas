@@ -11,6 +11,10 @@ router.route('/addToWishlist')
     .post(productController.addWishlist)
 router.route('/orderProduct')
     .get(productController.orderProduct)
-// router.route('/wishlistProducts')
-//     .get(productController.wishlistProducts)
+router.route('/randomImage')
+    .get(productController.getRandomImage)
+router.route('/wishlistProducts')
+    .get(productController.wishlistProdInfo)
+
+
 module.exports=router;

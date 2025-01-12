@@ -42,50 +42,38 @@ app.use(session({
     }
 }))
 app.use(populateCardProduct)
-const calculateDiscountedPercentage = (price) => {
-    if (price.originalPrice > 0) {
-        return ((price.originalPrice - price.discountedPrice) / price.originalPrice) * 100;
-    }
-    return 0;
-};
+// const calculateDiscountedPercentage = (price) => {
+//     if (price.originalPrice > 0) {
+//         return ((price.originalPrice - price.discountedPrice) / price.originalPrice) * 100;
+//     }
+//     return 0;
+// };
 
-const saveDiscountedPercentageMiddleware = async (req, res, next) => {
-    try {
-        const products = await Product.find({brand:'Samsung'}); 
+// const saveDiscountedPercentageMiddleware = async (req, res, next) => {
+//     try {
+//         const products = await Product.find({brand:'Samsung'}); 
         
-        for (let product of products) {
-            if (product.price && product.price.discountedPrice && product.price.originalPrice) {
-                const discountedPercentage = calculateDiscountedPercentage(product.price);
-                product.price.discountPercentage= Math.round(discountedPercentage);
-                await product.save(); 
-            }
-        }
+//         for (let product of products) {
+//             if (product.price && product.price.discountedPrice && product.price.originalPrice) {
+//                 const discountedPercentage = calculateDiscountedPercentage(product.price);
+//                 product.price.discountPercentage= Math.round(discountedPercentage);
+//                 await product.save(); 
+//             }
+//         }
 
-        next(); 
-    } catch (error) {
-        console.error("Error saving discounted percentage:", error);
-        res.status(500).send("Internal Server Error");
-    }
-};
+//         next(); 
+//     } catch (error) {
+//         console.error("Error saving discounted percentage:", error);
+//         res.status(500).send("Internal Server Error");
+//     }
+// };
 // app.use(saveDiscountedPercentageMiddleware);
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('/wishlistProducts',async(req,res)=>{
-    const wishlistIds=await Wishlist.findOne({userId:req.session.user._id});
-    const wishlistProducts=wishlistIds.wishlist;
-    const wishlist=await Promise.all(
-        wishlistProducts.map(async(item)=>{
-            const product=await Product.findOne(item.productId);
-            return product
-        })
-    )
-    return res.render('wishlistProducts',{wishlistProducts:wishlist})
-})
-app.use('/auth', authRouter)
-app.use(authenticatedMiddleware);
-app.use('/login', ativasHomeRouter)
-app.use('/',productRouter)
-app.use('/', cartRouter)
-app.use('/', suggestionMiddleware, searchRouter)
+app.use('/',authRouter,authenticatedMiddleware,ativasHomeRouter,productRouter,cartRouter,
+    suggestionMiddleware,searchRouter
+)
+
+
 
 module.exports = app;

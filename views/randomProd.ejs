@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .randomImage{
+            width: 40%;
+            margin-left: 6vw;
+            display: flex;
+            justify-content: center;
+            border: 1px solid gray;
+        }
+        .randomImage img{
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="randomImage">
+        <img id="randomProdImage" src="" alt="Random Product" style="width: 30vw;">
+    </div>
+
+    <script>
+        fetch('/randomImage', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            const images = data.images;
+            let currentIndex = 0;
+
+            function changeImage() {
+                const imgElement = document.getElementById('randomProdImage');
+                imgElement.src = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            setInterval(changeImage, 1000);
+            changeImage();
+        })
+        .catch(error => {
+            console.error('Error fetching images:', error);
+        });
+    </script>
+</body>
+</html>
