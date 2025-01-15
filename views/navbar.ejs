@@ -15,17 +15,21 @@
 
         .navbar {
             background-color: rgb(74, 74, 255);
-            width: 100vw;
+            width: 100%;
             height: 60px;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .content {
-            width: 80%;
+            width: 100%;
             height: 100%;
-            margin: auto;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .logo {
@@ -38,14 +42,14 @@
             display: flex;
             align-items: center;
             position: relative;
+            width: 50%;
         }
 
         .mainInput {
-            width: 400px;
+            width: 100%;
             height: 30px;
             border: none;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
+            border-radius: 5px;
             padding-left: 10px;
         }
 
@@ -53,18 +57,6 @@
             outline: none;
         }
 
-        .searchBtn {
-            width: 70px;
-            height: 32px;
-            background-color: red;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            margin-left: -1px;
-        }
 
         .becomeSeller {
             color: white;
@@ -76,7 +68,7 @@
             align-items: center;
         }
 
-        .navbar-section>div {
+        .navbar-section > div {
             margin-left: 20px;
             cursor: pointer;
             color: white;
@@ -169,32 +161,38 @@
         .suggestions li:hover {
             background-color: #f0f0f0;
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 400px) {
             .content {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 0;
             }
 
             .logo {
                 font-size: 28px;
                 margin-bottom: 10px;
+                text-align: center;
             }
 
             .search {
                 width: 100%;
+                margin-bottom: 10px;
+                justify-content: space-between;
             }
 
             .mainInput {
-                width: calc(100% - 70px);
+                width: calc(100% - 90px);
+                margin-right: 10px;
             }
 
             .navbar-section {
                 width: 100%;
                 justify-content: space-between;
-                margin-top: 10px;
+                flex-wrap: wrap;
             }
 
-            .navbar-section>div {
+            .navbar-section > div {
                 margin-left: 0;
                 margin-right: 10px;
             }
@@ -211,19 +209,16 @@
             }
 
             .mainInput {
-                width: calc(100% - 60px);
+                width: calc(100% - 150px);
             }
 
-            .searchBtn {
-                width: 60px;
-            }
 
             .navbar-section {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            .navbar-section>div {
+            .navbar-section > div {
                 margin-bottom: 10px;
             }
         }
@@ -240,7 +235,6 @@
                     <input type="text" id="liveInput" placeholder="Search for products, brands and more" name="search"
                         class="mainInput">
                     <ul id="suggestions-list" class="suggestions"></ul>
-                    <button class="searchBtn">Search</button>
                 </div>
                 <div class="navbar-section">
                     <div class="becomeSeller">
@@ -356,10 +350,8 @@
                         liveInput.value = item.name || '';
                         suggestionsList.style.display = 'none';
                         const queryParams = new URLSearchParams();
-                        // if (item.name) queryParams.append('name', item.name);
                         if (item.category) queryParams.append('category', item.category);
                         if (item.brand) queryParams.append('brand', item.brand);
-                        console.log(queryParams)
                         window.location.href = `/productType/?${queryParams.toString()}`;
                     });
 

@@ -1,3 +1,55 @@
+// let activity = [];
+
+//                 document.querySelectorAll('button.cart').forEach((button) => {
+//                     button.addEventListener('click', function () {
+//                         activity.push({
+//                             productId: this.id,
+//                             timeStamp: new Date().toLocaleString()
+//                         })
+//                         sendActivityToServer();
+//                     });
+//                 });
+//                 document.querySelectorAll('.like').forEach((likedItem) => {
+//                     likedItem.addEventListener('click', function () {
+//                         activity.push({
+//                             productId: this.id,
+//                             timeStamp: new Date().toLocaleString()
+//                         })
+//                         sendActivityToServer();
+//                     });
+//                 });
+
+//                 function sendActivityToServer() {
+//                     fetch('/user/recentActivity', {
+//                         method: 'POST',
+//                         headers: {
+//                             'Content-Type': 'application/json'
+//                         },
+//                         body: JSON.stringify({ activity })
+//                     })
+//                         .then(response => response.json())
+//                         .then(data => {
+//                             console.log('Activity sent successfully:', data);
+//                             activity = [];
+//                         })
+//                         .catch(error => {
+//                             console.error('Error sending activity data:', error);
+//                         });
+//                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,68 +155,74 @@
         #heartIcon.active {
             color: red;
         }
+
         @media (max-width: 768px) {
             .container {
-            flex-direction: column;
-            align-items: center;
-            margin-left: 0;
-            width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                width: 100%;
             }
 
             .product {
-            grid-template-columns: 1fr;
-            grid-gap: 10px;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
             }
 
-            .image, .productContent {
-            width: 100%;
-            height: auto;
+            .image,
+            .productContent {
+                width: 100%;
+                height: auto;
             }
 
-            .cart, .buy {
-            width: 80%;
-            height: 40px;
-            font-size: 14px;
+            .cart,
+            .buy {
+                width: 80%;
+                height: 40px;
+                font-size: 14px;
             }
 
             .like {
-            margin-left: auto;
-            margin-right: 10px;
+                margin-left: auto;
+                margin-right: 10px;
             }
 
             p {
-            font-size: 1.2rem;
-            margin-left: 10px;
+                font-size: 1.2rem;
+                margin-left: 10px;
             }
 
             .ratings {
-            width: auto;
-            height: auto;
-            font-size: 0.9rem;
-            margin-left: 10px;
-            padding: 2px 5px;
+                width: auto;
+                height: auto;
+                font-size: 0.9rem;
+                margin-left: 10px;
+                padding: 2px 5px;
             }
 
-            .productSpecifications, .paymentOptions {
-            flex-direction: column;
-            width: 100%;
+            .productSpecifications,
+            .paymentOptions {
+                flex-direction: column;
+                width: 100%;
             }
 
             .specifications {
-            flex-direction: column;
+                flex-direction: column;
             }
 
-            .specificationOptions, .paymentOptions {
-            margin-left: 0;
+            .specificationOptions,
+            .paymentOptions {
+                margin-left: 0;
             }
 
             .features div {
-            flex-direction: column;
-            align-items: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .features strong, .features p {
-            margin-left: 0;
+            .features strong,
+            .features p {
+                margin-left: 0;
             }
         }
     </style>
@@ -175,15 +233,17 @@
     <%-include('navbar')%>
         <div class="container">
             <div class="image">
-                <div class="like" id="<%=product._id%>" onclick="addWishlist('<%=product._id%>','<%=userId%>')"><i style="color: <%= wishlistProducts.includes(product._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;" class="fa-solid fa-heart" id="heartIcon"></i></div>
+                <div class="like" id="<%=product._id%>" onclick="addWishlist('<%=product._id%>','<%=userId%>')"><i
+                        style="color: <%= wishlistProducts.includes(product._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;"
+                        class="fa-solid fa-heart" id="heartIcon"></i></div>
                 <img src="<%=product.images[0]%>" alt="<%=product.name%>"
                     style="width: 100%; height: 100%; object-fit: contain; padding: 30px;" />
 
                 <div style="display: flex; justify-content: space-evenly; margin-top: 10px;">
-                    <button class="cart" id="<%=product._id%>" onclick="addToCart('<%=product._id%>')" style="background-color: orange;"><i
-                            class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
-                    <button class="buy" id="<%=product._id%>" onclick="buyNow()" style="background-color: rgb(255, 75, 10);"><i
-                            class="fa-solid fa-bolt"></i> BUY NOW</button>
+                    <button class="cart" id="<%=product._id%>" onclick="addToCart('<%=product._id%>')"
+                        style="background-color: orange;"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    <button class="buy" id="<%=product._id%>" onclick="buyNow()"
+                        style="background-color: rgb(255, 75, 10);"><i class="fa-solid fa-bolt"></i> BUY NOW</button>
                 </div>
             </div>
             <div class="productContent">
@@ -284,8 +344,8 @@
                                                                         <p
                                                                             style="display: inline; font-size: 19px;margin-left: 3px; color: gray;">
                                                                             <%=i%>
-                                                                        </p> : <strong
-                                                                            style="font-size: 19px; color: grey;">
+                                                                        </p> : <strong style="font-size: 19px; color: grey;">
+                                                                            
                                                                             <%=product.specifications[i]%>
                                                                         </strong>
                                                                     </strong>
@@ -392,53 +452,65 @@
                                                         <%=product.importantNotes%>
                                                     </p>
                                                 </div>
-                                                
+
                                                 <div class="reviews" id="review-container">
-                                                    <div style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
-                                                        <strong style="font-size: 20px; color: green;">Reviews and Ratings</strong>
-                                                        <% reviews.slice(0, 3).forEach(review => { %>
+                                                    <div
+                                                        style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
+                                                        <strong style="font-size: 20px; color: green;">Reviews and
+                                                            Ratings</strong>
+                                                        <% reviews.slice(0, 3).forEach(review=> { %>
                                                             <div style="display: flex; align-items: center;">
                                                                 <div class="ratings">
-                                                                    <%= review.rating %> <i class="fa-solid fa-star" style="font-size: 14px;"></i>
+                                                                    <%= review.rating %> <i class="fa-solid fa-star"
+                                                                            style="font-size: 14px;"></i>
                                                                 </div>
-                                                                <% if (review.rating === 1) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Poor</strong>
-                                                                <% } else if (review.rating === 2) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Fair</strong>
-                                                                <% } else if (review.rating === 3) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Good</strong>
-                                                                <% } else if (review.rating === 4) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Very Good</strong>
-                                                                <% } else if (review.rating === 5) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Excellent</strong>
-                                                                <% } %>
+                                                                <% if (review.rating===1) { %>
+                                                                    <strong
+                                                                        style="margin-top: 10px; margin-left: 10px;">Poor</strong>
+                                                                    <% } else if (review.rating===2) { %>
+                                                                        <strong
+                                                                            style="margin-top: 10px; margin-left: 10px;">Fair</strong>
+                                                                        <% } else if (review.rating===3) { %>
+                                                                            <strong
+                                                                                style="margin-top: 10px; margin-left: 10px;">Good</strong>
+                                                                            <% } else if (review.rating===4) { %>
+                                                                                <strong
+                                                                                    style="margin-top: 10px; margin-left: 10px;">Very
+                                                                                    Good</strong>
+                                                                                <% } else if (review.rating===5) { %>
+                                                                                    <strong
+                                                                                        style="margin-top: 10px; margin-left: 10px;">Excellent</strong>
+                                                                                    <% } %>
                                                             </div>
                                                             <div style="margin-top: 10px;">
-                                                                <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                                                <p
+                                                                    style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
                                                                     <%= review.description %>
                                                                 </p>
                                                             </div>
                                                             <hr>
-                                                        <% }) %>
-                                                
-                                                        <% if (reviews.length > 3) { %>
-                                                            <div style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
-                                                                <button id="toggle-reviews-btn" onclick="toggleReviews()"
-                                                                        style="background-color: transparent; color: blue; font-size: 20px; border: none;">
-                                                                    Show All
-                                                                </button>
-                                                            </div>
-                                                        <% } %>
+                                                            <% }) %>
+
+                                                                <% if (reviews.length> 3) { %>
+                                                                    <div
+                                                                        style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
+                                                                        <button id="toggle-reviews-btn"
+                                                                            onclick="toggleReviews()"
+                                                                            style="background-color: transparent; color: blue; font-size: 20px; border: none;">
+                                                                            Show All
+                                                                        </button>
+                                                                    </div>
+                                                                    <% } %>
                                                     </div>
                                                 </div>
-                                                
+
 
 
             </div>
 
 
             <script>
-                function addToCart(productId){
+                function addToCart(productId) {
                     fetch('/addToCart', {
                         method: 'POST',
                         headers: {
@@ -446,25 +518,26 @@
                         },
                         body: JSON.stringify({ productId })
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            window.location.reload();
-                        } else {
-                            alert(data.message);
-                        }
-                    })
-                    .catch(error => {
-                        console.log('Error:', error);
-                        alert('An error occurred while adding the product to cart.');
-                    });
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                window.location.reload();
+                            } else {
+                                alert(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.log('Error:', error);
+                            alert('An error occurred while adding the product to cart.');
+                        });
                 }
-                const heartIcon=document.querySelector('#heartIcon');
-                heartIcon.addEventListener('click',()=>{
+
+                const heartIcon = document.querySelector('#heartIcon');
+                heartIcon.addEventListener('click', () => {
                     heartIcon.classList.toggle('active');
-                    
-                })
-                function addWishlist(productId,userId){
+                });
+
+                function addWishlist(productId, userId) {
                     fetch('/addToWishlist', {
                         method: 'POST',
                         headers: {
@@ -472,26 +545,27 @@
                         },
                         body: JSON.stringify({ productId, userId })
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            window.location.reload();
-                        } else {
-                            alert(data.message);
-                        }
-                    })
-                    .catch(error => {
-                        console.log('Error:', error);
-                        alert('An error occurred while adding the product to wishlist.');
-                    });
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                window.location.reload();
+                            } else {
+                                alert(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.log('Error:', error);
+                            alert('An error occurred while adding the product to wishlist.');
+                        });
                 }
-                let allReviews = <%- JSON.stringify(reviews) %>;
+
+                let allReviews = <% - JSON.stringify(reviews) %>;
                 let showingAll = false;
-            
+
                 function toggleReviews() {
                     const reviewContainer = document.getElementById("review-container");
                     const toggleButton = document.getElementById("toggle-reviews-btn");
-            
+
                     if (!showingAll) {
                         reviewContainer.innerHTML = `
                             <div style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
@@ -503,13 +577,13 @@
                                         ${review.rating} <i class="fa-solid fa-star" style="font-size: 14px;"></i>
                                         </div>
                                         <strong style=" margin-left: 10px; color:black; margin-top:10px;">${getRatingText(review.rating)}</strong>
-                                        </div>
-                                    <div style="margin-top: 10px;">
-                                        <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
-                                            ${review.description}
-                                        </p>
                                     </div>
-                                    <hr>
+                                <div style="margin-top: 10px;">
+                                    <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                        ${review.description}
+                                    </p>
+                                </div>
+                                <hr>
                                 </div>
                             `).join('')}
                             </div>
@@ -545,10 +619,10 @@
                             </div>
                         `;
                     }
-            
+
                     showingAll = !showingAll;
                 }
-            
+
                 function getRatingText(rating) {
                     switch (rating) {
                         case 1: return "Poor";
@@ -559,48 +633,83 @@
                         default: return "";
                     }
                 }
-                let activity = [];
 
-                document.querySelectorAll('button.cart').forEach((button) => {
-                    button.addEventListener('click', function () {
-                        activity.push({
-                            productId: this.id,
-                            timeStamp: new Date().toLocaleString()
-                        })
-                        sendActivityToServer();
-                    });
-                });
-                document.querySelectorAll('.like').forEach((likedItem) => {
-                    likedItem.addEventListener('click', function () {
-                        activity.push({
-                            productId: this.id,
-                            timeStamp: new Date().toLocaleString()
-                        })
-                        sendActivityToServer();
-                    });
-                });
-
-                function sendActivityToServer() {
-                    fetch('/user/recentActivity', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ activity })
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Activity sent successfully:', data);
-                            activity = [];
-                        })
-                        .catch(error => {
-                            console.error('Error sending activity data:', error);
-                        });
-                }
-
+                
 
             </script>
-            
+
+
 </body>
 
 </html>
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .image,
+    .productContent {
+        width: 100%;
+        height: auto;
+    }
+
+    .cart,
+    .buy {
+        width: 80%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .like {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+
+    .ratings {
+        width: auto;
+        height: auto;
+        font-size: 0.9rem;
+        margin-left: 10px;
+        padding: 2px 5px;
+    }
+
+    .productSpecifications,
+    .paymentOptions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .specifications {
+        flex-direction: column;
+    }
+
+    .specificationOptions,
+    .paymentOptions {
+        margin-left: 0;
+    }
+
+    .features div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .features strong,
+    .features p {
+        margin-left: 0;
+    }
+}

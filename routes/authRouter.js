@@ -6,7 +6,7 @@ const authController=require('./../controllers/authController')
 router.route('/auth/login')
     .get(authController.login)
     .post(authController.verifyLogin)
-    
+
 router.route('/auth/signup')
     .get(authController.signup)
     .post(authController.registerAccount)

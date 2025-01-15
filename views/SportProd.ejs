@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .mainContainer {
+            width: 30vw;
+            margin: 20px auto;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .innerGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .smallDiv {
+            height: 250px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .smallDiv img {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h2 style="text-align: center;">Fullfull Your Sports Requirements</h2>
+        <% SportProd.forEach((prod, index)=> { %>
+            <% if (index % 2===0) { %>
+                <div class="innerGrid">
+                    <% } %>
+                        <div style="width: 100%;">
+                            <div class="smallDiv" onclick="goToLocket('<%=prod.category%>','<%=prod.brand%>')">
+                                <img src="<%= prod.images[0] %>" alt="Locket">
+                            </div>
+                            <p style="text-align: center;">
+                                <%= prod.brand %>
+                            </p>
+                        </div>
+                        <% if (index % 2===1 || index===LocketProd.length - 1) { %>
+                </div>
+                <% } %>
+                    <% }) %>
+    </div>
+    <script>
+        function goToLocket(category, brand) {
+            window.location.href = `/productType?category=${encodeURIComponent(category)}&brand=${encodeURIComponent(brand)}`;
+        }
+    </script>
+</body>
+
+</html>

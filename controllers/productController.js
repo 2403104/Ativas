@@ -11,10 +11,10 @@ const ObjectId = mongoose.Types.ObjectId;
 exports.prodInfo = async (req, res) => {
     const name = req.query.name;
     const category = req.query.category;
-    const findedProduct = await Product.findOne({ name, category });
+    const findedProduct = await Product.findOne(req.query);
     const reviews = await Review.find({ productId: new ObjectId('6777ee3e9f6eddc9566583f2') })
     const wishlistProducts = req.wishlistProducts;
-    return res.render('product', { product: findedProduct, reviews, userId: req.session.user._id, wishlistProducts })
+    return res.render('product', { product:findedProduct, reviews:reviews, userId: req.session.user._id, wishlistProducts })
 }
 
 exports.prodTypeInfo = async (req, res) => {
@@ -139,9 +139,6 @@ exports.addWishlist = async (req, res) => {
 exports.orderProduct = (req, res) => {
     return res.render('order')
 }
-// exports.wishlistProducts=(req,res)=>{
-//     return res.render('wishlistProducts')
-// }
 exports.getRandomImage=async (req,res)=>{
     const data=await Product.find({category:'Phone'})
     const imgList=data.map((prod)=>{

@@ -4,40 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Produc</title>
+    <title>Phone Product</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .containerMainPhone {
-            width: 95%;
-            height: 400px;
-            margin: 20px 50px 20px 35px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             gap: 20px;
             flex-wrap: wrap;
+            padding: 10px;
         }
 
         .cardPhone {
-            width: 11%;
+            width: 22%;
             height: 80%;
             text-align: center;
             background-color: white;
-            border-radius: 8px;
             padding: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .cardPhone .imgPhone {
             width: 100%;
-            height: 100%   ;
+            height: 200px;
             border-radius: 8px;
-            object-fit: cover;
+            object-fit: contain;
         }
 
-        .cardPhone:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        .img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         p {
@@ -48,26 +55,28 @@
         }
 
         h1 {
-            margin-left: 20px;
             font-size: 24px;
             color: #333;
             text-align: center;
-        }
-        @media (max-width: 1200px) {
-            .cardPhone {
-                width: 22%;
-            }
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             .cardPhone {
                 width: 30%;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .cardPhone {
                 width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cardPhone {
+                width: 60%;
             }
         }
 
@@ -85,53 +94,53 @@
         <div class="cardPhone" onclick="redirectToCategoryPhone('Samsung')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/q/k/h/-original-imagzm8qmr7qxfhq.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>Samsung </strong></p>
+                alt="Samsung">
+            <p><strong>Samsung</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Redmi')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/f/w/-original-imags37hy7uz2usv.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>REDMI </strong></p>
+                alt="Redmi">
+            <p><strong>Redmi</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Realme')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/f/k/x/narzo-n61-narzo-n61-realme-original-imah4ffg7bhkzbqv.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>REALME </strong></p>
+                alt="Realme">
+            <p><strong>Realme</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Motorolla')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>MOTOROLLA </strong></p>
+                alt="Motorolla">
+            <p><strong>Motorolla</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Infinix')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/t/s/a/-original-imah4dyjxthbhygh.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>INFINIX </strong></p>
+                alt="Infinix">
+            <p><strong>Infinix</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Vivo')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/w/3/4/-original-imahyytukhkky5ew.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>VIVO </strong></p>
+                alt="Vivo">
+            <p><strong>Vivo</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('OnePlus')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/p/m/o/-original-imah5wxz4y4qfgdq.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>ONEPLUS </strong></p>
+                alt="OnePlus">
+            <p><strong>OnePlus</strong></p>
         </div>
         <div class="cardPhone" onclick="redirectToCategoryPhone('Iphone')">
             <img class="imgPhone"
                 src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/q/n/s/-original-imah4jyfrgsbebg9.jpeg?q=70"
-            style="object-fit: contain;"    alt="Poco Phones">
-            <p><strong>IPHONE </strong></p>
+                alt="Iphone">
+            <p><strong>Iphone</strong></p>
         </div>
-
     </div>
+
     <script>
         function redirectToCategoryPhone(phoneBrand) {
             window.location.href = `/productType?brand=${encodeURIComponent(phoneBrand)}&category=Phone`;

@@ -57,55 +57,59 @@
             font-weight: 500;
             margin-left: 20px;
         }
+
         @media (max-width: 768px) {
             .allProductContainer {
-            width: 100vw;
-            margin-top: 10px;
+                width: 100vw;
+                margin-top: 10px;
             }
 
             .item {
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
             }
 
-            .img, .productSpecifications, .amount {
-            width: 100%;
-            text-align: center;
+            .img,
+            .productSpecifications,
+            .amount {
+                width: 100%;
+                text-align: center;
             }
 
             .img img {
-            margin: 0;
-            width: 80%;
+                margin: 0;
+                width: 80%;
             }
 
-            .ratings, p {
-            margin-left: 0;
-            font-size: 1rem;
+            .ratings,
+            p {
+                margin-left: 0;
+                font-size: 1rem;
             }
 
             .ratings {
-            margin: 10px auto;
+                margin: 10px auto;
             }
 
             .productSpecifications p {
-            font-size: 1rem;
+                font-size: 1rem;
             }
 
             .amount {
-            margin-top: 20px;
+                margin-top: 20px;
             }
 
             .amount strong {
-            font-size: 1.5rem;
+                font-size: 1.5rem;
             }
 
             .amount p {
-            font-size: 1rem;
+                font-size: 1rem;
             }
 
             .amount strong:nth-child(2) {
-            font-size: 1rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -117,7 +121,8 @@
             <%-include('sidebar')%>
                 <div class="allProductContainer">
                     <% products.forEach((product)=>{%>
-                        <div class="item" onclick="goToProduct('<%=product.name%>','<%=product.category%>')">
+                        <div class="item" id="<%=product._id%>"
+                            onclick="goToProduct('<%=product.name%>','<%=product.category%>')">
                             <div class="img">
                                 <img src="<%=product.images[0]%>" alt="<%=product.name%>" width="180px"
                                     style="border-radius: 15px; margin-left:40px; margin-top: 30px;">
@@ -200,11 +205,24 @@
         </div>
         <%-include('categoryProduct')%>
             <%-include('footer')%>
-            <script>
-                function goToProduct(name,category){
-                    window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
-                }
-            </script>
+                <script>
+                    function goToProduct(name, category) {
+                        window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                    }
+
+                    document.querySelectorAll('.item').forEach((item) => {
+                        item.addEventListener('click', function () {
+                            activity.push({
+                                productId: this.id,
+                                timeStamp: new Date().toLocaleString()
+                            })
+                            sendActivityToServer();
+                        });
+                    });
+
+
+
+                </script>
 </body>
 
 </html>

@@ -87,10 +87,10 @@
     <% for (let i=0; i < categoryProduct.length; i +=3) { %>
         <div class="fourItemBox">
             <% for (let j=i; j < i + 3 && j < categoryProduct.length; j++) { %>
-                <div class="singleCard"
+                <div class="singleCard" id="<%=categoryProduct[j]._id%>"
                     onclick="goToDetails('<%= categoryProduct[j].name %>', '<%= categoryProduct[j].category %>')">
 
-                    <div class="like" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i
+                    <div class="like" id="<%=categoryProduct[j]._id%>" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i
                             style="color: <%= wishlistProducts.includes(categoryProduct[j]._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;"
                             class="fa-solid fa-heart" id="heartIcon"></i></div>
 
@@ -171,6 +171,44 @@
                 }
                 function goToDetails(name, category) {
                     window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                }
+                let activity = [];
+
+                document.querySelectorAll('.singleCard').forEach((item) => {
+                    item.addEventListener('click', function () {
+                        activity.push({
+                            productId: this.id,
+                            timeStamp: new Date().toLocaleString()
+                        })
+                        sendActivityToServer();
+                    });
+                });
+                document.querySelectorAll('.like').forEach((likedItem) => {
+                    likedItem.addEventListener('click', function () {
+                        activity.push({
+                            productId: this.id,
+                            timeStamp: new Date().toLocaleString()
+                        })
+                        sendActivityToServer();
+                    });
+                });
+
+                function sendActivityToServer() {
+                    fetch('/user/recentActivity', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ activity })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Activity sent successfully:', data);
+                            activity = [];
+                        })
+                        .catch(error => {
+                            console.error('Error sending activity data:', error);
+                        });
                 }
             </script>
 </body>

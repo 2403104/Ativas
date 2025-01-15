@@ -1,4 +1,4 @@
-const {Product}=require('./../models/productModel');
+const { Product } = require('./../models/productModel');
 module.exports = async (req, res, next) => {
     const { input } = req.body;
 
@@ -8,7 +8,7 @@ module.exports = async (req, res, next) => {
     }
 
     const escapeRegex = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const normalizedInput = input.trim().toLowerCase(); 
+    const normalizedInput = input.trim().toLowerCase();
     const regexInput = new RegExp(escapeRegex(normalizedInput), 'i');
 
     const products = await Product.aggregate([
@@ -32,7 +32,7 @@ module.exports = async (req, res, next) => {
             $sort: { exactNameMatch: -1, exactBrandMatch: -1, exactCategoryMatch: -1 },
         },
         {
-            $limit: 20, 
+            $limit: 20,
         },
     ]);
 

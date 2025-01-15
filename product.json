@@ -1,962 +1,1691 @@
 [
     {
-        "name": "Samsung Galaxy Z Fold 5",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Foldable smartphone with dual displays and advanced multitasking capabilities.",
+        "name": "Sony WF-1000XM5",
+        "category": "Bluetooth Earbuds",
+        "brand": "Sony",
+        "description": "Premium noise-canceling earbuds with exceptional sound clarity and adaptive sound control.",
         "price": {
-            "originalPrice": 180000,
-            "discountedPrice": 170000,
-            "discountPercentage": 5.56
+            "originalPrice": 29999,
+            "discountedPrice": 24999,
+            "discountPercentage": 17
+        },
+        "specifications": {
+            "noiseCancellation": "Yes",
+            "batteryLife": "8 hours (earbuds), 24 hours (with case)",
+            "waterResistance": "IPX4",
+            "connectivity": "Bluetooth 5.3",
+            "fastCharging": "Yes (5 mins for 1 hour playback)"
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 14166,
-                        "tenure": "12 months"
+                        "amount": 2500,
+                        "tenure": "10 months"
                     },
                     {
-                        "period": "per month",
-                        "amount": 85000,
-                        "tenure": "2 months"
+                        "period": "per year",
+                        "amount": 12500,
+                        "tenure": "2 years"
                     }
-                ]
+                ],
+                "downPayment": 0
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
-        "specifications": {
-            "screenSize": "7.6 inches",
-            "processor": "Snapdragon 8 Gen 2",
-            "ram": "12GB",
-            "batteryCapacity": "4400mAh",
-            "camera": "50MP + 12MP + 10MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "512GB",
-            "color": "Beige",
-            "fastCharging": true
-        },
-        "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.9,
-            "totalRatings": 3000,
-            "reviews": 2200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Flat ₹10,000 cashback on selected bank cards.",
-                "validTill": "2025-04-30"
-            }
-        ],
         "features": [
             {
-                "featureName": "Display",
-                "featureDescription": "Dynamic AMOLED 2X, 120Hz refresh rate."
+                "featureName": "Voice Assistant",
+                "featureDescription": "Supports Alexa, Google Assistant, and Siri."
             },
             {
-                "featureName": "Design",
-                "featureDescription": "Premium foldable design with Gorilla Glass Victus 2."
+                "featureName": "Gaming Mode",
+                "featureDescription": "Low-latency mode for seamless gaming experience."
             }
         ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/n/j/-original-imagztmgmmshbqga.jpeg?q=70",
-            "https://example.com/samsung-galaxy-zfold5-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Limited stock available.",
-        "highlights": {
-            "Foldable Design": "Ultimate multitasking capabilities.",
-            "Processor": "Snapdragon 8 Gen 2",
-            "Display": "7.6-inch Dynamic AMOLED 2X"
-        }
-    },
-    {
-        "name": "Samsung Galaxy S23 Ultra",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Flagship smartphone with a 200MP camera and powerful performance.",
-        "price": {
-            "originalPrice": 120000,
-            "discountedPrice": 115000,
-            "discountPercentage": 4.17
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 9583,
-                        "tenure": "12 months"
-                    }
-                ]
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "screenSize": "6.8 inches",
-            "processor": "Snapdragon 8 Gen 2",
-            "ram": "12GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "200MP + 12MP + 10MP + 10MP Quad Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "512GB",
-            "color": "Green",
-            "fastCharging": true
-        },
+        "warranty": "1 Year",
+        "returnPolicy": "7 Days Return Policy",
         "seller": {
-            "name": "Samsung Premium Partner",
+            "name": "Sony Official Store",
             "rating": 4.8,
-            "totalRatings": 5000,
-            "reviews": 4200
+            "totalRatings": 1500,
+            "reviews": 600
         },
         "availableOffers": [
             {
-                "offerType": "Cashback",
-                "description": "Flat ₹8,000 cashback on selected bank cards.",
-                "validTill": "2025-05-15"
-            },
-            {
-                "offerType": "Exchange Offer",
-                "description": "Up to ₹20,000 off on exchange of old device.",
-                "validTill": "2025-05-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Camera",
-                "featureDescription": "200MP main sensor for incredible photography."
-            },
-            {
-                "featureName": "Battery",
-                "featureDescription": "5000mAh with 45W fast charging support."
+                "offerType": "Bank Offer",
+                "description": "10% Instant Discount on Credit Card Transactions",
+                "validTill": "2025-01-31"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/u/a/l/-original-imagzm8qrfdmhy8z.jpeg?q=70",
-            "https://example.com/samsung-galaxy-s23ultra-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/z/4/g/wf-1000xm5-sony-original-imagtakf5q7dwhet.jpeg?q=70",
+            "url2"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days replacement policy",
-        "importantNotes": "Eligible for free screen replacement for the first 6 months.",
-        "highlights": {
-            "Camera": "200MP Quad Camera",
-            "Processor": "Snapdragon 8 Gen 2",
-            "Display": "6.8-inch Edge AMOLED 2X"
-        }
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "SAMSUNG Galaxy Z Fold6 5G (Pink, 512 GB)  (12 GB RAM)",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Foldable smartphone with dual displays and advanced multitasking capabilities.",
+        "name": "Bose QuietComfort Earbuds II",
+        "category": "Bluetooth Earbuds",
+        "brand": "Bose",
+        "description": "High-quality noise-canceling earbuds with superb sound and adjustable ANC levels.",
         "price": {
-            "originalPrice": 180000,
-            "discountedPrice": 170000,
-            "discountPercentage": 5.56
+            "originalPrice": 32999,
+            "discountedPrice": 28999,
+            "discountPercentage": 12
+        },
+        "specifications": {
+            "noiseCancellation": "Yes",
+            "batteryLife": "6 hours (earbuds), 18 hours (with case)",
+            "waterResistance": "IPX4",
+            "connectivity": "Bluetooth 5.1",
+            "fastCharging": "Yes (15 mins for 2 hours playback)"
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 14166,
-                        "tenure": "12 months"
+                        "amount": 2900,
+                        "tenure": "10 months"
                     },
                     {
-                        "period": "per month",
-                        "amount": 85000,
-                        "tenure": "2 months"
+                        "period": "per year",
+                        "amount": 14500,
+                        "tenure": "2 years"
                     }
-                ]
+                ],
+                "downPayment": 0
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
-        "specifications": {
-            "screenSize": "7.6 inches",
-            "processor": "Snapdragon 8 Gen 2",
-            "ram": "12GB",
-            "batteryCapacity": "4400mAh",
-            "camera": "50MP + 12MP + 10MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "512GB",
-            "color": "Beige",
-            "fastCharging": true
-        },
+        "warranty": "1 Year",
+        "returnPolicy": "15 Days Return Policy",
         "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.9,
-            "totalRatings": 3000,
-            "reviews": 2200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Flat ₹10,000 cashback on selected bank cards.",
-                "validTill": "2025-04-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Display",
-                "featureDescription": "Dynamic AMOLED 2X, 120Hz refresh rate."
-            },
-            {
-                "featureName": "Design",
-                "featureDescription": "Premium foldable design with Gorilla Glass Victus 2."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/u/n/-original-imah2nd5uvhcde6g.jpeg?q=70",
-            "https://example.com/samsung-galaxy-zfold5-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Limited stock available.",
-        "highlights": {
-            "Foldable Design": "Ultimate multitasking capabilities.",
-            "Processor": "Snapdragon 8 Gen 2",
-            "Display": "7.6-inch Dynamic AMOLED 2X"
-        }
-    },
-    {
-        "name": "SAMSUNG Galaxy A14 5G (Dark Red, 128 GB)  (6 GB RAM)",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Flagship smartphone with a 200MP camera and powerful performance.",
-        "price": {
-            "originalPrice": 120000,
-            "discountedPrice": 115000,
-            "discountPercentage": 4.17
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 9583,
-                        "tenure": "12 months"
-                    }
-                ]
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "screenSize": "6.8 inches",
-            "processor": "Snapdragon 8 Gen 2",
-            "ram": "12GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "200MP + 12MP + 10MP + 10MP Quad Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "512GB",
-            "color": "Green",
-            "fastCharging": true
-        },
-        "seller": {
-            "name": "Samsung Premium Partner",
-            "rating": 4.8,
-            "totalRatings": 5000,
-            "reviews": 4200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Flat ₹8,000 cashback on selected bank cards.",
-                "validTill": "2025-05-15"
-            },
-            {
-                "offerType": "Exchange Offer",
-                "description": "Up to ₹20,000 off on exchange of old device.",
-                "validTill": "2025-05-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Camera",
-                "featureDescription": "200MP main sensor for incredible photography."
-            },
-            {
-                "featureName": "Battery",
-                "featureDescription": "5000mAh with 45W fast charging support."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/y/c/-original-imah4sssdf9pgz3e.jpeg?q=70",
-            "https://example.com/samsung-galaxy-s23ultra-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days replacement policy",
-        "importantNotes": "Eligible for free screen replacement for the first 6 months.",
-        "highlights": {
-            "Camera": "200MP Quad Camera",
-            "Processor": "Snapdragon 8 Gen 2",
-            "Display": "6.8-inch Edge AMOLED 2X"
-        }
-    },
-    {
-        "name": "Samsung Galaxy Note 20 Ultra",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Premium Note series phone with S Pen and 120Hz AMOLED display.",
-        "price": {
-            "originalPrice": 105000,
-            "discountedPrice": 95000,
-            "discountPercentage": 9.52
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 7916,
-                        "tenure": "12 months"
-                    }
-                ]
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "screenSize": "6.9 inches",
-            "processor": "Snapdragon 865+",
-            "ram": "12GB",
-            "batteryCapacity": "4500mAh",
-            "camera": "108MP + 12MP + 12MP Triple Rear Camera",
-            "os": "Android 10, upgradable to 13",
-            "connectivity": "5G",
-            "internalStorage": "256GB",
-            "color": "Mystic Bronze",
-            "fastCharging": true
-        },
-        "seller": {
-            "name": "Samsung Store",
+            "name": "Bose Official Store",
             "rating": 4.7,
-            "totalRatings": 1800,
-            "reviews": 1500
+            "totalRatings": 1200,
+            "reviews": 500
+        },
+        "availableOffers": [
+            {
+                "offerType": "Cashback",
+                "description": "5% Cashback on Debit Card Payments",
+                "validTill": "2025-02-15"
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/d/p/wf-ls900-sony-original-imagjzsscezhh2hn.jpeg?q=70",
+            "url4"
+        ],
+        "availability": "In Stock",
+        "highlights": [
+            {
+                "feature": "Sound Quality",
+                "description": "Clear, crisp sound with deep bass and balanced frequencies."
+            },
+            {
+                "feature": "Noise Cancellation",
+                "description": "Active noise cancellation for immersive listening experience."
+            },
+            {
+                "feature": "Battery Life",
+                "description": "Long-lasting battery for up to 6-12 hours of continuous playtime."
+            },
+            {
+                "feature": "Comfort",
+                "description": "Ergonomically designed to fit comfortably in the ear for long listening sessions."
+            },
+            {
+                "feature": "Water Resistance",
+                "description": "Sweat and water-resistant, ideal for workouts and outdoor use."
+            },
+            {
+                "feature": "Connectivity",
+                "description": "Seamless Bluetooth connection with low latency for gaming and calls."
+            },
+            {
+                "feature": "Touch Controls",
+                "description": "Touch-sensitive controls for easy music playback and call management."
+            },
+            {
+                "feature": "Voice Assistant Integration",
+                "description": "Compatible with voice assistants like Siri, Google Assistant, or Alexa."
+            },
+            {
+                "feature": "Compact Design",
+                "description": "Small, lightweight, and portable for easy storage and travel."
+            },
+            {
+                "feature": "Microphone Quality",
+                "description": "Clear microphone for high-quality calls and voice commands."
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Voice Assistant",
+                "featureDescription": "Supports Alexa, Google Assistant, and Siri."
+            },
+            {
+                "featureName": "Gaming Mode",
+                "featureDescription": "Low-latency mode for seamless gaming experience."
+            }
+        ],
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Jabra Elite 7 Pro",
+        "category": "Bluetooth Earbuds",
+        "brand": "Jabra",
+        "description": "Compact and lightweight earbuds with adjustable noise cancellation and clear voice call technology.",
+        "price": {
+            "originalPrice": 19999,
+            "discountedPrice": 17999,
+            "discountPercentage": 10
+        },
+        "specifications": {
+            "noiseCancellation": "Yes",
+            "batteryLife": "9 hours (earbuds), 35 hours (with case)",
+            "waterResistance": "IP57",
+            "connectivity": "Bluetooth 5.2",
+            "fastCharging": "Yes (5 mins for 1 hour playback)"
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1800,
+                        "tenure": "10 months"
+                    },
+                    {
+                        "period": "per year",
+                        "amount": 9000,
+                        "tenure": "2 years"
+                    }
+                ],
+                "downPayment": 0
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "warranty": "2 Years",
+        "returnPolicy": "10 Days Return Policy",
+        "seller": {
+            "name": "Jabra Official Store",
+            "rating": 4.6,
+            "totalRatings": 900,
+            "reviews": 400
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Flat ₹5000 off on the listed price.",
+                "description": "10% Discount for First-Time Buyers",
+                "validTill": "2025-03-01"
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf.jpeg?q=70",
+            "url6"
+        ],
+        "availability": "In Stock",
+        "highlights": [
+            {
+                "feature": "Sound Quality",
+                "description": "Clear, crisp sound with deep bass and balanced frequencies."
+            },
+            {
+                "feature": "Noise Cancellation",
+                "description": "Active noise cancellation for immersive listening experience."
+            },
+            {
+                "feature": "Battery Life",
+                "description": "Long-lasting battery for up to 6-12 hours of continuous playtime."
+            },
+            {
+                "feature": "Comfort",
+                "description": "Ergonomically designed to fit comfortably in the ear for long listening sessions."
+            },
+            {
+                "feature": "Water Resistance",
+                "description": "Sweat and water-resistant, ideal for workouts and outdoor use."
+            },
+            {
+                "feature": "Connectivity",
+                "description": "Seamless Bluetooth connection with low latency for gaming and calls."
+            },
+            {
+                "feature": "Touch Controls",
+                "description": "Touch-sensitive controls for easy music playback and call management."
+            },
+            {
+                "feature": "Voice Assistant Integration",
+                "description": "Compatible with voice assistants like Siri, Google Assistant, or Alexa."
+            },
+            {
+                "feature": "Compact Design",
+                "description": "Small, lightweight, and portable for easy storage and travel."
+            },
+            {
+                "feature": "Microphone Quality",
+                "description": "Clear microphone for high-quality calls and voice commands."
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Voice Assistant",
+                "featureDescription": "Supports Alexa, Google Assistant, and Siri."
+            },
+            {
+                "featureName": "Gaming Mode",
+                "featureDescription": "Low-latency mode for seamless gaming experience."
+            }
+        ],
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Anker Soundcore Liberty Air 2 Pro",
+        "category": "Bluetooth Earbuds",
+        "brand": "Anker",
+        "description": "Affordable earbuds with hybrid ANC and customizable sound settings via the app.",
+        "price": {
+            "originalPrice": 12999,
+            "discountedPrice": 9999,
+            "discountPercentage": 23
+        },
+        "specifications": {
+            "noiseCancellation": "Yes",
+            "batteryLife": "7 hours (earbuds), 26 hours (with case)",
+            "waterResistance": "IPX5",
+            "connectivity": "Bluetooth 5.0",
+            "fastCharging": "Yes (10 mins for 2 hours playback)"
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1000,
+                        "tenure": "10 months"
+                    },
+                    {
+                        "period": "per year",
+                        "amount": 5000,
+                        "tenure": "2 years"
+                    }
+                ],
+                "downPayment": 0
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "warranty": "1 Year",
+        "returnPolicy": "15 Days Return Policy",
+        "seller": {
+            "name": "Anker Official Store",
+            "rating": 4.5,
+            "totalRatings": 700,
+            "reviews": 300
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "5% Instant Discount with Credit Cards",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/kkh6zrk0/headphone/t/o/6/liberty-air-2-pro-soundcore-original-imafztahqgrzgsku.jpeg?q=70",
+            "url8"
+        ],
+        "availability": "In Stock",
+        "highlights": [
+            {
+                "feature": "Sound Quality",
+                "description": "Clear, crisp sound with deep bass and balanced frequencies."
+            },
+            {
+                "feature": "Noise Cancellation",
+                "description": "Active noise cancellation for immersive listening experience."
+            },
+            {
+                "feature": "Battery Life",
+                "description": "Long-lasting battery for up to 6-12 hours of continuous playtime."
+            },
+            {
+                "feature": "Comfort",
+                "description": "Ergonomically designed to fit comfortably in the ear for long listening sessions."
+            },
+            {
+                "feature": "Water Resistance",
+                "description": "Sweat and water-resistant, ideal for workouts and outdoor use."
+            },
+            {
+                "feature": "Connectivity",
+                "description": "Seamless Bluetooth connection with low latency for gaming and calls."
+            },
+            {
+                "feature": "Touch Controls",
+                "description": "Touch-sensitive controls for easy music playback and call management."
+            },
+            {
+                "feature": "Voice Assistant Integration",
+                "description": "Compatible with voice assistants like Siri, Google Assistant, or Alexa."
+            },
+            {
+                "feature": "Compact Design",
+                "description": "Small, lightweight, and portable for easy storage and travel."
+            },
+            {
+                "feature": "Microphone Quality",
+                "description": "Clear microphone for high-quality calls and voice commands."
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Voice Assistant",
+                "featureDescription": "Supports Alexa, Google Assistant, and Siri."
+            },
+            {
+                "featureName": "Gaming Mode",
+                "featureDescription": "Low-latency mode for seamless gaming experience."
+            }
+        ],
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Elite Bluetooth Earbuds",
+        "brand": "AudioMax",
+        "category": "Bluetooth Earbuds",
+        "description": "Premium quality earbuds with superior sound clarity.",
+        "price": {
+            "originalPrice": 5999,
+            "discountedPrice": 4999,
+            "discountPercentage": 16.67
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 833,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 1000
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.2",
+            "batteryLife": "36 hours",
+            "chargingTime": "1.5 hours",
+            "range": "15 meters",
+            "waterResistance": "IPX7",
+            "noiseCancellation": true,
+            "driverSize": "12mm"
+        },
+        "seller": {
+            "name": "TechWarehouse",
+            "rating": 4.5,
+            "totalRatings": 1200,
+            "reviews": 950
+        },
+        "availableOffers": [
+            {
+                "offerType": "Cashback",
+                "description": "Get 10% cashback with select credit cards.",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Voice Assistant",
+                "featureDescription": "Supports Alexa, Google Assistant, and Siri."
+            },
+            {
+                "featureName": "Gaming Mode",
+                "featureDescription": "Low-latency mode for seamless gaming experience."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/r/y/1/smash-wireless-earbuds-with-mic-13mm-drivers-playback-upto-40r-original-imah4c56chhrkrmb.jpeg?q=70",
+            "https://example.com/image2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Ensure compatibility with Bluetooth version 4.0 or higher.",
+        "highlights": {
+            "Battery Life": "36 hours",
+            "Noise Cancellation": "Active",
+            "Driver Size": "12mm"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Wireless Neckband Earphones",
+        "brand": "SoundFlex",
+        "category": "Bluetooth Earbuds",
+        "description": "Stylish neckband earphones with HD sound and extended battery life.",
+        "price": {
+            "originalPrice": 3999,
+            "discountedPrice": 2999,
+            "discountPercentage": 25
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 500,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 500
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.0",
+            "batteryLife": "20 hours",
+            "chargingTime": "1 hour",
+            "range": "10 meters",
+            "waterResistance": "IPX5",
+            "noiseCancellation": false,
+            "driverSize": "10mm"
+        },
+        "seller": {
+            "name": "AudioMart",
+            "rating": 4.2,
+            "totalRatings": 800,
+            "reviews": 600
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat ₹500 off on prepaid orders.",
+                "validTill": "2025-02-15"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Magnetic Earbuds",
+                "featureDescription": "Tangle-free magnetic design for easy storage."
+            },
+            {
+                "featureName": "Dual Pairing",
+                "featureDescription": "Connect two devices simultaneously."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/l0sgyvk0/headphone/m/b/c/buds-z2-oneplus-original-imagcg5stg9fzes6.jpeg?q=70",
+            "https://example.com/image4.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "6 months",
+        "returnPolicy": "15-day return policy",
+        "importantNotes": "Ideal for workouts and daily use.",
+        "highlights": {
+            "Battery Life": "20 hours",
+            "Magnetic Earbuds": "Yes",
+            "Driver Size": "10mm"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "ANC Over-Ear Headphones",
+        "brand": "BassBliss",
+        "category": "Bluetooth Earbuds",
+        "description": "High-performance over-ear headphones with active noise cancellation.",
+        "price": {
+            "originalPrice": 9999,
+            "discountedPrice": 7999,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1333,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 2000
+            },
+            "cashOnDelivery": false,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.3",
+            "batteryLife": "50 hours",
+            "chargingTime": "2 hours",
+            "range": "12 meters",
+            "waterResistance": "IPX4",
+            "noiseCancellation": true,
+            "driverSize": "40mm"
+        },
+        "seller": {
+            "name": "ElectroHub",
+            "rating": 4.8,
+            "totalRatings": 1500,
+            "reviews": 1200
+        },
+        "availableOffers": [
+            {
+                "offerType": "Cashback",
+                "description": "Flat ₹1000 cashback on select payment methods.",
+                "validTill": "2025-03-31"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Memory Foam Earpads",
+                "featureDescription": "Ultra-comfortable earpads for long listening sessions."
+            },
+            {
+                "featureName": "Foldable Design",
+                "featureDescription": "Compact and travel-friendly design."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/c/t/z/-original-imah5ntgexhbfyny.jpeg?q=70",
+            "https://example.com/image6.jpg"
+        ],
+        "availability": "Limited Stock",
+        "warranty": "1 year",
+        "returnPolicy": "No returns applicable",
+        "importantNotes": "Supports quick charging for instant use.",
+        "highlights": {
+            "Battery Life": "50 hours",
+            "Driver Size": "40mm",
+            "Noise Cancellation": "Active"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Pro Wireless Earbuds Black",
+        "brand": "AudioPro",
+        "category": "Bluetooth Earbuds",
+        "description": "Top-tier earbuds offering immersive sound and long-lasting comfort.",
+        "price": {
+            "originalPrice": 7999,
+            "discountedPrice": 6499,
+            "discountPercentage": 18.75
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1083,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 1500
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.3",
+            "batteryLife": "40 hours",
+            "chargingTime": "2 hours",
+            "range": "20 meters",
+            "waterResistance": "IP68",
+            "noiseCancellation": true,
+            "driverSize": "14mm"
+        },
+        "seller": {
+            "name": "PremiumTech",
+            "rating": 4.7,
+            "totalRatings": 1500,
+            "reviews": 1200
+        },
+        "availableOffers": [
+            {
+                "offerType": "Exchange Offer",
+                "description": "Get up to ₹2000 off on exchange.",
                 "validTill": "2025-03-01"
             }
         ],
         "features": [
             {
-                "featureName": "S Pen",
-                "featureDescription": "Included S Pen for enhanced productivity."
+                "featureName": "Touch Controls",
+                "featureDescription": "Manage calls and music with intuitive touch controls."
             },
             {
-                "featureName": "Display",
-                "featureDescription": "120Hz Dynamic AMOLED, 6.9-inch screen."
+                "featureName": "Ambient Mode",
+                "featureDescription": "Allows outside noise to mix with music for better awareness."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kdhphu80/mobile/z/6/j/samsung-note-20-canvas-sm-n986bzkgins-original-imafudkhukrhaqgm.jpeg?q=70",
-            "https://example.com/samsung-galaxy-note20ultra-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/s/7/f/-original-imahf4qppx6fkxtw.jpeg?q=70",
+            "https://example.com/pro2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "15 days return policy",
-        "importantNotes": "S Pen included with the phone.",
+        "warranty": "2 years",
+        "returnPolicy": "15-day return policy",
+        "importantNotes": "Not suitable for swimming despite IP68 rating.",
         "highlights": {
-            "S Pen": "Enhanced note-taking and drawing experience.",
-            "Display": "6.9-inch Dynamic AMOLED 120Hz"
-        }
+            "Battery Life": "40 hours",
+            "Driver Size": "14mm",
+            "Water Resistance": "IP68"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy A54 5G",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Mid-range 5G smartphone with a solid camera and battery performance.",
+        "name": "Active Noise Cancelling Headphones",
+        "brand": "SilenceMax",
+        "category": "Bluetooth Earbuds",
+        "description": "Experience top-notch ANC technology with premium over-ear headphones.",
         "price": {
-            "originalPrice": 35000,
-            "discountedPrice": 33000,
-            "discountPercentage": 5.71
+            "originalPrice": 12999,
+            "discountedPrice": 10999,
+            "discountPercentage": 15.39
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 2750,
-                        "tenure": "12 months"
+                        "amount": 1833,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 2000
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.5 inches",
-            "processor": "Exynos 1380",
-            "ram": "6GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "50MP + 12MP + 5MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "128GB",
-            "color": "Awesome Violet",
-            "fastCharging": true
+            "bluetoothVersion": "5.1",
+            "batteryLife": "50 hours",
+            "chargingTime": "2.5 hours",
+            "range": "30 meters",
+            "waterResistance": "None",
+            "noiseCancellation": true,
+            "driverSize": "40mm"
         },
         "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.6,
-            "totalRatings": 2500,
-            "reviews": 2000
+            "name": "TechGiant",
+            "rating": 4.8,
+            "totalRatings": 2000,
+            "reviews": 1800
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "Flat ₹1000 off with select bank cards.",
+                "validTill": "2025-02-20"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Quick Charge",
+                "featureDescription": "10 minutes of charge provides 5 hours of playback."
+            },
+            {
+                "featureName": "Adjustable Headband",
+                "featureDescription": "Comfortable fit for extended usage."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/kfu0h3k0-0/headphone/g/6/c/mid-anc-bt-marshall-original-imafw75d9gsybyqd.jpeg?q=70",
+            "https://example.com/anc2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "7-day return policy",
+        "importantNotes": "Designed for indoor use; not water-resistant.",
+        "highlights": {
+            "ANC": "Advanced",
+            "Battery Life": "50 hours",
+            "Driver Size": "40mm"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Marshall Mid ANC BT Active noise cancellation enabled Bluetooth  (Black, On the Ear)",
+        "brand": "AudioPro",
+        "category": "Bluetooth Earbuds",
+        "description": "Top-tier earbuds offering immersive sound and long-lasting comfort.",
+        "price": {
+            "originalPrice": 7999,
+            "discountedPrice": 6499,
+            "discountPercentage": 18.75
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1083,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 1500
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.3",
+            "batteryLife": "40 hours",
+            "chargingTime": "2 hours",
+            "range": "20 meters",
+            "waterResistance": "IP68",
+            "noiseCancellation": true,
+            "driverSize": "14mm"
+        },
+        "seller": {
+            "name": "PremiumTech",
+            "rating": 4.7,
+            "totalRatings": 1500,
+            "reviews": 1200
+        },
+        "availableOffers": [
+            {
+                "offerType": "Exchange Offer",
+                "description": "Get up to ₹2000 off on exchange.",
+                "validTill": "2025-03-01"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Touch Controls",
+                "featureDescription": "Manage calls and music with intuitive touch controls."
+            },
+            {
+                "featureName": "Ambient Mode",
+                "featureDescription": "Allows outside noise to mix with music for better awareness."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/kfu0h3k0-0/headphone/g/6/c/mid-anc-bt-marshall-original-imafw75d9gsybyqd.jpeg?q=70",
+            "https://example.com/pro2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "2 years",
+        "returnPolicy": "15-day return policy",
+        "importantNotes": "Not suitable for swimming despite IP68 rating.",
+        "highlights": {
+            "Battery Life": "40 hours",
+            "Driver Size": "14mm",
+            "Water Resistance": "IP68"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "Active Noise Cancelling Headphones",
+        "brand": "SilenceMax",
+        "category": "Bluetooth Earbuds",
+        "description": "Experience top-notch ANC technology with premium over-ear headphones.",
+        "price": {
+            "originalPrice": 12999,
+            "discountedPrice": 10999,
+            "discountPercentage": 15.39
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1833,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 2000
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.1",
+            "batteryLife": "50 hours",
+            "chargingTime": "2.5 hours",
+            "range": "30 meters",
+            "waterResistance": "None",
+            "noiseCancellation": true,
+            "driverSize": "40mm"
+        },
+        "seller": {
+            "name": "TechGiant",
+            "rating": 4.8,
+            "totalRatings": 2000,
+            "reviews": 1800
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "Flat ₹1000 off with select bank cards.",
+                "validTill": "2025-02-20"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Quick Charge",
+                "featureDescription": "10 minutes of charge provides 5 hours of playback."
+            },
+            {
+                "featureName": "Adjustable Headband",
+                "featureDescription": "Comfortable fit for extended usage."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/v/z/-original-imagwmkfnyabtwhb.jpeg?q=70",
+            "https://example.com/anc2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "7-day return policy",
+        "importantNotes": "Designed for indoor use; not water-resistant.",
+        "highlights": {
+            "ANC": "Advanced",
+            "Battery Life": "50 hours",
+            "Driver Size": "40mm"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "True Wireless Earbuds Xtreme",
+        "brand": "XSound",
+        "category": "Bluetooth Earbuds",
+        "description": "Compact earbuds with rich sound and extended playtime.",
+        "price": {
+            "originalPrice": 5999,
+            "discountedPrice": 4799,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 800,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 1200
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.2",
+            "batteryLife": "30 hours",
+            "chargingTime": "1.5 hours",
+            "range": "15 meters",
+            "waterResistance": "IPX7",
+            "noiseCancellation": true,
+            "driverSize": "12mm"
+        },
+        "seller": {
+            "name": "SoundHaven",
+            "rating": 4.5,
+            "totalRatings": 1000,
+            "reviews": 850
         },
         "availableOffers": [
             {
                 "offerType": "Cashback",
-                "description": "Flat ₹2000 cashback on selected cards.",
-                "validTill": "2025-06-30"
+                "description": "5% cashback on select cards.",
+                "validTill": "2025-02-28"
             }
         ],
         "features": [
             {
-                "featureName": "Display",
-                "featureDescription": "6.5-inch Super AMOLED, 120Hz refresh rate."
+                "featureName": "Game Mode",
+                "featureDescription": "Low latency mode for gamers."
             },
             {
-                "featureName": "Camera",
-                "featureDescription": "50MP primary sensor for sharp photos."
+                "featureName": "Voice Assistant",
+                "featureDescription": "Compatible with Siri and Google Assistant."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/a/t/-original-imagnrhknw9pbg3t.jpeg?q=70",
-            "https://example.com/samsung-galaxy-a54-5g-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/b/q/v/btw300-xtreme-true-wireless-with-unstoppable-150-hrs-playtime-i-original-imah3fwrubh22hzp.jpeg?q=70",
+            "https://example.com/xtreme2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days return policy",
-        "importantNotes": "Up to 6 months No-cost EMI available.",
+        "warranty": "1 year",
+        "returnPolicy": "10-day return policy",
+        "importantNotes": "Ensure to use the provided charger for optimal battery life.",
         "highlights": {
-            "Camera": "50MP with OIS for clearer photos.",
-            "Battery": "5000mAh with 25W fast charging"
-        }
+            "Driver Size": "12mm",
+            "Battery Life": "30 hours",
+            "Water Resistance": "IPX7"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy M34 5G",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Budget-friendly 5G phone with long-lasting battery and decent camera.",
+        "name": "Smart Hearing Amplifier",
+        "brand": "HearPlus",
+        "category": "Bluetooth Earbuds",
+        "description": "Advanced hearing device with customizable settings.",
         "price": {
-            "originalPrice": 20000,
-            "discountedPrice": 18500,
-            "discountPercentage": 7.5
+            "originalPrice": 24999,
+            "discountedPrice": 21999,
+            "discountPercentage": 12
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 1542,
-                        "tenure": "12 months"
+                        "amount": 3666,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 5000
+            },
+            "cashOnDelivery": false,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.0",
+            "batteryLife": "20 hours",
+            "chargingTime": "3 hours",
+            "range": "10 meters",
+            "waterResistance": "IPX4",
+            "noiseCancellation": true,
+            "driverSize": "Not Applicable"
+        },
+        "seller": {
+            "name": "HealthConnect",
+            "rating": 4.7,
+            "totalRatings": 800,
+            "reviews": 700
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "10% instant discount with specific bank cards.",
+                "validTill": "2025-02-15"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Adjustable Volume",
+                "featureDescription": "Multiple volume levels for different environments."
+            },
+            {
+                "featureName": "Rechargeable Battery",
+                "featureDescription": "No need for disposable batteries."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/hearing-aid/q/p/0/very-small-invisible-mini-old-age-discreet-completely-in-the-original-imah2dfk3uumtqwr.jpeg?q=70",
+            "https://example.com/hearplus2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "3 years",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Not suitable for swimming.",
+        "highlights": {
+            "Battery Life": "20 hours",
+            "Bluetooth": "Yes",
+            "Volume Control": "Customizable"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "UltraBass Bluetooth Earbuds",
+        "brand": "BassX",
+        "category": "Bluetooth Earbuds",
+        "description": "In-ear wireless earbuds with powerful bass and long battery life.",
+        "price": {
+            "originalPrice": 5499,
+            "discountedPrice": 4699,
+            "discountPercentage": 14.5
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 700,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 500
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.5 inches",
-            "processor": "Exynos 1280",
-            "ram": "6GB",
-            "batteryCapacity": "6000mAh",
-            "camera": "50MP + 8MP + 2MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "64GB",
-            "color": "Awesome Black",
-            "fastCharging": true
+            "bluetoothVersion": "5.2",
+            "batteryLife": "10 hours",
+            "chargingTime": "1 hour",
+            "range": "12 meters",
+            "waterResistance": "IPX7",
+            "noiseCancellation": true,
+            "driverSize": "12mm"
         },
         "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.5,
-            "totalRatings": 1800,
-            "reviews": 1500
+            "name": "BassX Official",
+            "rating": 4.4,
+            "totalRatings": 3200,
+            "reviews": 1000
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "Get 5% instant discount with specific bank cards.",
+                "validTill": "2025-01-30"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Powerful Bass",
+                "featureDescription": "Enhanced bass for a deep and rich audio experience."
+            },
+            {
+                "featureName": "Quick Charge",
+                "featureDescription": "Full charge in just 1 hour."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/u/t/3/new-air-buds-3rd-generation-bluetooth-5-3-dual-pairing-tws-original-imah5r4tszwsgkkq.jpeg?q=70",
+            "https://example.com/bassx2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Keep away from extreme heat.",
+        "highlights": {
+            "Battery": "Lasts up to 10 hours on a full charge",
+            "Design": "Sleek and stylish design with ergonomic fit"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "X-Pro Wireless Earbuds",
+        "brand": "ProAudio",
+        "category": "Bluetooth Earbuds",
+        "description": "Premium wireless earbuds with clear sound and great battery life.",
+        "price": {
+            "originalPrice": 6499,
+            "discountedPrice": 5299,
+            "discountPercentage": 18.5
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 900,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 700
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.1",
+            "batteryLife": "12 hours",
+            "chargingTime": "1.5 hours",
+            "range": "15 meters",
+            "waterResistance": "IPX6",
+            "noiseCancellation": true,
+            "driverSize": "13mm"
+        },
+        "seller": {
+            "name": "ProAudio Store",
+            "rating": 4.6,
+            "totalRatings": 2900,
+            "reviews": 1400
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Flat ₹1500 off on the listed price.",
-                "validTill": "2025-06-30"
+                "description": "Flat ₹500 off on all payments via credit card.",
+                "validTill": "2025-02-28"
             }
         ],
         "features": [
             {
-                "featureName": "Battery",
-                "featureDescription": "6000mAh for extended usage."
+                "featureName": "HD Sound",
+                "featureDescription": "Crisp and clear sound for music lovers."
             },
             {
-                "featureName": "Camera",
-                "featureDescription": "50MP primary camera for better photos."
+                "featureName": "Comfortable Fit",
+                "featureDescription": "Soft ear tips that provide a snug fit for all-day comfort."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/t/5/galaxy-m34-without-charger-sm-m346b-samsung-original-imagrue3vhfgvwjz.jpeg?q=70",
-            "https://example.com/samsung-galaxy-m34-5g-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/c/s/ws-952-exotic-pro-in-ear-earbuds-rd-original-imahfzvjqj5ar5vw.jpeg?q=70",
+            "https://example.com/xpro2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Offer available on select bank cards.",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Avoid using in extreme cold weather.",
         "highlights": {
-            "Battery": "6000mAh with 15W fast charging.",
-            "Camera": "50MP primary sensor."
-        }
+            "Sound Quality": "Superior sound with deep bass and clear treble",
+            "Fit": "Snug fit with multiple ear tips"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy F05",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Affordable 5G smartphone with a smooth display and decent performance.",
+        "name": "AirFit Bluetooth Earbuds",
+        "brand": "FitSound",
+        "category": "Bluetooth Earbuds",
+        "description": "True wireless earbuds designed for fitness enthusiasts.",
         "price": {
-            "originalPrice": 18000,
-            "discountedPrice": 17000,
-            "discountPercentage": 5.56
+            "originalPrice": 5999,
+            "discountedPrice": 4799,
+            "discountPercentage": 20
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 1416,
-                        "tenure": "12 months"
+                        "amount": 800,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 1000
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.6 inches",
-            "processor": "MediaTek Dimensity 700",
-            "ram": "4GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "50MP + 2MP + 2MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "64GB",
-            "color": "Black",
-            "fastCharging": true
+            "bluetoothVersion": "5.0",
+            "batteryLife": "7 hours",
+            "chargingTime": "1 hour",
+            "range": "10 meters",
+            "waterResistance": "IPX8",
+            "noiseCancellation": false,
+            "driverSize": "11mm"
         },
         "seller": {
-            "name": "Samsung Store",
-            "rating": 4.4,
-            "totalRatings": 1200,
+            "name": "FitSound Official",
+            "rating": 4.8,
+            "totalRatings": 2000,
+            "reviews": 700
+        },
+        "availableOffers": [
+            {
+                "offerType": "Cashback",
+                "description": "₹300 cashback on UPI transactions.",
+                "validTill": "2025-01-25"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Workout Ready",
+                "featureDescription": "Waterproof and sweatproof for intense workouts."
+            },
+            {
+                "featureName": "Secure Fit",
+                "featureDescription": "Comes with ear hooks for a secure fit during exercise."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/r/z/enco-buds-2-oppo-original-imagh9frfp7gxdb3.jpeg?q=70",
+            "https://example.com/airfit2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Use only the provided charging cable.",
+        "highlights": {
+            "Fit": "Perfect for workouts with a secure fit",
+            "Water Resistance": "IPX8 rated for full water protection"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "SonicPro Earbuds",
+        "brand": "SonicWave",
+        "category": "Bluetooth Earbuds",
+        "description": "Wireless earbuds with cutting-edge sound technology.",
+        "price": {
+            "originalPrice": 7499,
+            "discountedPrice": 5999,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1000,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 1200
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.2",
+            "batteryLife": "10 hours",
+            "chargingTime": "2 hours",
+            "range": "20 meters",
+            "waterResistance": "IPX5",
+            "noiseCancellation": true,
+            "driverSize": "15mm"
+        },
+        "seller": {
+            "name": "SonicWave Electronics",
+            "rating": 4.5,
+            "totalRatings": 2500,
             "reviews": 1100
         },
         "availableOffers": [
             {
-                "offerType": "Discount",
-                "description": "₹1000 off on exchange of old device.",
-                "validTill": "2025-08-30"
+                "offerType": "Bank Offer",
+                "description": "10% off on specific credit/debit cards.",
+                "validTill": "2025-03-01"
             }
         ],
         "features": [
             {
-                "featureName": "Display",
-                "featureDescription": "6.6-inch FHD+ display with smooth visuals."
+                "featureName": "Noise Isolation",
+                "featureDescription": "Enhanced isolation for clear listening in noisy environments."
             },
             {
-                "featureName": "Camera",
-                "featureDescription": "50MP primary camera with Night Mode."
+                "featureName": "Sleek Design",
+                "featureDescription": "Slim and modern design that fits comfortably."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/e/r/f/-original-imah56hkgehywn5b.jpeg?q=70",
-            "https://example.com/samsung-galaxy-a14-5g-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/l/g/k/ez919-242-pro-white-sonic-roof-original-imahyvshukd5vqhy.jpeg?q=70",
+            "https://example.com/sonicpro2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days replacement policy",
-        "importantNotes": "Offer valid till stocks last.",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Use the earbuds within the specified range for optimal performance.",
         "highlights": {
-            "Battery": "5000mAh with 15W fast charging.",
-            "Camera": "50MP triple camera."
-        }
+            "Sound Quality": "Rich sound with deep bass and clear treble",
+            "Design": "Lightweight, sleek, and comfortable fit"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy Z Flip 5",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Compact foldable phone with a stylish flip design and advanced camera features.",
+        "name": "Juno Bluetooth Earbuds",
+        "brand": "JunoTech",
+        "category": "Bluetooth Earbuds",
+        "description": "Stylish, compact earbuds with immersive sound and long battery life.",
         "price": {
-            "originalPrice": 110000,
-            "discountedPrice": 105000,
-            "discountPercentage": 4.55
+            "originalPrice": 3999,
+            "discountedPrice": 2999,
+            "discountPercentage": 25
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 8750,
-                        "tenure": "12 months"
+                        "amount": 500,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 300
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.7 inches",
-            "processor": "Snapdragon 8 Gen 2",
-            "ram": "8GB",
-            "batteryCapacity": "3700mAh",
-            "camera": "12MP + 12MP Dual Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "256GB",
-            "color": "Lavender",
-            "fastCharging": true
+            "bluetoothVersion": "5.0",
+            "batteryLife": "6 hours",
+            "chargingTime": "1 hour",
+            "range": "10 meters",
+            "waterResistance": "IPX4",
+            "noiseCancellation": false,
+            "driverSize": "10mm"
         },
         "seller": {
-            "name": "Samsung Store",
-            "rating": 4.8,
-            "totalRatings": 3200,
-            "reviews": 2700
+            "name": "JunoTech Store",
+            "rating": 4.3,
+            "totalRatings": 1500,
+            "reviews": 600
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Flat ₹4000 off on purchase of Galaxy Z Flip 5.",
-                "validTill": "2025-07-01"
+                "description": "Save ₹500 with a coupon on first purchase.",
+                "validTill": "2025-01-25"
             }
         ],
         "features": [
             {
-                "featureName": "Foldable Design",
-                "featureDescription": "Compact design with a foldable screen."
+                "featureName": "Compact Design",
+                "featureDescription": "Lightweight and compact design for easy portability."
             },
             {
-                "featureName": "Display",
-                "featureDescription": "6.7-inch Dynamic AMOLED 2X, 120Hz refresh rate."
+                "featureName": "Quick Charging",
+                "featureDescription": "Full charge in just 1 hour for all-day listening."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/i/1/-original-imagztmgek9hynxd.jpeg?q=70",
-            "https://example.com/samsung-galaxy-zflip5-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/s/7/f/-original-imahf4qppx6fkxtw.jpeg?q=70",
+            "https://example.com/juno2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Limited stock available.",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Avoid exposure to high temperatures.",
         "highlights": {
-            "Foldable Design": "Elegant flip design for portability.",
-            "Camera": "12MP + 12MP dual rear camera"
-        }
+            "Comfort": "Ergonomically designed for a comfortable fit",
+            "Battery Life": "Up to 6 hours of continuous music playback"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy F15 5G",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Affordable 5G smartphone with a massive battery and smooth performance.",
+        "name": "Vibe Bluetooth Earbuds",
+        "brand": "VibeTech",
+        "category": "Bluetooth Earbuds",
+        "description": "Wireless earbuds with rich sound and superior comfort for long use.",
         "price": {
-            "originalPrice": 15000,
-            "discountedPrice": 14500,
-            "discountPercentage": 3.33
+            "originalPrice": 5499,
+            "discountedPrice": 4399,
+            "discountPercentage": 20
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 1216,
-                        "tenure": "12 months"
+                        "amount": 700,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 400
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.6 inches",
-            "processor": "Exynos 1330",
-            "ram": "4GB",
-            "batteryCapacity": "6000mAh",
-            "camera": "50MP + 2MP + 2MP Triple Rear Camera",
-            "os": "Android 13",
-            "connectivity": "5G",
-            "internalStorage": "64GB",
-            "color": "Blue",
-            "fastCharging": true
+            "bluetoothVersion": "5.0",
+            "batteryLife": "9 hours",
+            "chargingTime": "1.5 hours",
+            "range": "15 meters",
+            "waterResistance": "IPX5",
+            "noiseCancellation": false,
+            "driverSize": "12mm"
         },
         "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.5,
-            "totalRatings": 2100,
-            "reviews": 1700
+            "name": "VibeTech Store",
+            "rating": 4.6,
+            "totalRatings": 2200,
+            "reviews": 900
         },
         "availableOffers": [
             {
                 "offerType": "Cashback",
-                "description": "Flat ₹1000 cashback on selected bank cards.",
-                "validTill": "2025-09-01"
+                "description": "₹200 cashback with a specific credit card.",
+                "validTill": "2025-02-20"
             }
         ],
         "features": [
             {
-                "featureName": "Battery",
-                "featureDescription": "6000mAh battery for long-lasting performance."
+                "featureName": "Rich Sound",
+                "featureDescription": "Experience deep bass and clear sound for music lovers."
             },
             {
-                "featureName": "Camera",
-                "featureDescription": "50MP primary sensor for great photography."
+                "featureName": "Secure Fit",
+                "featureDescription": "Soft ear tips provide a secure fit for all-day comfort."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/q/e/l/-original-imah3agqmmzap5gx.jpeg?q=70",
-            "https://example.com/samsung-galaxy-m14-5g-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/c/9/5/-original-imagszhqjywpbnsd.jpeg?q=70",
+            "https://example.com/vibe2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Offer available on select bank cards.",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Avoid dropping or submerging in water.",
         "highlights": {
-            "Battery": "6000mAh with 15W fast charging.",
-            "Camera": "50MP triple camera."
-        }
+            "Design": "Ergonomic design for comfortable wear",
+            "Connectivity": "Stable Bluetooth connection for uninterrupted listening"
+        },
+        "addedOn": "2025-01-15"
     },
     {
-        "name": "Samsung Galaxy A23 5G",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Affordable 5G phone with a smooth display and decent camera.",
+        "name": "EchoSound Bluetooth Earbuds",
+        "brand": "EchoAudio",
+        "category": "Bluetooth Earbuds",
+        "description": "High-quality earbuds with excellent sound isolation and battery life.",
         "price": {
-            "originalPrice": 20000,
-            "discountedPrice": 19000,
-            "discountPercentage": 5
+            "originalPrice": 7999,
+            "discountedPrice": 6499,
+            "discountPercentage": 18
         },
         "paymentOptions": {
             "emi": {
                 "emiOptions": [
                     {
                         "period": "per month",
-                        "amount": 1583,
-                        "tenure": "12 months"
+                        "amount": 1000,
+                        "tenure": "6 months"
                     }
-                ]
+                ],
+                "downPayment": 500
             },
             "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "screenSize": "6.6 inches",
-            "processor": "Qualcomm Snapdragon 695",
-            "ram": "6GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "50MP + 5MP + 2MP Triple Rear Camera",
-            "os": "Android 12, upgradable to Android 13",
-            "connectivity": "5G",
-            "internalStorage": "128GB",
-            "color": "Black",
-            "fastCharging": true
+            "bluetoothVersion": "5.1",
+            "batteryLife": "15 hours",
+            "chargingTime": "2 hours",
+            "range": "18 meters",
+            "waterResistance": "IPX7",
+            "noiseCancellation": true,
+            "driverSize": "14mm"
         },
         "seller": {
-            "name": "Samsung Store",
-            "rating": 4.6,
-            "totalRatings": 1800,
-            "reviews": 1500
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Flat ₹2000 off on exchange of old device.",
-                "validTill": "2025-08-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Display",
-                "featureDescription": "6.6-inch FHD+ display for immersive visuals."
-            },
-            {
-                "featureName": "Battery",
-                "featureDescription": "5000mAh with fast charging support."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/f/g/i/-original-imagmfhbbex3ubzy.jpeg?q=70",
-            "https://example.com/samsung-galaxy-a23-5g-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days replacement policy",
-        "importantNotes": "Offer valid till stocks last.",
-        "highlights": {
-            "Battery": "5000mAh with 25W fast charging.",
-            "Camera": "50MP main sensor."
-        }
-    },
-    {
-        "name": "Samsung Galaxy A04s",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Affordable smartphone with a large display and long-lasting battery.",
-        "price": {
-            "originalPrice": 15000,
-            "discountedPrice": 14000,
-            "discountPercentage": 6.67
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 1166,
-                        "tenure": "12 months"
-                    }
-                ]
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "screenSize": "6.5 inches",
-            "processor": "Exynos 850",
-            "ram": "4GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "50MP + 2MP + 2MP Triple Rear Camera",
-            "os": "Android 12",
-            "connectivity": "4G",
-            "internalStorage": "64GB",
-            "color": "Black",
-            "fastCharging": true
-        },
-        "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.4,
-            "totalRatings": 1600,
-            "reviews": 1300
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Flat ₹1000 off on exchange of old device.",
-                "validTill": "2025-09-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Battery",
-                "featureDescription": "5000mAh for all-day use."
-            },
-            {
-                "featureName": "Display",
-                "featureDescription": "6.5-inch Infinity-V display for clear visuals."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/q/t/-original-imaghufzepfjunmu.jpeg?q=70",
-            "https://example.com/samsung-galaxy-a04s-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "10 days replacement policy",
-        "importantNotes": "Offer available on select models.",
-        "highlights": {
-            "Battery": "5000mAh with 15W fast charging.",
-            "Camera": "50MP main sensor."
-        }
-    },
-    {
-        "name": "Samsung Galaxy A35 5G",
-        "brand": "Samsung",
-        "category": "Phone",
-        "description": "Mid-range 5G phone with a powerful camera and high refresh rate display.",
-        "price": {
-            "originalPrice": 20000,
-            "discountedPrice": 18500,
-            "discountPercentage": 7.5
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 1542,
-                        "tenure": "12 months"
-                    }
-                ]
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "screenSize": "6.6 inches",
-            "processor": "Snapdragon 750G",
-            "ram": "4GB",
-            "batteryCapacity": "5000mAh",
-            "camera": "50MP + 8MP + 2MP Triple Rear Camera",
-            "os": "Android 12",
-            "connectivity": "5G",
-            "internalStorage": "128GB",
-            "color": "Aqua Blue",
-            "fastCharging": true
-        },
-        "seller": {
-            "name": "Samsung Store",
+            "name": "EchoAudio Store",
             "rating": 4.7,
-            "totalRatings": 2300,
-            "reviews": 2000
+            "totalRatings": 3000,
+            "reviews": 1200
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "₹1500 off on purchase with select bank cards.",
-                "validTill": "2025-07-01"
+                "description": "Flat ₹600 off on online payments.",
+                "validTill": "2025-02-05"
             }
         ],
         "features": [
             {
-                "featureName": "Display",
-                "featureDescription": "120Hz refresh rate for smoother visuals."
+                "featureName": "Advanced Noise Cancellation",
+                "featureDescription": "Enjoy crystal-clear audio with enhanced noise isolation."
             },
             {
-                "featureName": "Camera",
-                "featureDescription": "50MP primary camera with Night Mode."
+                "featureName": "Long Battery Life",
+                "featureDescription": "15 hours of continuous use with just one charge."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/m/b/r/-original-imah3xvkkqpuzgpg.jpeg?q=70",
-            "https://example.com/samsung-galaxy-f23-5g-back.jpg"
+            "https://rukminim2.flixcart.com/image/612/612/jt4olu80/headphone/6/w/p/sennheiser-momentum-true-original-imafejykyyj5mftx.jpeg?q=70",
+            "https://example.com/echosound2.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 Year Manufacturer Warranty",
-        "returnPolicy": "7 days replacement policy",
-        "importantNotes": "Offer valid till stocks last.",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Do not expose to extreme temperatures.",
         "highlights": {
-            "Battery": "5000mAh with 25W fast charging.",
-            "Camera": "50MP with ultra-wide lens."
-        }
+            "Sound": "Immersive sound with enhanced bass",
+            "Comfort": "Soft ear tips for all-day comfort"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "RhythmX Wireless Earbuds",
+        "brand": "RhythmX",
+        "category": "Bluetooth Earbuds",
+        "description": "True wireless earbuds for a seamless listening experience.",
+        "price": {
+            "originalPrice": 8999,
+            "discountedPrice": 7499,
+            "discountPercentage": 17
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 1200,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 800
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.3",
+            "batteryLife": "12 hours",
+            "chargingTime": "1 hour",
+            "range": "20 meters",
+            "waterResistance": "IPX6",
+            "noiseCancellation": true,
+            "driverSize": "16mm"
+        },
+        "seller": {
+            "name": "RhythmX Official",
+            "rating": 4.9,
+            "totalRatings": 1800,
+            "reviews": 800
+        },
+        "availableOffers": [
+            {
+                "offerType": "Bank Offer",
+                "description": "Get ₹800 instant discount with your bank card.",
+                "validTill": "2025-01-20"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "HD Sound Quality",
+                "featureDescription": "Experience high-definition audio with a deep bass boost."
+            },
+            {
+                "featureName": "Ergonomic Fit",
+                "featureDescription": "Designed for a snug and comfortable fit, perfect for long listening sessions."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/e/w/c/my582zm-a-beats-original-imagxbuz9zgkkqhx.jpeg?q=70",
+            "https://example.com/rhythmx2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Do not submerge in water.",
+        "highlights": {
+            "Sound": "Premium HD sound with enhanced bass",
+            "Design": "Sleek and stylish design with ergonomic fit"
+        },
+        "addedOn": "2025-01-15"
+    },
+    {
+        "name": "ClearSound Bluetooth Earbuds",
+        "brand": "ClearSound",
+        "category": "Bluetooth Earbuds",
+        "description": "Lightweight, high-quality earbuds with crystal-clear sound.",
+        "price": {
+            "originalPrice": 6999,
+            "discountedPrice": 5499,
+            "discountPercentage": 21
+        },
+        "paymentOptions": {
+            "emi": {
+                "emiOptions": [
+                    {
+                        "period": "per month",
+                        "amount": 900,
+                        "tenure": "6 months"
+                    }
+                ],
+                "downPayment": 600
+            },
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "bluetoothVersion": "5.0",
+            "batteryLife": "8 hours",
+            "chargingTime": "1.5 hours",
+            "range": "12 meters",
+            "waterResistance": "IPX5",
+            "noiseCancellation": false,
+            "driverSize": "11mm"
+        },
+        "seller": {
+            "name": "ClearSound Official",
+            "rating": 4.4,
+            "totalRatings": 1300,
+            "reviews": 500
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat ₹400 off on select purchases.",
+                "validTill": "2025-02-10"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Clear Sound",
+                "featureDescription": "Crystal-clear sound with excellent balance."
+            },
+            {
+                "featureName": "Compact & Lightweight",
+                "featureDescription": "Perfect for on-the-go usage and travel."
+            }
+        ],
+        "images": [
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/b/m/s/-original-imahfcgwqdzsfxga.jpeg?q=70",
+            "https://example.com/clearsound2.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "1 year",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Keep away from strong magnetic fields.",
+        "highlights": {
+            "Sound": "Balanced and clear audio",
+            "Design": "Lightweight and compact"
+        },
+        "addedOn": "2025-01-15"
     }
 ]

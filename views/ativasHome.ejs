@@ -5,17 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ativas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .navbar, .movingImages, .phoneProduct, .printerProduct, .dressProduct, .randomProd {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .flex-item {
+            flex: 1 1 calc(50% - 10px);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .flex-item {
+                flex: 1 1 100%;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .flex-item {
+                flex: 1 1 calc(50% - 10px);
+            }
+
+            .flex-container {
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .flex-item {
+                flex: 1 1 calc(22% - 10px);
+            }
+
+            .flex-container {
+                gap: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <%-include('navbar')%>
-    <%-include('movingImages')%>
-    <%-include('phoneProduct')%>
-    <%-include('printerProduct')%>
-    <div style="display: flex;">
-        <%-include('dressProduct')%>
-        <%-include('randomProd')%>
-    </div>
+ 
+        <%-include('navbar')%>
+        <%-include('movingImages')%>
+        <%-include('recommendedProd')%>
+        <%-include('recentActivity')%>
+        <%-include('phoneProduct')%>
+        <%-include('printerProduct')%>
+        <div class="flex-container">
+            <%-include('dressProduct')%>
+            <%-include('randomProd')%>
+        </div>
+        <div style="display: flex;">
+            <%-include('Locket&Sports&Food')%>
+            <%-include('SportProd')%>
+            <%-include('earbuds')%>
+        </div>
 
 
 </body>

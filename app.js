@@ -9,6 +9,7 @@ require('dotenv').config();
 const path = require('path');
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Types.ObjectId;
+const ejs=require('ejs')
 
 
 const authRouter = require('./routes/authRouter');
@@ -16,9 +17,11 @@ const ativasHomeRouter = require('./routes/ativasHomeRouter')
 const cartRouter = require('./routes/cartRouter')
 const searchRouter = require('./routes/searchRouter');
 const productRouter=require('./routes/productRouter')
+const activityRouter=require('./routes/activityRouter')
 
 const authController = require('./controllers/authController')
 const searchController = require('./controllers/searchController')
+const activityController=require('./controllers/activityController')
 
 const populateCardProduct = require('./middlewares/populateCardProduct')
 const authenticatedMiddleware = require('./middlewares/authMiddleware');
@@ -42,6 +45,7 @@ app.use(session({
     }
 }))
 app.use(populateCardProduct)
+
 // const calculateDiscountedPercentage = (price) => {
 //     if (price.originalPrice > 0) {
 //         return ((price.originalPrice - price.discountedPrice) / price.originalPrice) * 100;
@@ -70,8 +74,9 @@ app.use(populateCardProduct)
 // app.use(saveDiscountedPercentageMiddleware);
 app.set('views', path.join(__dirname, 'views'));
 
+
 app.use('/',authRouter,authenticatedMiddleware,ativasHomeRouter,productRouter,cartRouter,
-    suggestionMiddleware,searchRouter
+    suggestionMiddleware,searchRouter,activityRouter
 )
 
 
