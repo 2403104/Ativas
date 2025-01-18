@@ -713,3 +713,27 @@
         margin-left: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+function updateProductPrice(product, count) {
+    const prodPrice = document.getElementById('prodPrice');
+    const prodDiscount = document.getElementById('prodDiscount');
+    const prodPriceFinal = document.getElementById('prodPriceFinal');
+    const prodDiscountFinal = document.getElementById('prodDiscountFinal');
+
+    const originalPrice = product.price.originalPrice * count;
+    const discountedPrice = product.price.discountedPrice * count;
+    const discount = originalPrice - discountedPrice;
+
+    prodPrice.textContent = `₹${originalPrice}`;
+    prodDiscount.textContent = `₹${discount}`;
+    prodPriceFinal.textContent = `₹${discountedPrice}`;
+    prodDiscountFinal.textContent = `You will save ₹${discount} on this product.`;
+}

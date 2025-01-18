@@ -446,9 +446,52 @@ const bluetoothEarbudsSpecificSchema = new Schema({
       required: true
     }
   });
+  // Computer Schema
+  const computerSpecificSchema = new Schema({
+    processor: {
+      type: String,  // E.g., 'Intel i7', 'AMD Ryzen 5'
+      required: true
+    },
+    ram: {
+      type: String,  // E.g., '16GB', '32GB'
+      required: true
+    },
+    storage: {
+      type: String,  // E.g., '512GB SSD', '1TB HDD'
+      required: true
+    },
+    graphicsCard: {
+      type: String,  // E.g., 'NVIDIA GTX 1660', 'AMD Radeon RX 580'
+      required: true
+    },
+    operatingSystem: {
+      type: String,  // E.g., 'Windows 10', 'Ubuntu'
+      required: true
+    },
+    screenSize: {
+      type: String,  // E.g., '15.6 inches', '17 inches'
+      required: true
+    },
+    batteryLife: {
+      type: String,  // E.g., '8 hours', '10 hours'
+    },
+    weight: {
+      type: String,  // E.g., '2.5 kg', '3 kg'
+    },
+    dimensions: {
+      type: String  // E.g., '35.8 x 24.6 x 1.8 cm'
+    },
+    ports: {
+      type: [String]  // E.g., ['USB 3.0', 'HDMI', 'Ethernet']
+    },
+    warranty: {
+      type: String  // E.g., '1 year', '2 years'
+    }
+  });
 
-const Product = mongoose.model('Product', productSchema);
-
+  const Product = mongoose.model('Product', productSchema);
+  
+const Computer = Product.discriminator('Computer', computerSpecificSchema);
 const Phone = Product.discriminator('Phone', phoneSpecificSchema);
 const Printer = Product.discriminator('Printer', printerSpecificSchema);
 const Dress = Product.discriminator('Dress', dressSpecificSchema);

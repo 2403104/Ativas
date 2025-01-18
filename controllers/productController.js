@@ -12,9 +12,24 @@ exports.prodInfo = async (req, res) => {
     const name = req.query.name;
     const category = req.query.category;
     const findedProduct = await Product.findOne(req.query);
+
+    const updatedSpecifications = {};
+    for (const key in findedProduct.specifications) {
+        if (findedProduct.specifications.hasOwnProperty(key)) {
+            const newKey = key[0].toUpperCase() + key.slice(1).toLowerCase();
+            const value = findedProduct.specifications[key];
+            if (typeof value === "string") {
+                updatedSpecifications[newKey] = value[0].toUpperCase() + value.slice(1).toLowerCase();
+            } else {
+                updatedSpecifications[newKey] = value;
+            }
+        }
+    }
+    findedProduct.specifications = updatedSpecifications;
+
     const reviews = await Review.find({ productId: new ObjectId('6777ee3e9f6eddc9566583f2') })
     const wishlistProducts = req.wishlistProducts;
-    return res.render('product', { product:findedProduct, reviews:reviews, userId: req.session.user._id, wishlistProducts })
+    return res.render('product', { product: findedProduct, reviews: reviews, userId: req.session.user._id, wishlistProducts })
 }
 
 exports.prodTypeInfo = async (req, res) => {
@@ -99,8 +114,27 @@ exports.prodTypeInfo = async (req, res) => {
     const categoryProduct = await Product.find({ category })
     const allProduct = await Product.find(totalQuery)
 
+    const catProds = categoryProduct.map((prod) => {
+        const updatedSpecifications = {};
+        for (const key in prod.specifications) {
+            if (prod.specifications.hasOwnProperty(key)) {
+                const newKey = key[0].toUpperCase() + key.slice(1).toLowerCase();
+                const value = prod.specifications[key];
+                if (typeof value === "string") {
+                    updatedSpecifications[newKey] = value[0].toUpperCase() + value.slice(1).toLowerCase();
+                } else {
+                    updatedSpecifications[newKey] = value;
+                }
+            }
+        }
+        prod.specifications = updatedSpecifications;
+        return prod;
+    });
 
-    return res.render('productType', { products: allProduct, offerList, categoryProduct,wishlistProducts ,userId: req.session.user._id})
+
+
+
+    return res.render('productType', { products: allProduct, offerList, categoryProduct: catProds, wishlistProducts, userId: req.session.user._id })
 }
 
 exports.addWishlist = async (req, res) => {
@@ -136,24 +170,22 @@ exports.addWishlist = async (req, res) => {
         return res.status(500).json({ success: false, message: "Internal server error!!" });
     }
 }
-exports.orderProduct = (req, res) => {
-    return res.render('order')
-}
-exports.getRandomImage=async (req,res)=>{
-    const data=await Product.find({category:'Phone'})
-    const imgList=data.map((prod)=>{
+
+exports.getRandomImage = async (req, res) => {
+    const data = await Product.find({ category: 'Phone' })
+    const imgList = data.map((prod) => {
         return prod.images[0];
     })
-    return res.status(200).json({images:imgList})
+    return res.status(200).json({ images: imgList })
 };
-exports.wishlistProdInfo=async(req,res)=>{
-    const wishlistIds=await Wishlist.findOne({userId:req.session.user._id});
-    const wishlistProducts=wishlistIds.wishlist;
-    const wishlist=await Promise.all(
-        wishlistProducts.map(async(item)=>{
-            const product=await Product.findOne(item.productId);
+exports.wishlistProdInfo = async (req, res) => {
+    const wishlistIds = await Wishlist.findOne({ userId: req.session.user._id });
+    const wishlistProducts = wishlistIds.wishlist;
+    const wishlist = await Promise.all(
+        wishlistProducts.map(async (item) => {
+            const product = await Product.findOne(item.productId);
             return product
         })
     )
-    return res.render('wishlistProducts',{wishlistProducts:wishlist})
+    return res.render('wishlistProducts', { wishlistProducts: wishlist })
 }

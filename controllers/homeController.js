@@ -1,6 +1,7 @@
 const { Product } = require('./../models/productModel');
 const recentActivity = require('./../models/recentActivityModel');
 const Cart = require('./../models/cartModel');
+
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Types.ObjectId;
 
@@ -77,5 +78,23 @@ exports.ativasHome = async (req, res) => {
     if (EarbudsProd.length==4) break;
   }
 
-  return res.render('ativasHome', {LocketProd,recentActivityProd,recProd:prods,LocketProd,SportProd,EarbudsProd});
+  //LAPTOP AND TABLETS
+  const Laptop = await Product.find({ category: "Laptop" });
+  const Tablet = await Product.find({ category: "Tablet" });
+  const Phone=await Product.find({category:"Phone"})
+  const selectedLaptops = Laptop.slice(0, 6);
+  const selectedTablets = Tablet.slice(0, 3);
+  const selectedPhone = Phone.slice(0, 3);
+  let LaptopAndTablet = [...selectedLaptops, ...selectedPhone,...selectedTablets];
+  
+
+  const moreDiscount=await Product.find({"price.discountPercentage":{$gte:30}})
+  moreDiscount.sort((a, b) => {
+    return b.price.discountPercentage - a.price.discountPercentage;
+  });
+  
+  const mostDiscountProduct=moreDiscount.slice(0,6)
+  
+
+  return res.render('ativasHome', {moreDiscount:mostDiscountProduct,LocketProd,recentActivityProd,LaptopAndTablet,recProd:prods,LocketProd,SportProd,EarbudsProd});
 }

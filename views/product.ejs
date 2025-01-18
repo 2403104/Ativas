@@ -182,7 +182,7 @@
                 <div style="display: flex; justify-content: space-evenly; margin-top: 10px;">
                     <button class="cart" id="<%=product._id%>" onclick="addToCart('<%=product._id%>')" style="background-color: orange;"><i
                             class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
-                    <button class="buy" id="<%=product._id%>" onclick="buyNow()" style="background-color: rgb(255, 75, 10);"><i
+                    <button class="buy" id="<%=product._id%>" onclick="buyNow('<%=product.name%>','<%=product.category%>')" style="background-color: rgb(255, 75, 10);"><i
                             class="fa-solid fa-bolt"></i> BUY NOW</button>
                 </div>
             </div>
@@ -346,6 +346,7 @@
                                                     </div>
                                                 </div>
 
+                                                <% if (product.features.length>0){%>
                                                 <div
                                                     style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
                                                     <strong style=" font-size: 20px; color: green; ">Features</strong>
@@ -364,6 +365,7 @@
                                                             <% }) %>
                                                     </div>
                                                 </div>
+                                                <%}%>
 
                                                 <div
                                                     style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
@@ -464,6 +466,9 @@
                     heartIcon.classList.toggle('active');
                     
                 })
+                function buyNow(name,category){
+                    window.location.href=`/orderProduct?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                }
                 function addWishlist(productId,userId){
                     fetch('/addToWishlist', {
                         method: 'POST',

@@ -18,6 +18,7 @@ const cartRouter = require('./routes/cartRouter')
 const searchRouter = require('./routes/searchRouter');
 const productRouter=require('./routes/productRouter')
 const activityRouter=require('./routes/activityRouter')
+const orderRouter=require('./routes/orderRouter')
 
 const authController = require('./controllers/authController')
 const searchController = require('./controllers/searchController')
@@ -76,7 +77,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use('/',authRouter,authenticatedMiddleware,ativasHomeRouter,productRouter,cartRouter,
-    suggestionMiddleware,searchRouter,activityRouter
+    suggestionMiddleware,searchRouter,activityRouter,orderRouter
 )
 
 

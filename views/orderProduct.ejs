@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ativas Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             background-color: #f1f3f6;
             font-family: Arial, Helvetica, sans-serif;
         }
+        
 
         .mainOrder {
             display: flex;
@@ -28,6 +31,8 @@
         }
 
         .paymentDetails {
+            margin-top: 20px;
+            height: 260px;
             width: 25%;
             background-color: white;
             margin-right: auto;
@@ -144,11 +149,18 @@
             background-color: white;
             padding: 15px 20px;
             border: 1px solid #ddd;
-            border-radius: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .productSummary-container {
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .login-left {
@@ -194,10 +206,16 @@
         }
 
         .login,
-        .deliveryAddress {
+        .deliveryAddress
+         {
             width: 100%;
             margin: 20px auto;
             background-color: white;
+        }
+        .productDetails {
+            width: 100%;
+            margin: 20px auto;
+            background-color: blue;
         }
 
         .changeLogin,
@@ -213,7 +231,7 @@
 
         .inputField {
             width: 220px;
-            height: 25px;
+            height: 38px;
             margin: 10px 30px 10px 30px;
             border: 1px solid gray;
             padding: 5px 10px;
@@ -230,101 +248,127 @@
         }
 
         .inputField input {
-            position: absolute;
+            position: relative;
+            top: 0px;
             bottom: 5px;
-            left: 10px;
             width: calc(100% - 20px);
             height: 25px;
             font-size: 14px;
             border: none;
             outline: none;
-            background-color: transparent;
             color: black;
+            margin-top: 15px;
         }
+
+        .product-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .product-image img {
+            width: 130px;
+            height: auto;
+        }
+
+        .product-details {
+            gap: 1px;
+        }
+
+        .checkoutButton {
+            padding: 10px 15px;
+            background-color: orange;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .mainOrder {
-            flex-direction: column;
-            width: 100%;
-            padding: 10px;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px;
             }
 
             .diffActivity,
             .paymentDetails {
-            width: 100%;
-            margin: 10px 0;
+                width: 100%;
+                margin: 10px 0;
             }
 
             .heading {
-            font-size: 16px;
-            padding-left: 20px;
+                font-size: 16px;
+                padding-left: 20px;
             }
 
             .custom-span {
-            font-size: 12px;
-            margin-right: 10px;
+                font-size: 12px;
+                margin-right: 10px;
             }
 
             .userDetails {
-            width: 100%;
-            margin-bottom: 10px;
+                width: 100%;
+                margin-bottom: 10px;
             }
 
             .checkoutButton {
-            font-size: 14px;
-            padding: 8px 16px;
-            margin: 10px 0;
+                font-size: 14px;
+                padding: 8px 16px;
+                margin: 10px 0;
             }
 
             .advantages {
-            width: 100%;
-            font-size: 10px;
-            margin-top: 10px;
+                width: 100%;
+                font-size: 10px;
+                margin-top: 10px;
             }
 
             .advantages .advantage {
-            font-size: 10px;
+                font-size: 10px;
             }
 
             .login-container,
             .deliveryAddress-container {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
             }
 
             .login-left {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
             .step-number {
-            width: 25px;
-            height: 25px;
-            font-size: 12px;
+                width: 25px;
+                height: 25px;
+                font-size: 12px;
             }
 
             .login-text {
-            font-size: 12px;
+                font-size: 12px;
             }
 
             .user-details {
-            font-size: 12px;
+                font-size: 12px;
             }
 
             .changeLogin,
             .changeDeliveryAddress {
-            font-size: 12px;
-            padding: 5px 8px;
+                font-size: 12px;
+                padding: 5px 8px;
             }
 
             .inputField {
-            width: 100%;
-            margin: 5px 0;
+
+                width: 100%;
+                margin: 5px 0;
             }
 
             .inputField input {
-            font-size: 12px;
+                font-size: 12px;
             }
         }
     </style>
@@ -339,14 +383,16 @@
         </div>
     </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    let orderContainer = document.querySelector('.diffActivity');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let orderContainer = document.querySelector('.diffActivity');
+            let paymentDetails = document.querySelector('.paymentDetails');
+            let count=1
 
-    function addLoginSection() {
-        let newLogin = document.createElement('div');
-        newLogin.classList.add('login');
-        newLogin.innerHTML = `
+            function addLoginSection() {
+                let newLogin = document.createElement('div');
+                newLogin.classList.add('login');
+                newLogin.innerHTML = `
         <div class="login-container">
             <div class="login-left">
                 <div class="step-number">1</div>
@@ -359,10 +405,10 @@
         </div>
     `;
 
-        orderContainer.appendChild(newLogin);
+                orderContainer.appendChild(newLogin);
 
-        newLogin.querySelector('.changeLogin').addEventListener('click', () => {
-            newLogin.innerHTML = `
+                newLogin.querySelector('.changeLogin').addEventListener('click', () => {
+                    newLogin.innerHTML = `
             <div class="heading"><span class="custom-span">1</span>LOGIN</div>
             <div style="display: flex;">
                 <div class="userDetails">
@@ -385,29 +431,30 @@
                 </div>
             </div>
             <p class="note">Please note that upon clicking "Logout" you will lose all items in cart and will be redirected to the home page.</p>`;
-        });
-    }
+                });
+            }
 
-    function addDeliveryAddressSection() {
-        let newDeliveryAddress = document.createElement('div');
-        newDeliveryAddress.classList.add('deliveryAddress');
-        newDeliveryAddress.innerHTML = `
+            function addDeliveryAddressSection() {
+                let newDeliveryAddress = document.createElement('div');
+                newDeliveryAddress.classList.add('deliveryAddress');
+                newDeliveryAddress.innerHTML = `
         <div class="deliveryAddress-container">
             <div class="login-left">
                 <div class="step-number">2</div>
                 <div>
                     <div class="login-text">DELIVERY ADDRESS <span class="checkmark">✔</span></div>
                     <div class="user-details"><span>Ankit Kumar </span></div>
+                    <div class="user-details"><span>IIT Goa Hostel, B1-102, IIT Goa hostel premise, Bandora, Goa - 403401</span></div>
                 </div>
             </div>
             <button class="changeDeliveryAddress">CHANGE</button>
         </div>
     `;
 
-        orderContainer.appendChild(newDeliveryAddress);
+                orderContainer.appendChild(newDeliveryAddress);
 
-        newDeliveryAddress.querySelector('.changeDeliveryAddress').addEventListener('click', () => {
-            newDeliveryAddress.innerHTML = `
+                newDeliveryAddress.querySelector('.changeDeliveryAddress').addEventListener('click', () => {
+                    newDeliveryAddress.innerHTML = `
             <div class="heading"><span class="custom-span">2</span>DELIVERY ADDRESS</div>
             <button id="editAddress" class="editButton" style="position: relative; left:85%; top: 10px; color: blue; border: none; padding: 5px 10px; cursor: pointer;">EDIT</button>
             <div class="userDetails">
@@ -420,10 +467,10 @@
                 <button class="checkoutButton" id="saveAndContinue">SAVE & CONTINUE</button>
             </div>`;
 
-            const editAddressButton = newDeliveryAddress.querySelector('#editAddress');
-            if (editAddressButton) {
-                editAddressButton.addEventListener('click', () => {
-                    newDeliveryAddress.innerHTML = `
+                    const editAddressButton = newDeliveryAddress.querySelector('#editAddress');
+                    if (editAddressButton) {
+                        editAddressButton.addEventListener('click', () => {
+                            newDeliveryAddress.innerHTML = `
                     <div class="heading"><span class="custom-span">2</span>EDIT DELIVERY ADDRESS</div>
                     <form action="/editAddress" method="post" id="editAddressForm" style="margin-left: 25px;">
                         <div style="display:flex; ">
@@ -448,7 +495,7 @@
                         </div>
                                 <div class="inputField" onclick="document.getElementById('address').focus()" style="width:68%">
                                     <label for="address" class="placeholder">Address (Area and Street)</label>
-                                    <input type="text" id="address" style="width:100%;height:100%;">
+                                    <input type="text" id="address" style="width:98%;height:70%;">
                                 </div>
                                                    
                         
@@ -474,65 +521,174 @@
                         </div>
                         
                         
-                        <button type="submit" class="checkoutButton">SAVE ADDRESS</button>
+                        <button type="submit" id="saveAddressBtn" class="checkoutButton">SAVE ADDRESS</button>
                     </form>`;
 
-                    const editAddressForm = newDeliveryAddress.querySelector('#editAddressForm');
-                    if (editAddressForm) {
-                        editAddressForm.addEventListener('submit', (event) => {
-                            event.preventDefault();
-                            const name = editAddressForm.querySelector('#name').value;
-                            const address = editAddressForm.querySelector('#address').value;
-                            newDeliveryAddress.innerHTML = `
-                            <div class="deliveryAddress-container">
-                                <div class="login-left">
-                                    <div class="step-number">2</div>
-                                    <div>
-                                        <div class="login-text">DELIVERY ADDRESS <span class="checkmark">✔</span></div>
-                                        <div class="user-details"><span>${name} </span></div>
-                                        <div class="user-details"><span>${address} </span></div>
-                                    </div>
-                                </div>
-                                <button class="changeDeliveryAddress">CHANGE</button>
-                            </div>`;
+                            const editAddressForm = newDeliveryAddress.querySelector('#editAddressForm');
+                            if (editAddressForm) {
+                                editAddressForm.addEventListener('submit', (event) => {
+                                    newDeliveryAddress.innerHTML = `
+            <div class="heading"><span class="custom-span">2</span>DELIVERY ADDRESS</div>
+            <button id="editAddress" class="editButton" style="position: relative; left:85%; top: 10px; color: blue; border: none; padding: 5px 10px; cursor: pointer;">EDIT</button>
+            <div class="userDetails">
+                <p style="color: grey; margin-left: 25px; font-size:10px;">
+                    <span style="color: black; font-size: 13px;">Ankit Kumar</span>
+                </p>
+                <p style="color: grey; margin-left: 25px; font-size:10px;">
+                    <span style="color: black; font-size: 13px;">IIT Goa Hostel, B1-102, IIT Goa hostel premise, Bandora, Goa - 403401</span>
+                </p>
+                <button class="checkoutButton" id="saveAndContinue">SAVE & CONTINUE</button>
+            </div>`;;
+                                });
+                            }
                         });
                     }
-                });
-            }
 
-            const saveAndContinueButton = newDeliveryAddress.querySelector('#saveAndContinue');
-            if (saveAndContinueButton) {
-                saveAndContinueButton.addEventListener('click', () => {
-                    newDeliveryAddress.innerHTML = `
+                    const saveAndContinueButton = newDeliveryAddress.querySelector('#saveAndContinue');
+                    if (saveAndContinueButton) {
+                        saveAndContinueButton.addEventListener('click', () => {
+                            newDeliveryAddress.innerHTML = `
                 <div class="deliveryAddress-container">
                     <div class="login-left">
                         <div class="step-number">2</div>
                         <div>
                             <div class="login-text">DELIVERY ADDRESS <span class="checkmark">✔</span></div>
                             <div class="user-details"><span>Ankit Kumar </span></div>
+                            <div class="user-details"><span>IIT Goa Hostel, B1-102, IIT Goa hostel premise, Bandora, Goa - 403401</span></div>
                         </div>
                     </div>
                     <button class="changeDeliveryAddress">CHANGE</button>
                 </div>
                 `;
+                        });
+                    }
                 });
             }
-        });
-    }
 
-    addLoginSection();
-    addDeliveryAddressSection();
 
-    document.querySelector('.mainOrder').addEventListener('click', function (e) {
-        if (e.target.classList.contains('addLogin')) {
+            const product= <%- JSON.stringify(product)%>
+
+            
+            function addProductSummary(product) {
+
+                const diffActivity = document.querySelector('.diffActivity');
+
+                const productSummary = document.createElement('div');
+                productSummary.innerHTML = `
+                <div class="heading" style="margin-bottom: 0px; padding-bottom: 0px;"><span class="custom-span">3</span>ORDER SUMMARY</div>
+                <div class="productSummary-container" style="margin-top: 0px;">
+                    <div class="product-image">
+                        <img src="${product.images[0]}" alt="${product.name}">
+                        <div style="display:flex; justify-content:space-evenly; margin-top:10px;">
+                            <button class="decrement-button" style="padding: 5px 10px; border-radius:50%;  background-color:white; border:1px solid gray; cursor: pointer;">-</button>
+                            <button class="count-display" style="width:60px;padding: 5px 15px; background-color:white; border:1px solid gray; cursor: default;"><strong>1</strong></button>
+                            <button class="increment-button" style="padding: 5px 10px; border-radius:50%; background-color:white; border:1px solid gray; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div style="display:flex;">
+                                                    <div>
+                        <p style="font-size:17px; margin-left:10px;"><strong>${product.name}</strong></p>
+                        <p><strong>Seller:</strong> ${product.seller.name}</p>
+                        <p><strong>Price:</strong> ₹${product.price.discountedPrice}</p>
+                        <p><strong>Offers:</strong> ${product.availableOffers[0].description}</p>
+                        <button class="checkoutButton">CONTINUE CHECKOUT</button>
+                            </div>
+                        <div>
+                                    <p><strong>Delivery:</strong> in 2 days </p>
+                        <p>${product.openBoxEligible ? "Open Box Delivery is available for this item." : ""}</p>
+                        </div>
+                        <div>
+                            
+                    
+                        
+                            </div>
+                    </div>
+                `;
+
+                diffActivity.appendChild(productSummary);
+                
+                
+                const decrementButton = productSummary.querySelector('.decrement-button');
+                const incrementButton = productSummary.querySelector('.increment-button');
+                const countDisplay = productSummary.querySelector('.count-display');
+
+
+                decrementButton.addEventListener('click', () => {
+                    if (count > 1) {
+                        count--;
+                        countDisplay.textContent=count;
+                        addProductPrice(product,count)
+                    }
+                })
+                incrementButton.addEventListener('click',()=>{
+                    count++;
+                    countDisplay.textContent=count;
+                    addProductPrice(product,count)
+                })
+            }
+
+            function addProductPrice(product,count){
+                const paymentDetails = document.querySelector('.paymentDetails');
+                paymentDetails.innerHTML=`
+                                <div style="font-size: 20px; color: grey; margin-bottom: 15px;">
+                                        <strong>Price Details</strong>
+                                    </div>
+                                    <hr style="color: grey;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; font-size: 18px; margin-bottom: 5px;">
+                                        <p>Price (${count} Item)</p>
+                                        <p id="prodPrice"><i class="fa-solid fa-indian-rupee-sign"></i>
+                                            ${product.price.originalPrice*count}
+                                        </p>
+                                    </div>
+                                    <div
+                                        style="display: flex; justify-content: space-between; font-size: 18px; margin-bottom: 5px;">
+                                        <p>Discount</p>
+                                        <p id="prodDiscount" style="color: green;"><i class="fa-solid fa-minus"
+                                                style="font-size: 12px;"></i> <i
+                                                class="fa-solid fa-indian-rupee-sign"></i> ${(product.price.originalPrice-product.price.discountedPrice)*count}</p>
+                                    </div>
+                                    <hr style="color: grey;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; font-size: 20px; font-weight: bold; margin-bottom: 5px;">
+                                        <p><strong>Total Amount</strong></p>
+                                        <p id="prodPriceFinal"><i class="fa-solid fa-indian-rupee-sign"></i>
+                                            ${product.price.discountedPrice*count}
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div
+                                        style="font-size: 16px; color: green; margin-top: 15px;">
+                                        <strong id="prodDiscountFinal">You will save <i class="fa-solid fa-indian-rupee-sign"></i>
+                                            ${(product.price.originalPrice-product.price.discountedPrice)*count} on this product.</strong>
+                                    </div>
+
+                `;
+                
+            }
             addLoginSection();
-        } else if (e.target.classList.contains('addDeliveryAddress')) {
             addDeliveryAddressSection();
-        }
-    });
-});
+            addProductSummary(product);
+            addProductPrice(product,count);
+
+            document.querySelector('.mainOrder').addEventListener('click', function (e) {
+                if (e.target.classList.contains('addLogin')) {
+                    addLoginSection();
+                } else if (e.target.classList.contains('addDeliveryAddress')) {
+                    addDeliveryAddressSection();
+                }
+                else if (e.target.classList.contains('addProductSummary')) {
+                    addProductSummary(product);
+                }
+                else if (e.target.classList.contains('addProductPrice')) {
+                    addProductPrice(product);
+                }
+            });
+        });
 
 
-</script>
+    </script>
 </body>
+
 </html>

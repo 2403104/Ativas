@@ -97,40 +97,44 @@
         .footer-right {
             text-align: right;
         }
+
         @media (max-width: 768px) {
             .cartMain {
-            flex-direction: column;
-            width: 100%;
+                flex-direction: column;
+                width: 100%;
             }
 
-            .cartItemList, .totalCost {
-            width: 100%;
-            margin: 10px 0;
+            .cartItemList,
+            .totalCost {
+                width: 100%;
+                margin: 10px 0;
             }
 
             .item {
-            flex-direction: column;
-            height: auto;
+                flex-direction: column;
+                height: auto;
             }
 
-            .image, img {
-            width: 100%;
-            height: auto;
+            .image,
+            img {
+                width: 100%;
+                height: auto;
             }
 
             .btn a {
-            margin: 10px 0;
+                margin: 10px 0;
             }
 
             .footer {
-            flex-direction: column;
-            text-align: center;
+                flex-direction: column;
+                text-align: center;
             }
 
-            .footer-left, .footer-right {
-            flex-direction: row;
-            justify-content: center;
-            margin: 5px 0;
+            .footer-left,
+            .footer-right {
+                flex-direction: row;
+                justify-content: center;
+                margin: 5px 0;
             }
         }
     </style>
@@ -174,7 +178,8 @@
                             <% discount+=Number(prod.price.discountedPrice);%>
                                 <% })%>
                                     <div style="font-size: 22px;color: grey; margin-left: 20px; padding: 12px;">
-                                        <strong>Price Details</strong></div>
+                                        <strong>Price Details</strong>
+                                    </div>
                                     <hr style="color: grey;">
                                     <div
                                         style="display: flex; justify-content: space-between; padding: 10px; margin: 10px;font-size: 20px;">
@@ -202,7 +207,8 @@
                                     <div
                                         style="font-size: 22px;color: green; margin-left: 20px; padding: 10px 0px 10px 0px;">
                                         <strong>You will save <i class="fa-solid fa-indian-rupee-sign"></i>
-                                            <%=price-discount%> on this product.</strong></div>
+                                            <%=price-discount%> on this product.</strong>
+                                    </div>
 
 
             </div>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            width: 100vw;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .product-card-moreDisc {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 33%;
+            padding: 20px;
+            background: linear-gradient(90deg, rgb(255, 229, 180), rgb(255, 213, 135));
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .product-info {
+            max-width: 300px;
+        }
+
+        .product-info h2 {
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .product-info .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007600;
+            margin-top: 10px;
+        }
+
+        .product-image {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <h2>Most Discounted Products For You</h2>
+        <% for (let i = 0; i < moreDiscount.length; i += 3) { %>
+        <div class="row">
+            <% for (let j = i; j < i + 3 && j < moreDiscount.length; j++) { %>
+                <div class="product-card-moreDisc" onclick="goTomoreDiscount('<%=moreDiscount[j].name%>','<%=moreDiscount[j].category%>')">
+                    <div class="product-info">
+                        <h2>Best <%=moreDiscount[j].brand%> <%= moreDiscount[j].category %></h2>
+                        <p>Prepaids | Supercoins</p>
+                        <div style="display: flex;">
+                            <p class="price" style="text-decoration: line-through; margin-right: 25px;">₹<%= moreDiscount[j].price.originalPrice %></p>
+                            <p class="price">₹<%= moreDiscount[j].price.discountedPrice %></p>
+
+                        </div>
+                        <p class="price"> <%=Math.round(moreDiscount[j].price.discountPercentage)%>% OFF</p>
+                    </div>
+                    <div class="product-image">
+                        <img src="<%= moreDiscount[j].images[0] %>" alt="<%= moreDiscount[j].name %>">
+                        <p style="text-align: center;"><%= moreDiscount[j].brand %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+    <script>
+        function goTomoreDiscount(name,category){
+            window.location.href=`/productType?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+        }
+    </script>
+</body>
+</html>
