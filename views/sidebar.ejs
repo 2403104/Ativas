@@ -118,6 +118,7 @@
         const checkboxes = document.querySelectorAll('[type="checkbox"]');
         const url = new URL(window.location.href);
         const params = url.searchParams;
+        
         checkboxes.forEach((checkbox)=>{
             if (localStorage.getItem(checkbox.id)==='true'){
                 checkbox.checked=true;
@@ -133,6 +134,7 @@
                 } else {
                     params.delete(checkbox.id);
                 }
+                // console.log(url)
                 window.history.replaceState({}, '', `${url.pathname}?${params.toString()}`);
                 window.location.reload();
             });

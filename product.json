@@ -1,3311 +1,1429 @@
 [
     {
-        "name": "Apple MacBook Pro 16 (M2 Max)",
-        "brand": "Apple",
-        "category": "Laptop",
-        "description": "A high-end MacBook Pro with the powerful M2 Max chip, ideal for professionals requiring top-notch performance for tasks like video editing, software development, and machine learning.",
+        "name": "Herbal Immunity Booster Capsules",
+        "brand": "NatureCare",
+        "category": "Healthcare",
+        "description": "A natural immunity booster with powerful herbal ingredients to support your immune system and overall health.",
         "price": {
-            "originalPrice": 450000,
-            "discountedPrice": 429990,
-            "discountPercentage": 4.44
+            "originalPrice": 799,
+            "discountedPrice": 599,
+            "discountPercentage": 25
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 35832.5,
-                        "tenure": "12 months"
-                    },
-                    {
-                        "period": "per year",
-                        "amount": 420000,
-                        "tenure": "1 year"
-                    }
-                ],
-                "downPayment": 10000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Apple M2 Max (12-core CPU, 38-core GPU)",
-            "ram": "64GB Unified Memory",
-            "storage": "4TB SSD",
-            "graphicsCard": "Integrated Apple GPU (38-core)",
-            "operatingSystem": "macOS Ventura",
-            "screenSize": "16 inches Liquid Retina XDR (3456x2234)",
-            "batteryLife": "22 hours",
-            "weight": "2.2 kg",
-            "dimensions": "35.79 x 24.59 x 1.68 cm",
-            "ports": [
-                "3 x Thunderbolt 4",
-                "1 x HDMI",
-                "1 x MagSafe 3",
-                "1 x 3.5mm headphone jack"
-            ],
-            "warranty": "1 year with AppleCare+ optional"
+            "usage": "Take one capsule daily after meals or as directed by your healthcare professional.",
+            "ingredients": "Ashwagandha, Tulsi, Giloy, Turmeric, Amla",
+            "precautions": "Consult your doctor if you are pregnant, nursing, or taking other medications.",
+            "dosage": "1 capsule daily",
+            "sideEffects": "None reported when taken as directed. Mild digestive discomfort may occur in rare cases."
         },
         "seller": {
-            "name": "Apple Authorized Reseller",
-            "rating": 4.8,
-            "totalRatings": 256,
-            "reviews": 84
+            "name": "HealthMart Distributors",
+            "rating": 4.5,
+            "totalRatings": 820,
+            "reviews": 120
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 25% off on your first purchase",
+                "validTill": "2025-01-31"
+            },
+            {
+                "offerType": "Cashback",
+                "description": "5% cashback on purchases made with credit cards",
+                "validTill": "2025-01-31"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Natural Ingredients",
+                "featureDescription": "Made with herbal ingredients like Ashwagandha and Turmeric."
+            },
+            {
+                "featureName": "Boosts Immunity",
+                "featureDescription": "Helps strengthen the immune system naturally."
+            },
+            {
+                "featureName": "Easy to Consume",
+                "featureDescription": "Available in easy-to-swallow capsule form."
+            }
+        ],
+        "images": [
+            "https://example.com/images/immunity-booster-front.jpg",
+            "https://example.com/images/immunity-booster-back.jpg",
+            "https://example.com/images/immunity-booster-ingredients.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "N/A",
+        "returnPolicy": "7-day return policy applicable for unopened packages.",
+        "importantNotes": "Store in a cool, dry place away from direct sunlight.",
+        "highlights": {
+            "Vegan": "Yes",
+            "Gluten-Free": "Yes",
+            "Preservatives": "None"
+        },
+        "addedOn": "2025-01-19T00:00:00Z"
+    },
+    {
+        "name": "Herbal Stress Relief Capsules",
+        "brand": "NatureCare",
+        "category": "Healthcare",
+        "description": "A herbal supplement designed to help reduce stress and anxiety by promoting relaxation and supporting overall mental well-being.",
+        "price": {
+            "originalPrice": 599,
+            "discountedPrice": 499,
+            "discountPercentage": 17
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Ashwagandha, Brahmi, Lavender",
+            "recommendedFor": "Stress relief, Anxiety reduction, Mental clarity"
+        },
+        "seller": {
+            "name": "Herbal Health Store",
+            "rating": 4.3,
+            "totalRatings": 1200,
+            "reviews": 300
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "10% off on first purchase",
+                "validTill": "2025-02-01"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Stress reduction",
+                "featureDescription": "Helps reduce cortisol levels and promotes relaxation."
+            },
+            {
+                "featureName": "Mental clarity",
+                "featureDescription": "Enhances mental focus and reduces brain fog."
+            }
+        ],
+        "images": [
+            "https://example.com/images/herbal-stress-relief.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Not for use during pregnancy or breastfeeding.",
+        "highlights": {
+            "effect": "Immediate relief from stress",
+            "certification": "FDA Approved"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Turmeric & Ginger Capsules",
+        "brand": "HerbMax",
+        "category": "Healthcare",
+        "description": "A powerful combination of turmeric and ginger, known for their anti-inflammatory and antioxidant properties, helping with joint health and digestive support.",
+        "price": {
+            "originalPrice": 499,
+            "discountedPrice": 399,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Turmeric, Ginger, Black Pepper",
+            "recommendedFor": "Joint health, Digestion, Inflammation reduction"
+        },
+        "seller": {
+            "name": "Wellness Hub",
+            "rating": 4.6,
+            "totalRatings": 1500,
+            "reviews": 500
+        },
+        "availableOffers": [
+            {
+                "offerType": "Buy One Get One",
+                "description": "Buy one bottle and get the second at 50% off",
+                "validTill": "2025-03-01"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Anti-inflammatory",
+                "featureDescription": "Helps reduce joint pain and inflammation."
+            },
+            {
+                "featureName": "Antioxidant properties",
+                "featureDescription": "Boosts immunity and protects against free radicals."
+            }
+        ],
+        "images": [
+            "https://example.com/images/turmeric-ginger.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Consult a doctor if you are on blood thinners.",
+        "highlights": {
+            "effect": "Relieves joint pain",
+            "certification": "GMP Certified"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Probiotic Gut Health",
+        "brand": "BioLife",
+        "category": "Healthcare",
+        "description": "Supports digestive health with 30 billion CFU of probiotics, promoting healthy gut flora and improving overall digestion.",
+        "price": {
+            "originalPrice": 799,
+            "discountedPrice": 699,
+            "discountPercentage": 13
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Probiotic strains (Lactobacillus, Bifidobacterium), Inulin",
+            "recommendedFor": "Gut health, Digestive support, Bloating relief"
+        },
+        "seller": {
+            "name": "BioPlus Health",
+            "rating": 4.7,
+            "totalRatings": 2000,
+            "reviews": 700
         },
         "availableOffers": [
             {
                 "offerType": "Cashback",
-                "description": "Get ₹10,000 cashback on payments via HDFC Bank cards.",
-                "validTill": "2025-03-31"
-            },
-            {
-                "offerType": "Extended Warranty",
-                "description": "Get an additional year of warranty for free with AppleCare+.",
+                "description": "5% cashback on credit card payments",
                 "validTill": "2025-02-15"
             }
         ],
         "features": [
             {
-                "featureName": "Liquid Retina XDR Display",
-                "featureDescription": "A stunning display with 1000 nits of sustained brightness, perfect for professional color grading."
+                "featureName": "Digestive support",
+                "featureDescription": "Promotes healthy gut flora and digestion."
             },
             {
-                "featureName": "MagSafe Charging",
-                "featureDescription": "Convenient and secure magnetic charging with fast-charging support."
+                "featureName": "Improves immunity",
+                "featureDescription": "Strengthens immunity by balancing gut bacteria."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/p/f/l/-original-imah697na9bjbnsx.jpeg?q=70",
-            "https://example.com/images/macbookpro16-back.jpg"
+            "https://example.com/images/probiotic-gut-health.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 year manufacturer warranty with optional AppleCare+",
-        "returnPolicy": "15-day return policy for unopened products only",
-        "importantNotes": "This device is custom-built. Delivery time may vary.",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Keep refrigerated after opening.",
         "highlights": {
-            "Performance": "Apple M2 Max chip ensures unparalleled performance for creative professionals.",
-            "Battery Life": "Up to 22 hours of video playback on a single charge.",
-            "Display": "16-inch Liquid Retina XDR with P3 wide color and True Tone."
+            "effect": "Boosts digestion and immunity",
+            "certification": "ISO Certified"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-18"
     },
     {
-        "name": "HP ZBook Fury G9",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "A high-performance mobile workstation with powerful specs, designed for engineers, architects, and data scientists.",
+        "name": "Omega-3 Fish Oil Capsules",
+        "brand": "HealthyOmega",
+        "category": "Healthcare",
+        "description": "Rich in EPA and DHA, these fish oil capsules promote heart health, brain function, and joint mobility.",
         "price": {
-            "originalPrice": 365000,
-            "discountedPrice": 345000,
-            "discountPercentage": 5.48
+            "originalPrice": 999,
+            "discountedPrice": 849,
+            "discountPercentage": 15
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 28750,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 5000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-13900HX",
-            "ram": "64GB DDR5",
-            "storage": "2TB NVMe SSD",
-            "graphicsCard": "NVIDIA RTX A5000 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches 4K UHD IPS (3840x2160)",
-            "batteryLife": "10 hours",
-            "weight": "2.72 kg",
-            "dimensions": "39.8 x 26.7 x 2.6 cm",
-            "ports": [
-                "4 x USB 3.2",
-                "1 x HDMI 2.1",
-                "1 x RJ45 Ethernet",
-                "1 x Thunderbolt 4"
-            ],
-            "warranty": "3 years"
+            "ingredients": "Omega-3 Fish Oil, EPA, DHA",
+            "recommendedFor": "Heart health, Brain function, Joint mobility"
         },
         "seller": {
-            "name": "HP Official Store",
-            "rating": 4.7,
-            "totalRatings": 152,
-            "reviews": 40
+            "name": "OmegaHealth",
+            "rating": 4.5,
+            "totalRatings": 800,
+            "reviews": 350
         },
         "availableOffers": [
             {
-                "offerType": "Exchange Offer",
-                "description": "Get up to ₹20,000 off on exchange of your old laptop.",
+                "offerType": "Discount",
+                "description": "Buy 2, get 1 free",
+                "validTill": "2025-03-15"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Heart health",
+                "featureDescription": "Supports cardiovascular health and lowers cholesterol."
+            },
+            {
+                "featureName": "Cognitive function",
+                "featureDescription": "Promotes brain function and memory."
+            }
+        ],
+        "images": [
+            "https://example.com/images/omega-3-fish-oil.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Not suitable for individuals allergic to fish.",
+        "highlights": {
+            "effect": "Supports heart and brain health",
+            "certification": "Non-GMO"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Vitamin C + Zinc Tablets",
+        "brand": "NutriBoost",
+        "category": "Healthcare",
+        "description": "A potent combination of Vitamin C and Zinc that helps boost immunity and fight off infections.",
+        "price": {
+            "originalPrice": 399,
+            "discountedPrice": 299,
+            "discountPercentage": 25
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Vitamin C, Zinc",
+            "recommendedFor": "Immunity boost, Cold prevention"
+        },
+        "seller": {
+            "name": "NutraMax",
+            "rating": 4.8,
+            "totalRatings": 2500,
+            "reviews": 1000
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "25% off on the first order",
+                "validTill": "2025-02-01"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Immunity boost",
+                "featureDescription": "Strengthens the immune system and fights infections."
+            },
+            {
+                "featureName": "Cold prevention",
+                "featureDescription": "Reduces the severity and duration of common cold symptoms."
+            }
+        ],
+        "images": [
+            "https://example.com/images/vitamin-c-zinc.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "For adults only. Do not exceed the recommended dosage.",
+        "highlights": {
+            "effect": "Boosts immunity",
+            "certification": "FDA Registered"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Multivitamin for Women",
+        "brand": "VitaFem",
+        "category": "Healthcare",
+        "description": "A comprehensive multivitamin specifically designed for women, supporting overall health and hormonal balance.",
+        "price": {
+            "originalPrice": 799,
+            "discountedPrice": 699,
+            "discountPercentage": 13
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Vitamin A, B, C, D, E, Folic Acid, Iron",
+            "recommendedFor": "Women’s health, Energy, Hormonal balance"
+        },
+        "seller": {
+            "name": "FemVita",
+            "rating": 4.7,
+            "totalRatings": 600,
+            "reviews": 150
+        },
+        "availableOffers": [
+            {
+                "offerType": "Cashback",
+                "description": "10% cashback on first purchase",
+                "validTill": "2025-02-10"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Supports women’s health",
+                "featureDescription": "Helps maintain hormonal balance and overall well-being."
+            },
+            {
+                "featureName": "Boosts energy",
+                "featureDescription": "Increases vitality and energy levels."
+            }
+        ],
+        "images": [
+            "https://example.com/images/multivitamin-women.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Not for use during pregnancy unless prescribed by a doctor.",
+        "highlights": {
+            "effect": "Supports hormonal balance",
+            "certification": "GMP Certified"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Natural Sleep Aid",
+        "brand": "CalmNaturals",
+        "category": "Healthcare",
+        "description": "A natural sleep aid formulated with melatonin, valerian root, and chamomile to promote restful sleep and relieve insomnia.",
+        "price": {
+            "originalPrice": 699,
+            "discountedPrice": 549,
+            "discountPercentage": 21
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Melatonin, Valerian Root, Chamomile",
+            "recommendedFor": "Sleep disorders, Insomnia relief"
+        },
+        "seller": {
+            "name": "Nature Remedies",
+            "rating": 4.2,
+            "totalRatings": 900,
+            "reviews": 200
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "15% off on the first purchase",
                 "validTill": "2025-02-28"
             }
         ],
         "features": [
             {
-                "featureName": "ISV Certification",
-                "featureDescription": "Certified to run professional applications like AutoCAD and SolidWorks flawlessly."
+                "featureName": "Promotes sleep",
+                "featureDescription": "Helps improve sleep quality and duration."
             },
             {
-                "featureName": "DreamColor Display",
-                "featureDescription": "100% AdobeRGB with factory-calibrated color accuracy."
+                "featureName": "Natural ingredients",
+                "featureDescription": "Made with natural herbs and melatonin."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/612/612/kkoc70w0/computer/g/u/u/elitebook-840-g6-business-laptop-hp-original-imafzzaaa6bygtb7.jpeg?q=70",
-            "https://example.com/images/zbookfury-side.jpg"
+            "https://example.com/images/sleep-aid.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "3 years onsite warranty",
-        "returnPolicy": "7-day return policy for manufacturing defects",
-        "importantNotes": "Heavy-duty laptop, recommended for professional use only.",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Not for use by children under 12.",
         "highlights": {
-            "Performance": "Powered by Intel Core i9 and NVIDIA RTX A5000 GPU.",
-            "Display": "Stunning 4K UHD IPS panel for accurate visuals.",
-            "Durability": "Built to withstand heavy usage and extreme conditions."
+            "effect": "Restful sleep",
+            "certification": "FDA Approved"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-18"
     },
     {
-        "name": "Lenovo ThinkPad X1 Extreme Gen 5",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "A premium performance laptop with an Intel Core i9 processor and NVIDIA RTX graphics, ideal for professionals and creatives.",
+        "name": "Hair Growth Formula",
+        "brand": "Herbals Plus",
+        "category": "Healthcare",
+        "description": "An herbal hair growth supplement enriched with biotin and saw palmetto to improve hair thickness and reduce hair fall.",
         "price": {
-            "originalPrice": 300000,
-            "discountedPrice": 285000,
-            "discountPercentage": 5
+            "originalPrice": 899,
+            "discountedPrice": 799,
+            "discountPercentage": 11
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 23750,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 7000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-12900H",
-            "ram": "64GB DDR5",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "15.6 inches 4K UHD",
-            "batteryLife": "12 hours",
-            "weight": "2.1 kg",
-            "dimensions": "35.5 x 23.5 x 1.9 cm",
-            "ports": [
-                "2 x USB 3.2",
-                "1 x HDMI 2.1",
-                "1 x Thunderbolt 4",
-                "1 x RJ45 Ethernet"
-            ],
-            "warranty": "3 years"
+            "ingredients": "Biotin, Saw Palmetto, Vitamin E",
+            "recommendedFor": "Hair growth, Thicker hair, Hair fall reduction"
         },
         "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.5,
-            "totalRatings": 200,
-            "reviews": 100
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Get ₹15,000 cashback on HDFC Bank card payments.",
-                "validTill": "2025-03-31"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "4K UHD Display",
-                "featureDescription": "An ultra-high-definition display for accurate color reproduction."
-            },
-            {
-                "featureName": "MIL-STD 810G Durability",
-                "featureDescription": "Built to withstand the rigors of military-grade durability."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kynb6vk0/computer/s/7/y/thinkpad-p43s-thin-and-light-laptop-lenovo-original-imagau8rwey9zabh.jpeg?q=70",
-            "https://example.com/images/thinkpadx1-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "3 years onsite warranty",
-        "returnPolicy": "30-day return policy for unopened products",
-        "importantNotes": "This model is designed for heavy-duty performance.",
-        "highlights": {
-            "Performance": "Equipped with Intel i9 and NVIDIA RTX for top-tier performance.",
-            "Display": "High-quality 4K UHD display with Dolby Vision.",
-            "Durability": "Built to endure tough conditions with military-grade specifications."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Dell Alienware X17 R2",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "A powerful gaming laptop with Intel's latest i9 processor, 32GB RAM, and a 17-inch 4K display, perfect for immersive gaming experiences.",
-        "price": {
-            "originalPrice": 350000,
-            "discountedPrice": 330000,
-            "discountPercentage": 5.71
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 27500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 10000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-12900K",
-            "ram": "32GB DDR5",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Home",
-            "screenSize": "17.3 inches 4K UHD",
-            "batteryLife": "8 hours",
-            "weight": "2.5 kg",
-            "dimensions": "40 x 30 x 1.8 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "1 x HDMI 2.1",
-                "1 x Thunderbolt 4",
-                "1 x RJ45 Ethernet"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.7,
-            "totalRatings": 300,
-            "reviews": 120
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Up to ₹10,000 cashback on select bank cards.",
-                "validTill": "2025-03-31"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "16:9 4K UHD Display",
-                "featureDescription": "Experience immersive gaming with a 4K UHD display."
-            },
-            {
-                "featureName": "Advanced Thermal Design",
-                "featureDescription": "Alienware Cryo-Tech cooling for prolonged gaming sessions."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/8/0/c/-original-imagz77t9zgvcrjh.jpeg?q=70",
-            "https://example.com/images/alienware-x17-back.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy for manufacturing defects",
-        "importantNotes": "For gaming enthusiasts seeking top-tier graphics and performance.",
-        "highlights": {
-            "Graphics": "NVIDIA RTX 3080 16GB for exceptional gaming visuals.",
-            "Display": "4K UHD for ultra-crisp and detailed images.",
-            "Cooling": "Efficient Alienware Cryo-Tech cooling system."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Microsoft Surface Studio 2+",
-        "brand": "Microsoft",
-        "category": "Laptop",
-        "description": "An all-in-one creative studio computer with a stunning PixelSense touchscreen display, powerful processors, and extensive connectivity.",
-        "price": {
-            "originalPrice": 550000,
-            "discountedPrice": 530000,
-            "discountPercentage": 3.64
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 44166.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 15000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-11370H",
-            "ram": "32GB DDR4",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce GTX 1660 Ti 6GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "28 inches PixelSense Touchscreen (4500x3000)",
-            "batteryLife": "11 hours",
-            "weight": "4.5 kg",
-            "dimensions": "55.1 x 41.5 x 19.8 cm",
-            "ports": [
-                "4 x USB 3.1",
-                "1 x HDMI 2.0",
-                "1 x Ethernet",
-                "2 x Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Microsoft Store",
-            "rating": 4.8,
-            "totalRatings": 150,
-            "reviews": 65
+            "name": "HerbalCare",
+            "rating": 4.6,
+            "totalRatings": 1100,
+            "reviews": 400
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Get ₹25,000 off on the purchase of Surface Studio 2+ using select bank cards.",
-                "validTill": "2025-05-31"
+                "description": "Buy 1, get 1 at 50% off",
+                "validTill": "2025-03-10"
             }
         ],
         "features": [
             {
-                "featureName": "PixelSense Touchscreen",
-                "featureDescription": "A highly responsive touchscreen with 10-point multi-touch support."
+                "featureName": "Promotes hair growth",
+                "featureDescription": "Stimulates hair follicles for faster growth."
             },
             {
-                "featureName": "Integrated Stand",
-                "featureDescription": "Adjustable stand allows you to set the screen to any angle."
+                "featureName": "Reduces hair fall",
+                "featureDescription": "Strengthens hair roots to reduce hair shedding."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/g/a/j/-original-imah2pfghyhyzmpt.jpeg?q=70",
-            "https://example.com/images/surfacestudio-side.jpg"
+            "https://example.com/images/hair-growth.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "14-day return policy for manufacturing defects",
-        "importantNotes": "For designers, artists, and creatives looking for a powerful workstation.",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Consult a doctor if you have a scalp condition.",
         "highlights": {
-            "Performance": "Intel i7 processor and NVIDIA GTX for fluid performance.",
-            "Display": "Stunning 28-inch 4K PixelSense touchscreen.",
-            "Design": "Elegant, sleek all-in-one design with adjustable stand."
+            "effect": "Healthier hair",
+            "certification": "Non-GMO"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-18"
     },
     {
-        "name": "Dell Precision 7770 Workstation",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "A premium mobile workstation featuring Intel Xeon and NVIDIA RTX A5000 graphics, designed for heavy workloads and professional applications.",
+        "name": "Joint Pain Relief Gel",
+        "brand": "ReliefFlex",
+        "category": "Healthcare",
+        "description": "Topical gel designed to provide immediate relief from joint and muscle pain, featuring menthol, camphor, and eucalyptus.",
         "price": {
-            "originalPrice": 400000,
-            "discountedPrice": 380000,
-            "discountPercentage": 5
+            "originalPrice": 399,
+            "discountedPrice": 299,
+            "discountPercentage": 25
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 31666.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 7000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Xeon W-11955M",
-            "ram": "128GB DDR4 ECC",
-            "storage": "4TB SSD",
-            "graphicsCard": "NVIDIA RTX A5000 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches 4K UHD (3840x2160) OLED",
-            "batteryLife": "8 hours",
-            "weight": "2.9 kg",
-            "dimensions": "40.6 x 28.0 x 2.4 cm",
-            "ports": [
-                "2 x USB 3.2",
-                "1 x HDMI 2.0",
-                "2 x Thunderbolt 4",
-                "1 x SD card reader"
-            ],
-            "warranty": "3 years"
+            "ingredients": "Menthol, Camphor, Eucalyptus",
+            "recommendedFor": "Joint pain, Muscle soreness, Arthritis"
         },
         "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.8,
-            "totalRatings": 110,
-            "reviews": 40
+            "name": "FlexRelief",
+            "rating": 4.5,
+            "totalRatings": 750,
+            "reviews": 300
         },
         "availableOffers": [
             {
-                "offerType": "Cashback",
-                "description": "Get ₹15,000 cashback on payments via Axis Bank credit card.",
-                "validTill": "2025-05-31"
+                "offerType": "Discount",
+                "description": "Flat 20% off on all purchases",
+                "validTill": "2025-02-15"
             }
         ],
         "features": [
             {
-                "featureName": "Ultra-fast Performance",
-                "featureDescription": "Equipped with Intel Xeon processor and NVIDIA RTX A5000 for seamless multitasking and GPU-intensive applications."
+                "featureName": "Fast-acting relief",
+                "featureDescription": "Provides relief within minutes of application."
             },
             {
-                "featureName": "4K OLED Display",
-                "featureDescription": "OLED screen with exceptional contrast, color accuracy, and viewing angles."
+                "featureName": "Soothing effect",
+                "featureDescription": "Cools the skin and soothes the pain."
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/l1fc0i80/computer/9/5/r/inspiron-3525-thin-and-light-laptop-dell-original-imagczzfezyd7tqs.jpeg?q=70",
-            "https://example.com/images/dellprecision7770-side.jpg"
+            "https://example.com/images/joint-relief-gel.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "3 years onsite warranty",
-        "returnPolicy": "15-day return policy for unopened products only",
-        "importantNotes": "This device is designed for professional use. Best for CAD, video editing, and scientific computing.",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "For external use only.",
         "highlights": {
-            "Performance": "Designed for professionals needing maximum performance in demanding tasks.",
-            "Display": "4K OLED display ensures perfect visual quality.",
-            "Durability": "Rugged and built for extreme conditions."
+            "effect": "Quick pain relief",
+            "certification": "GMP Certified"
         },
-        "addedOn": "2025-01-17"
+        "addedOn": "2025-01-18"
     },
     {
-        "name": "Microsoft Surface Studio 2",
-        "brand": "Microsoft",
-        "category": "Laptop",
-        "description": "A revolutionary all-in-one desktop with a stunning 28-inch PixelSense touch display and the latest Intel Core i7 and NVIDIA GTX graphics.",
+        "name": "Organic Green Tea",
+        "brand": "TeaLuxe",
+        "category": "Healthcare",
+        "description": "Premium organic green tea leaves with natural antioxidants to help with detoxification, metabolism, and overall wellness.",
         "price": {
-            "originalPrice": 310000,
-            "discountedPrice": 295000,
-            "discountPercentage": 4.84
+            "originalPrice": 299,
+            "discountedPrice": 249,
+            "discountPercentage": 17
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 24583.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 8000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i7-11370H",
-            "ram": "32GB DDR4",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GTX 1060 6GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "28 inches PixelSense 4K Touch Display (4500 x 3000)",
-            "batteryLife": "5 hours",
-            "weight": "4.5 kg",
-            "dimensions": "63.2 x 45.6 x 20.6 cm",
-            "ports": [
-                "4 x USB 3.0",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x SD card reader",
-                "1 x DisplayPort"
-            ],
-            "warranty": "2 years"
+            "ingredients": "Organic Green Tea",
+            "recommendedFor": "Detoxification, Weight loss, Antioxidant boost"
         },
         "seller": {
-            "name": "Microsoft Official Store",
-            "rating": 4.6,
-            "totalRatings": 90,
+            "name": "Tea World",
+            "rating": 4.8,
+            "totalRatings": 2000,
+            "reviews": 800
+        },
+        "availableOffers": [
+            {
+                "offerType": "Buy One Get One",
+                "description": "Buy one pack, get another one free",
+                "validTill": "2025-02-10"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Detoxifies body",
+                "featureDescription": "Helps remove toxins and cleanse the system."
+            },
+            {
+                "featureName": "Boosts metabolism",
+                "featureDescription": "Increases metabolism and supports weight loss."
+            }
+        ],
+        "images": [
+            "https://example.com/images/organic-green-tea.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Contains caffeine, avoid during night.",
+        "highlights": {
+            "effect": "Detoxifies and energizes",
+            "certification": "USDA Organic"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Vitamin D3 Supplement",
+        "brand": "HealthyBones",
+        "category": "Healthcare",
+        "description": "A potent Vitamin D3 supplement designed to support bone health, immune function, and overall well-being.",
+        "price": {
+            "originalPrice": 499,
+            "discountedPrice": 399,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Vitamin D3",
+            "recommendedFor": "Bone health, Immune function, Calcium absorption"
+        },
+        "seller": {
+            "name": "BoneCare",
+            "rating": 4.4,
+            "totalRatings": 600,
+            "reviews": 250
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 10% off on all purchases",
+                "validTill": "2025-03-01"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Supports bone health",
+                "featureDescription": "Improves calcium absorption for stronger bones."
+            },
+            {
+                "featureName": "Boosts immunity",
+                "featureDescription": "Enhances immune function and reduces infections."
+            }
+        ],
+        "images": [
+            "https://example.com/images/vitamin-d3.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Take with a meal for better absorption.",
+        "highlights": {
+            "effect": "Supports bone and immune health",
+            "certification": "Non-GMO"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Menstrual Pain Relief Tablets",
+        "brand": "FemCare",
+        "category": "Healthcare",
+        "description": "A natural remedy for menstrual cramps and discomfort, featuring ginger and turmeric for pain relief and inflammation reduction.",
+        "price": {
+            "originalPrice": 499,
+            "discountedPrice": 399,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Ginger, Turmeric, Magnesium",
+            "recommendedFor": "Menstrual pain, Cramps relief, Inflammation reduction"
+        },
+        "seller": {
+            "name": "FemWell",
+            "rating": 4.3,
+            "totalRatings": 1300,
+            "reviews": 400
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "20% off on first purchase",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Pain relief",
+                "featureDescription": "Relieves cramps and discomfort during menstruation."
+            },
+            {
+                "featureName": "Natural ingredients",
+                "featureDescription": "Contains ginger, turmeric, and magnesium for holistic relief."
+            }
+        ],
+        "images": [
+            "https://example.com/images/menstrual-pain-relief.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Consult a doctor before use if you have gastrointestinal issues.",
+        "highlights": {
+            "effect": "Relieves cramps effectively",
+            "certification": "GMP Certified"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Organic Apple Cider Vinegar",
+        "brand": "VitaPure",
+        "category": "Healthcare",
+        "description": "100% organic apple cider vinegar with the 'mother' to support digestion, detox, and weight loss.",
+        "price": {
+            "originalPrice": 349,
+            "discountedPrice": 299,
+            "discountPercentage": 14
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Organic Apple Cider Vinegar",
+            "recommendedFor": "Digestive health, Weight loss, Detoxification"
+        },
+        "seller": {
+            "name": "VitaWell",
+            "rating": 4.7,
+            "totalRatings": 1800,
+            "reviews": 650
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 15% off on all orders above ₹500",
+                "validTill": "2025-03-05"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Supports digestion",
+                "featureDescription": "Improves digestion and gut health."
+            },
+            {
+                "featureName": "Helps with weight loss",
+                "featureDescription": "Boosts metabolism and aids in fat burning."
+            }
+        ],
+        "images": [
+            "https://example.com/images/apple-cider-vinegar.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Dilute with water before consumption.",
+        "highlights": {
+            "effect": "Detoxifies and aids weight loss",
+            "certification": "USDA Organic"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Omega-3 Fish Oil Capsules",
+        "brand": "PureHealth",
+        "category": "Healthcare",
+        "description": "Fish oil capsules containing omega-3 fatty acids to support heart health, brain function, and reduce inflammation.",
+        "price": {
+            "originalPrice": 799,
+            "discountedPrice": 649,
+            "discountPercentage": 19
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "ingredients": "Omega-3 Fatty Acids, Fish Oil",
+            "recommendedFor": "Heart health, Brain function, Reducing inflammation"
+        },
+        "seller": {
+            "name": "HealthMax",
+            "rating": 4.5,
+            "totalRatings": 1600,
+            "reviews": 700
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 10% off on Omega-3 Fish Oil Capsules",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "features": [
+            {
+                "featureName": "Supports heart health",
+                "featureDescription": "Helps reduce cholesterol levels and supports heart function."
+            },
+            {
+                "featureName": "Improves brain function",
+                "featureDescription": "Boosts memory, focus, and cognitive health."
+            }
+        ],
+        "images": [
+            "https://example.com/images/omega-3-fish-oil.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No warranty",
+        "returnPolicy": "30-day return policy",
+        "importantNotes": "Consult a doctor if you're on blood-thinning medication.",
+        "highlights": {
+            "effect": "Promotes heart and brain health",
+            "certification": "Non-GMO"
+        },
+        "addedOn": "2025-01-18"
+    },
+    {
+        "name": "Organic Turmeric Capsules",
+        "category": "Health Supplements",
+        "description": "Made from pure turmeric extract, known for its anti-inflammatory and antioxidant properties.",
+        "price": {
+            "originalPrice": 799,
+            "discountedPrice": 599,
+            "discountPercentage": 25
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "60g",
+            "capsules": "60 capsules"
+        },
+        "seller": {
+            "name": "Herbal Remedies",
+            "rating": 4.5,
+            "totalRatings": 150,
+            "reviews": 30
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 25% off on Turmeric Capsules",
+                "validTill": "2025-03-31"
+            }
+        ],
+        "features": [
+            {
+                "type": "Dosage",
+                "featureName": "Take 1 capsule daily after meal",
+                "featureDescription": "Helps with joint pain and overall inflammation"
+            }
+        ],
+        "images": [
+            "https://example.com/organic_turmeric.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Not suitable for pregnant women",
+        "highlights": {
+            "anti-inflammatory": "Reduces joint pain and swelling",
+            "antioxidant": "Boosts immunity and prevents cell damage"
+        },
+        "addedOn": "2025-01-15T10:00:00Z"
+    },
+    {
+        "name": "Vitamin D3 2000 IU",
+        "category": "Health Supplements",
+        "description": "Supports bone health, immune function, and overall well-being with 2000 IU of Vitamin D3.",
+        "price": {
+            "originalPrice": 499,
+            "discountedPrice": 399,
+            "discountPercentage": 20
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "30g",
+            "capsules": "60 capsules"
+        },
+        "seller": {
+            "name": "Health Experts",
+            "rating": 4.7,
+            "totalRatings": 200,
             "reviews": 50
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Get ₹10,000 off on the first purchase using HDFC cards.",
+                "description": "20% off on all Vitamin D3 bottles",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "features": [
+            {
+                "type": "Dosage",
+                "featureName": "Take 1 capsule daily with food",
+                "featureDescription": "Supports bone density and muscle function"
+            }
+        ],
+        "images": [
+            "https://example.com/vitamin_d3.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Consult a doctor before use if on any medication",
+        "highlights": {
+            "bone_health": "Promotes healthy bones and teeth",
+            "immune_support": "Boosts immunity during seasonal changes"
+        },
+        "addedOn": "2025-01-10T12:00:00Z"
+    },
+    {
+        "name": "Natural Detox Tea",
+        "category": "Herbal Tea",
+        "description": "A blend of natural herbs to aid digestion, detoxify the body, and promote weight loss.",
+        "price": {
+            "originalPrice": 299,
+            "discountedPrice": 249,
+            "discountPercentage": 17
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "100g",
+            "servings": "30 servings"
+        },
+        "seller": {
+            "name": "Green Leaf",
+            "rating": 4.2,
+            "totalRatings": 120,
+            "reviews": 40
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Save 17% on Detox Tea",
+                "validTill": "2025-02-28"
+            }
+        ],
+        "features": [
+            {
+                "type": "Usage",
+                "featureName": "Drink 1 cup after meals",
+                "featureDescription": "Helps detoxify your body and improve digestion"
+            }
+        ],
+        "images": [
+            "https://example.com/detox_tea.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "May cause mild laxative effects",
+        "highlights": {
+            "detox": "Detoxifies and cleanses the body",
+            "weight_loss": "Supports healthy weight loss"
+        },
+        "addedOn": "2025-01-12T09:00:00Z"
+    },
+    {
+        "name": "Herbal Cough Syrup",
+        "category": "Healthcare",
+        "description": "Natural remedy for cough and sore throat, made with a blend of herbal ingredients.",
+        "price": {
+            "originalPrice": 199,
+            "discountedPrice": 149,
+            "discountPercentage": 25
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "150ml",
+            "servings": "30 servings"
+        },
+        "seller": {
+            "name": "Herbal Remedies",
+            "rating": 4.3,
+            "totalRatings": 90,
+            "reviews": 20
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Flat 25% off on Herbal Cough Syrup",
                 "validTill": "2025-04-30"
             }
         ],
         "features": [
             {
-                "featureName": "PixelSense Touch Display",
-                "featureDescription": "Stunning 4K touch display perfect for digital artists and designers."
-            },
-            {
-                "featureName": "All-in-One Design",
-                "featureDescription": "Elegant and space-saving all-in-one design with a foldable touchscreen."
+                "type": "Dosage",
+                "featureName": "Take 1 tablespoon every 4 hours",
+                "featureDescription": "Relieves cough and sore throat naturally"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/j/k/e/qil-00031-thin-and-light-laptop-microsoft-original-imagtyx5sjghg46j.jpeg?q=70",
-            "https://example.com/images/surfacestudio2-side.jpg"
+            "https://example.com/herbal_cough.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "2 years manufacturer warranty",
-        "returnPolicy": "30-day return policy for defective products",
-        "importantNotes": "Best suited for creative professionals and multimedia production.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Not recommended for children under 6 years",
         "highlights": {
-            "Performance": "Excellent performance for 3D rendering, video editing, and design work.",
-            "Display": "Brilliant 28-inch 4K touch display with 10-point multi-touch.",
-            "Design": "Sleek and elegant with an easy-to-adjust stand."
+            "natural": "Made with 100% natural herbs",
+            "soothing": "Soothes sore throat and reduces cough"
         },
-        "addedOn": "2025-01-17"
+        "addedOn": "2025-01-20T11:00:00Z"
     },
     {
-        "name": "Lenovo ThinkPad X1 Carbon Gen 11",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "A flagship laptop built for business professionals, featuring Intel Core i9 and 32GB of RAM, offering top-tier performance and reliability.",
+        "name": "Aloe Vera Gel",
+        "category": "Personal Care",
+        "description": "Pure Aloe Vera gel for skin hydration, soothing sunburn, and promoting healthy skin.",
         "price": {
-            "originalPrice": 250000,
-            "discountedPrice": 240000,
-            "discountPercentage": 4
+            "originalPrice": 299,
+            "discountedPrice": 199,
+            "discountPercentage": 33
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 20000,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 5000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-13950U",
-            "ram": "32GB DDR5",
-            "storage": "1TB SSD",
-            "graphicsCard": "Intel Iris Xe Graphics",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "14 inches 4K UHD IPS (3840x2160)",
-            "batteryLife": "15 hours",
-            "weight": "1.13 kg",
-            "dimensions": "31.4 x 22.3 x 1.49 cm",
-            "ports": [
-                "2 x USB-C",
-                "2 x USB 3.2",
-                "1 x HDMI 2.0",
-                "1 x Ethernet",
-                "1 x 3.5mm jack"
-            ],
-            "warranty": "3 years"
+            "weight": "200g",
+            "type": "Gel"
         },
         "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.9,
-            "totalRatings": 120,
-            "reviews": 70
-        },
-        "availableOffers": [
-            {
-                "offerType": "Gift Voucher",
-                "description": "Get a ₹5,000 gift voucher for accessories with this purchase.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Premium Build",
-                "featureDescription": "Carbon fiber body with military-grade durability."
-            },
-            {
-                "featureName": "Long Battery Life",
-                "featureDescription": "Up to 15 hours of battery life on a single charge."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kynb6vk0/computer/s/7/y/thinkpad-p43s-thin-and-light-laptop-lenovo-original-imagau8rwey9zabh.jpeg?q=70",
-            "https://example.com/images/thinkpadx1carbon-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "3 years onsite warranty",
-        "returnPolicy": "7-day return policy for defects",
-        "importantNotes": "Designed for professionals who need performance on the go.",
-        "highlights": {
-            "Performance": "Powered by Intel Core i9 and 32GB RAM for multitasking efficiency.",
-            "Battery Life": "15 hours of productivity with fast charging.",
-            "Design": "Ultra-light and portable with military-grade durability."
-        },
-        "addedOn": "2025-01-17"
-    },
-    {
-        "name": "Apple Mac Pro 2023",
-        "brand": "Apple",
-        "category": "Laptop",
-        "description": "A powerhouse designed for professionals who need the most powerful Mac with expansive customization options and unmatched performance.",
-        "price": {
-            "originalPrice": 600000,
-            "discountedPrice": 590000,
-            "discountPercentage": 1.67
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 49166.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 20000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M2 Ultra Chip",
-            "ram": "128GB Unified Memory",
-            "storage": "8TB SSD",
-            "graphicsCard": "Apple M2 Ultra Graphics",
-            "operatingSystem": "macOS Ventura",
-            "screenSize": "Not Included",
-            "batteryLife": "Not Applicable",
-            "weight": "18 kg",
-            "dimensions": "52.2 x 21.3 x 45.0 cm",
-            "ports": [
-                "4 x Thunderbolt 4",
-                "2 x USB 3.0",
-                "2 x Ethernet",
-                "1 x HDMI"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.8,
-            "totalRatings": 250,
-            "reviews": 95
+            "name": "Herbal Skincare",
+            "rating": 4.6,
+            "totalRatings": 200,
+            "reviews": 45
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Save ₹30,000 on all Mac Pro orders using Citibank Cards.",
+                "description": "33% off on Aloe Vera Gel",
+                "validTill": "2025-03-15"
+            }
+        ],
+        "features": [
+            {
+                "type": "Usage",
+                "featureName": "Apply generously to face and body",
+                "featureDescription": "Moisturizes and soothes skin"
+            }
+        ],
+        "images": [
+            "https://example.com/aloe_vera.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "For external use only",
+        "highlights": {
+            "moisturizing": "Keeps skin hydrated and soft",
+            "soothing": "Soothes sunburn and irritation"
+        },
+        "addedOn": "2025-01-10T14:00:00Z"
+    },
+    {
+        "name": "Multivitamin Tablets",
+        "category": "Health Supplements",
+        "description": "Complete multivitamin supplement to support overall health and well-being.",
+        "price": {
+            "originalPrice": 399,
+            "discountedPrice": 299,
+            "discountPercentage": 25
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "50g",
+            "tablets": "60 tablets"
+        },
+        "seller": {
+            "name": "Health Essentials",
+            "rating": 4.4,
+            "totalRatings": 180,
+            "reviews": 25
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "25% off on Multivitamin Tablets",
                 "validTill": "2025-03-31"
             }
         ],
         "features": [
             {
-                "featureName": "Powerful M2 Ultra Chip",
-                "featureDescription": "Revolutionary Apple silicon with up to 20 CPU cores for outstanding speed."
-            },
-            {
-                "featureName": "Expandable Architecture",
-                "featureDescription": "Customizable for your needs with up to 8TB of SSD storage and 128GB RAM."
+                "type": "Dosage",
+                "featureName": "Take 1 tablet daily with food",
+                "featureDescription": "Supports overall health and immunity"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/computer/g/t/w/-original-imagypv6zpfu8kzh.jpeg?q=70",
-            "https://example.com/images/macpro-side.jpg"
+            "https://example.com/multivitamin.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy for unopened products",
-        "importantNotes": "Ideal for professional content creators, developers, and media production.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Consult a doctor before use",
         "highlights": {
-            "Performance": "Apple's M2 Ultra chip for industry-leading performance.",
-            "Customization": "Expandable to meet your needs for any project.",
-            "Design": "Elegant, space-saving design with remarkable power."
+            "immune_support": "Boosts immunity and energy levels",
+            "overall_health": "Supports healthy skin, eyes, and bones"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-10T12:00:00Z"
     },
     {
-        "name": "Alienware Aurora R15",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "A powerful gaming PC designed for enthusiasts, featuring the latest Intel Core i9 processor and NVIDIA RTX 3090 graphics.",
+        "name": "Ashwagandha Tablets",
+        "category": "Herbal Supplements",
+        "description": "Natural stress relief and energy booster made from pure Ashwagandha extract.",
         "price": {
-            "originalPrice": 700000,
-            "discountedPrice": 680000,
-            "discountPercentage": 2.86
+            "originalPrice": 699,
+            "discountedPrice": 499,
+            "discountPercentage": 28
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 56666.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 25000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-13900K",
-            "ram": "64GB DDR5",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3090 24GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "Not Included",
-            "batteryLife": "Not Applicable",
-            "weight": "18.5 kg",
-            "dimensions": "51 x 22 x 48 cm",
-            "ports": [
-                "4 x USB 3.0",
-                "2 x USB-C",
-                "2 x HDMI",
-                "1 x Ethernet",
-                "1 x Optical Audio"
-            ],
-            "warranty": "2 years"
+            "weight": "60g",
+            "tablets": "60 tablets"
         },
         "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.7,
-            "totalRatings": 350,
-            "reviews": 130
+            "name": "Nature's Wellness",
+            "rating": 4.6,
+            "totalRatings": 250,
+            "reviews": 60
         },
         "availableOffers": [
             {
-                "offerType": "Cashback",
-                "description": "Get ₹40,000 cashback when purchasing with HDFC cards.",
-                "validTill": "2025-05-31"
+                "offerType": "Discount",
+                "description": "Flat 28% off on Ashwagandha Tablets",
+                "validTill": "2025-03-31"
             }
         ],
         "features": [
             {
-                "featureName": "Top-tier Graphics",
-                "featureDescription": "Equipped with the latest NVIDIA RTX 3090 for gaming and VR at ultra settings."
-            },
-            {
-                "featureName": "Efficient Cooling",
-                "featureDescription": "Advanced cooling system to prevent thermal throttling during intense gaming sessions."
+                "type": "Dosage",
+                "featureName": "Take 1 tablet twice daily",
+                "featureDescription": "Reduces stress and promotes mental clarity"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kcauaa80/computer/8/k/e/alienware-original-imaftgn37g4vzqmy.jpeg?q=70",
-            "https://example.com/images/alienware-aurora-back.jpg"
+            "https://example.com/ashwagandha.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for gamers and content creators who require top-tier performance.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Not suitable for pregnant women",
         "highlights": {
-            "Graphics": "NVIDIA RTX 3090 for high-end gaming and 3D rendering.",
-            "Performance": "Intel i9 processor and 64GB RAM for uninterrupted work.",
-            "Cooling": "Enhanced thermal design to handle extreme gaming sessions."
+            "stress_relief": "Reduces anxiety and stress",
+            "energy_booster": "Improves energy and vitality"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-15T08:00:00Z"
     },
     {
-        "name": "HP Omen 45L",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "A high-performance gaming PC with a sleek design, equipped with an Intel Core i9 processor and powerful NVIDIA graphics.",
+        "name": "Elderberry Syrup",
+        "category": "Immunity Boosters",
+        "description": "A natural remedy for boosting immunity and fighting seasonal illnesses.",
         "price": {
-            "originalPrice": 800000,
-            "discountedPrice": 780000,
-            "discountPercentage": 2.5
+            "originalPrice": 499,
+            "discountedPrice": 399,
+            "discountPercentage": 20
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 65000,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 30000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-12900K",
-            "ram": "128GB DDR5",
-            "storage": "4TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 12GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "Not Included",
-            "batteryLife": "Not Applicable",
-            "weight": "23 kg",
-            "dimensions": "48 x 30 x 50 cm",
-            "ports": [
-                "6 x USB 3.1",
-                "1 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x DisplayPort"
-            ],
-            "warranty": "2 years"
+            "weight": "200ml",
+            "servings": "40 servings"
         },
         "seller": {
-            "name": "HP Official Store",
-            "rating": 4.6,
+            "name": "Immunity Care",
+            "rating": 4.5,
             "totalRatings": 180,
+            "reviews": 40
+        },
+        "availableOffers": [
+            {
+                "offerType": "Discount",
+                "description": "Save 20% on Elderberry Syrup",
+                "validTill": "2025-04-15"
+            }
+        ],
+        "features": [
+            {
+                "type": "Dosage",
+                "featureName": "Take 1 teaspoon daily",
+                "featureDescription": "Boosts immunity and reduces symptoms of cold and flu"
+            }
+        ],
+        "images": [
+            "https://example.com/elderberry.jpg"
+        ],
+        "availability": "In Stock",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Consult a doctor before use if pregnant",
+        "highlights": {
+            "immunity": "Boosts immune defense",
+            "antioxidant": "Rich in natural antioxidants"
+        },
+        "addedOn": "2025-01-12T09:30:00Z"
+    },
+    {
+        "name": "Fish Oil Capsules",
+        "category": "Health Supplements",
+        "description": "Rich in Omega-3 fatty acids, supports heart and brain health.",
+        "price": {
+            "originalPrice": 899,
+            "discountedPrice": 749,
+            "discountPercentage": 17
+        },
+        "paymentOptions": {
+            "emi": null,
+            "cashOnDelivery": true,
+            "netBanking": true,
+            "debitCreditCard": true
+        },
+        "specifications": {
+            "weight": "120g",
+            "capsules": "90 capsules"
+        },
+        "seller": {
+            "name": "Omega Health",
+            "rating": 4.7,
+            "totalRatings": 300,
             "reviews": 80
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Get ₹50,000 off on HP Omen 45L when purchasing with Axis Bank Cards.",
-                "validTill": "2025-04-30"
+                "description": "Save 17% on Fish Oil Capsules",
+                "validTill": "2025-03-31"
             }
         ],
         "features": [
             {
-                "featureName": "Customizable RGB Lighting",
-                "featureDescription": "Personalize your PC with customizable RGB lighting."
-            },
-            {
-                "featureName": "Optimized for Gaming",
-                "featureDescription": "Omen 45L is built for extreme gaming performance and multitasking."
+                "type": "Dosage",
+                "featureName": "Take 2 capsules daily",
+                "featureDescription": "Improves cardiovascular and cognitive functions"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/w/f/w/16-wf0055tx-gaming-laptop-hp-original-imah3beg6gcgfffp.jpeg?q=70",
-            "https://example.com/images/omen-45l-side.jpg"
+            "https://example.com/fish_oil.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for serious gamers who want to dominate the competition.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Not suitable for vegetarians",
         "highlights": {
-            "Graphics": "Top-tier NVIDIA RTX 3080 for high-definition gaming.",
-            "Storage": "Massive 4TB SSD for quick access to all your files.",
-            "Design": "Sleek and modern design with customizable features."
+            "heart_health": "Supports healthy heart function",
+            "brain_health": "Enhances cognitive ability"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-18T10:00:00Z"
     },
-    
     {
-        "name": "MSI MEG Trident X 12th Gen",
-        "brand": "MSI",
-        "category": "Laptop",
-        "description": "A premium gaming desktop featuring Intel's 12th Gen processors and NVIDIA's latest RTX 3090 for maximum performance in a compact design.",
+        "name": "Probiotic Capsules",
+        "category": "Digestive Health",
+        "description": "Promotes gut health and improves digestion with 10 billion live cultures.",
         "price": {
-            "originalPrice": 850000,
-            "discountedPrice": 820000,
-            "discountPercentage": 3.53
+            "originalPrice": 599,
+            "discountedPrice": 499,
+            "discountPercentage": 17
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 68333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 35000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-12900K",
-            "ram": "64GB DDR5",
-            "storage": "2TB SSD + 4TB HDD",
-            "graphicsCard": "NVIDIA GeForce RTX 3090 24GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "Not Included",
-            "batteryLife": "Not Applicable",
-            "weight": "14 kg",
-            "dimensions": "30 x 40 x 20 cm",
-            "ports": [
-                "4 x USB 3.0",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x DisplayPort"
-            ],
-            "warranty": "2 years"
+            "weight": "60g",
+            "capsules": "60 capsules"
         },
         "seller": {
-            "name": "MSI Official Store",
-            "rating": 4.8,
+            "name": "Gut Health Co.",
+            "rating": 4.6,
             "totalRatings": 220,
-            "reviews": 105
+            "reviews": 50
         },
         "availableOffers": [
             {
-                "offerType": "Cashback",
-                "description": "Get ₹45,000 cashback on purchases using SBI Credit Cards.",
-                "validTill": "2025-06-30"
+                "offerType": "Discount",
+                "description": "Flat 17% off on Probiotic Capsules",
+                "validTill": "2025-04-10"
             }
         ],
         "features": [
             {
-                "featureName": "Powerful Performance",
-                "featureDescription": "Equipped with the latest Intel Core i9 processor and NVIDIA RTX 3090 for unparalleled performance in gaming and content creation."
-            },
-            {
-                "featureName": "Compact Design",
-                "featureDescription": "A small form factor PC that can be easily placed on a desk without sacrificing power."
+                "type": "Dosage",
+                "featureName": "Take 1 capsule daily with food",
+                "featureDescription": "Supports digestive health and strengthens immunity"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/i/4/j/vector-gp68-hx-13vg-214in-laptop-msi-original-imagrgwdgxy4ggug.jpeg?q=70",
-            "https://example.com/images/msi-trident-x-side.jpg"
+            "https://example.com/probiotic.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for gamers, content creators, and professionals who need a compact powerhouse.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Keep refrigerated after opening",
         "highlights": {
-            "Graphics": "NVIDIA RTX 3090 for supreme gaming and rendering capabilities.",
-            "Storage": "Massive 2TB SSD and 4TB HDD for speedy performance and ample space.",
-            "Design": "Compact yet powerful, perfect for desktop setups with limited space."
+            "digestive_health": "Improves gut flora balance",
+            "immune_support": "Enhances immunity"
         },
-        "addedOn": "2025-01-16"
+        "addedOn": "2025-01-14T07:00:00Z"
     },
     {
-        "name": "Alienware X17 R2",
-        "brand": "Alienware",
-        "category": "Laptop",
-        "description": "Alienware X17 R2 is a top-tier gaming laptop featuring Intel Core i9 and NVIDIA GeForce RTX 3080 Ti for smooth and immersive gaming experiences.",
+        "name": "Herbal Sleep Aid",
+        "category": "Relaxation Supplements",
+        "description": "Promotes restful sleep with natural ingredients like valerian root and chamomile.",
         "price": {
-            "originalPrice": 400000,
-            "discountedPrice": 380000,
-            "discountPercentage": 5
+            "originalPrice": 799,
+            "discountedPrice": 649,
+            "discountPercentage": 19
         },
         "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 31666.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 40000
-            },
-            "cashOnDelivery": false,
+            "emi": null,
+            "cashOnDelivery": true,
             "netBanking": true,
             "debitCreditCard": true
         },
         "specifications": {
-            "processor": "Intel Core i9-12900K",
-            "ram": "32GB DDR5",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 Ti 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches",
-            "batteryLife": "5 hours",
-            "weight": "2.5 kg",
-            "dimensions": "40 x 30 x 2 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x DisplayPort"
-            ],
-            "warranty": "2 years"
+            "weight": "80g",
+            "tablets": "60 tablets"
         },
         "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.7,
+            "name": "Calm Nights",
+            "rating": 4.4,
             "totalRatings": 150,
-            "reviews": 85
+            "reviews": 35
         },
         "availableOffers": [
             {
                 "offerType": "Discount",
-                "description": "Get 10% off on using SBI Credit Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Top-tier Performance",
-                "featureDescription": "Equipped with Intel i9 and RTX 3080 Ti for seamless gameplay and professional workloads."
-            },
-            {
-                "featureName": "Large Display",
-                "featureDescription": "17.3-inch screen with high refresh rate for ultra-responsive gaming and immersive visuals."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/computer/8/0/c/-original-imagz77t9zgvcrjh.jpeg?q=70",
-            "https://example.com/images/alienware-x17-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for serious gamers who demand the best in performance and display.",
-        "highlights": {
-            "Graphics": "NVIDIA RTX 3080 Ti for ultra-high frame rates in AAA titles.",
-            "Screen": "17.3-inch screen with high refresh rate for smooth visuals.",
-            "Battery": "Long battery life for extended gaming sessions on the go."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Asus ROG Zephyrus G15",
-        "brand": "Asus",
-        "category": "Laptop",
-        "description": "Asus ROG Zephyrus G15 is a lightweight, powerful gaming laptop with AMD Ryzen 9 and NVIDIA RTX 3080, designed for gamers who demand both power and portability.",
-        "price": {
-            "originalPrice": 350000,
-            "discountedPrice": 330000,
-            "discountPercentage": 5.71
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 27500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 38000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "AMD Ryzen 9 5900HS",
-            "ram": "32GB DDR4",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "15.6 inches",
-            "batteryLife": "8 hours",
-            "weight": "2.1 kg",
-            "dimensions": "35 x 24 x 1.9 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "1 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x SD Card Reader"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "Asus Official Store",
-            "rating": 4.8,
-            "totalRatings": 250,
-            "reviews": 200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Get ₹25,000 cashback on using ICICI Bank Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Powerful Ryzen 9 Processor",
-                "featureDescription": "AMD Ryzen 9 5900HS for an incredible combination of high clock speeds and multi-core performance."
-            },
-            {
-                "featureName": "High-end Graphics",
-                "featureDescription": "NVIDIA RTX 3080 16GB ensures lag-free gaming with support for ray tracing and high frame rates."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/e/o/z/rog-zephyrus-g14-gaming-laptop-asus-original-imahfcjyjcvuu2hz.jpeg?q=70",
-            "https://example.com/images/rog-zephyrus-g15-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Designed for gamers and creators who need a balance of portability and power.",
-        "highlights": {
-            "Graphics": "RTX 3080 for exceptional gaming performance.",
-            "Processor": "AMD Ryzen 9 for top-notch performance in games and multitasking.",
-            "Portability": "Lightweight design with premium build."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "MSI GE76 Raider",
-        "brand": "MSI",
-        "category": "Laptop",
-        "description": "MSI GE76 Raider is a premium gaming laptop that features Intel Core i9 and NVIDIA RTX 3080, offering high-end performance and an immersive gaming experience.",
-        "price": {
-            "originalPrice": 375000,
-            "discountedPrice": 355000,
-            "discountPercentage": 5.33
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 29583.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 35000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11980HK",
-            "ram": "64GB DDR4",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches",
-            "batteryLife": "4 hours",
-            "weight": "3 kg",
-            "dimensions": "42 x 29 x 2.5 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x SD Card Reader"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "MSI Official Store",
-            "rating": 4.7,
-            "totalRatings": 180,
-            "reviews": 130
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Save ₹20,000 on purchases via HDFC Bank Credit Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Top Performance",
-                "featureDescription": "Intel Core i9 processor and NVIDIA RTX 3080 graphics for smooth 4K gaming and heavy workloads."
-            },
-            {
-                "featureName": "Immersive Display",
-                "featureDescription": "17.3-inch display with a high refresh rate for smooth, lag-free gaming."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kr3tj0w0/computer/j/3/s/na-notebook-msi-original-imag4z5jfc9bzwyq.jpeg?q=70",
-            "https://example.com/images/msi-ge76-raider-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Designed for gamers and professionals who need extreme performance.",
-        "highlights": {
-            "Processor": "Intel Core i9 for superior performance in games and productivity.",
-            "Graphics": "RTX 3080 for the best visual experience.",
-            "Display": "Large screen with high refresh rate for ultra-smooth gaming."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Gigabyte AORUS 17G",
-        "brand": "Gigabyte",
-        "category": "Computer",
-        "description": "The Gigabyte AORUS 17G is a powerful gaming laptop designed for enthusiasts, featuring Intel Core i9 and NVIDIA RTX 3080 for maximum performance in gaming and multitasking.",
-        "price": {
-            "originalPrice": 390000,
-            "discountedPrice": 375000,
-            "discountPercentage": 3.85
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 31250,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 40000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11900K",
-            "ram": "64GB DDR4",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches",
-            "batteryLife": "4 hours",
-            "weight": "2.8 kg",
-            "dimensions": "41 x 28 x 2.3 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x SD Card Reader"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "Gigabyte Official Store",
-            "rating": 4.6,
-            "totalRatings": 190,
-            "reviews": 140
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Get ₹25,000 off on using Axis Bank Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Extreme Performance",
-                "featureDescription": "Equipped with Intel i9 processor and RTX 3080 GPU, making it perfect for high-end gaming and content creation."
-            },
-            {
-                "featureName": "Premium Design",
-                "featureDescription": "Sleek, stylish design with advanced cooling and premium build quality."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/612/612/xif0q/monitor/y/j/q/aorus-fo27q3-2560-x-1440-dqhd-27-2024-aorus-fo27q3-gigabyte-original-imah4w4fxmxwcf8h.jpeg?q=70",
-            "https://example.com/images/aorus-17g-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for gamers who demand the highest levels of performance.",
-        "highlights": {
-            "Graphics": "RTX 3080 for seamless gaming and 4K content creation.",
-            "Storage": "2TB SSD for fast data access and storage.",
-            "RAM": "64GB for handling the most demanding tasks."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Lenovo Legion 7i",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "The Lenovo Legion 7i offers unmatched performance with Intel Core i9 and NVIDIA RTX 3080 graphics, ideal for gaming and heavy-duty tasks.",
-        "price": {
-            "originalPrice": 350000,
-            "discountedPrice": 340000,
-            "discountPercentage": 2.86
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 28333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 38000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11980HK",
-            "ram": "32GB DDR4",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "15.6 inches",
-            "batteryLife": "5 hours",
-            "weight": "2.5 kg",
-            "dimensions": "36 x 24 x 2 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "2 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x SD Card Reader"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.8,
-            "totalRatings": 220,
-            "reviews": 170
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Get ₹15,000 cashback when using ICICI Credit Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Advanced Performance",
-                "featureDescription": "Powered by Intel i9 and RTX 3080, this laptop is perfect for running AAA games and creative apps without lag."
-            },
-            {
-                "featureName": "Gaming Display",
-                "featureDescription": "15.6-inch FHD display with a high refresh rate for smooth, tear-free gaming."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/p/2/h/-original-imagzzfbaazmyncn.jpeg?q=70",
-            "https://example.com/images/lenovo-legion-7i-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for gamers who require top-tier performance and portability.",
-        "highlights": {
-            "Graphics": "RTX 3080 for the highest level of gaming graphics.",
-            "Processor": "Intel Core i9 for exceptional performance in gaming and productivity.",
-            "Display": "15.6-inch high-refresh-rate display for fluid gaming."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "HP Omen 17",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "HP Omen 17 offers unbeatable performance with Intel Core i9 and NVIDIA RTX 3080, combining high-end components with a large 17-inch display for an immersive gaming experience.",
-        "price": {
-            "originalPrice": 380000,
-            "discountedPrice": 365000,
-            "discountPercentage": 3.95
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 30416.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 40000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11900K",
-            "ram": "32GB DDR4",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080 16GB",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "17.3 inches",
-            "batteryLife": "5 hours",
-            "weight": "2.9 kg",
-            "dimensions": "40 x 27 x 2.5 cm",
-            "ports": [
-                "3 x USB 3.2",
-                "1 x USB-C",
-                "1 x HDMI",
-                "1 x Ethernet",
-                "1 x SD Card Reader"
-            ],
-            "warranty": "2 years"
-        },
-        "seller": {
-            "name": "HP Official Store",
-            "rating": 4.7,
-            "totalRatings": 230,
-            "reviews": 180
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Get ₹20,000 off with HDFC Credit Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Gaming Beast",
-                "featureDescription": "Intel i9 and RTX 3080 give you extreme power for gaming, 3D rendering, and content creation."
-            },
-            {
-                "featureName": "Immersive Audio-Visuals",
-                "featureDescription": "Large 17.3-inch screen and Bang & Olufsen audio for premium gaming experiences."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kzn17680/computer/1/i/z/-original-imagbhzqahdzyx4e.jpeg?q=70",
-            "https://example.com/images/hp-omen-17-side.jpg"
-        ],
-        "availability": "In Stock",
-        "warranty": "2 years",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "An all-around powerful machine for gamers and creators who need top-tier performance.",
-        "highlights": {
-            "Graphics": "RTX 3080 for incredible visuals and performance.",
-            "Screen": "17.3-inch display with high refresh rate for smooth gaming.",
-            "Processor": "Intel Core i9 for supreme processing power."
-        },
-        "addedOn": "2025-01-16"
-    },
-    {
-        "name": "Apple iPad Pro 12.9-inch (2024)",
-        "brand": "Apple",
-        "category": "Tablet",
-        "description": "The iPad Pro 12.9-inch (2024) is a premium tablet with M2 chip, Liquid Retina XDR display, and support for the Magic Keyboard, ideal for creative professionals and power users.",
-        "price": {
-            "originalPrice": 160000,
-            "discountedPrice": 150000,
-            "discountPercentage": 6.25
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 12500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 20000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M2 chip",
-            "ram": "16GB",
-            "storage": "1TB",
-            "graphicsCard": "Apple GPU",
-            "operatingSystem": "iPadOS 16",
-            "screenSize": "12.9 inches",
-            "batteryLife": "10 hours",
-            "weight": "682g",
-            "dimensions": "280.6 x 214.9 x 5.9 mm",
-            "ports": [
-                "USB-C",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.9,
-            "totalRatings": 2000,
-            "reviews": 1800
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "Get ₹10,000 cashback on HDFC Bank cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "M2 Chip",
-                "featureDescription": "Delivers next-level performance for multitasking, gaming, and professional applications."
-            },
-            {
-                "featureName": "Pro Display",
-                "featureDescription": "The Liquid Retina XDR display offers stunning brightness, contrast, and color accuracy for professional creative work."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/tablet/l/1/z/-original-imahyp6kyptg8bkb.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Best suited for professional users requiring high performance and display quality.",
-        "highlights": {
-            "Processor": "Apple M2 chip for seamless multitasking and app performance.",
-            "Display": "12.9-inch Liquid Retina XDR display for stunning visuals.",
-            "Storage": "1TB storage for heavy files, apps, and media."
-        },
-        "addedOn": "2025-01-15"
-    },
-    {
-        "name": "Apple iPad Pro 11-inch (2024)",
-        "brand": "Apple",
-        "category": "Tablet",
-        "description": "The iPad Pro 11-inch (2024) brings the power of the M2 chip and ProMotion display to a smaller size, designed for portability and performance in a sleek design.",
-        "price": {
-            "originalPrice": 120000,
-            "discountedPrice": 110000,
-            "discountPercentage": 8.33
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 9166.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 15000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M2 chip",
-            "ram": "8GB",
-            "storage": "512GB",
-            "graphicsCard": "Apple GPU",
-            "operatingSystem": "iPadOS 16",
-            "screenSize": "11 inches",
-            "batteryLife": "10 hours",
-            "weight": "466g",
-            "dimensions": "247.6 x 178.5 x 5.9 mm",
-            "ports": [
-                "USB-C",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.8,
-            "totalRatings": 1800,
-            "reviews": 1600
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹7,500 off on purchases above ₹90,000.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "ProMotion Display",
-                "featureDescription": "Offers a fluid and responsive 120Hz display for enhanced visuals and smoother touch interaction."
-            },
-            {
-                "featureName": "M2 Chip",
-                "featureDescription": "Provides exceptional performance for both professional tasks and gaming."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kolsscw0/tablet/n/r/c/mhwd3hn-a-apple-original-imag3yr5xrqchvrg.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Best for users seeking premium performance in a more portable form.",
-        "highlights": {
-            "Processor": "M2 chip for advanced multitasking and processing power.",
-            "Display": "11-inch Liquid Retina display with ProMotion for a smoother experience.",
-            "Storage": "512GB for storing all your apps, documents, and media."
-        },
-        "addedOn": "2025-01-15"
-    },
-    {
-        "name": "Apple iPad Air 5 (2024)",
-        "brand": "Apple",
-        "category": "Tablet",
-        "description": "The iPad Air 5 is a thinner, lighter tablet with Apple's M1 chip, offering excellent performance and an enhanced Retina display.",
-        "price": {
-            "originalPrice": 80000,
-            "discountedPrice": 76000,
-            "discountPercentage": 5
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 6333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 10000
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M1 chip",
-            "ram": "8GB",
-            "storage": "256GB",
-            "graphicsCard": "Apple GPU",
-            "operatingSystem": "iPadOS 16",
-            "screenSize": "10.9 inches",
-            "batteryLife": "10 hours",
-            "weight": "462g",
-            "dimensions": "247.6 x 178.5 x 6.1 mm",
-            "ports": [
-                "USB-C",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.8,
-            "totalRatings": 1700,
-            "reviews": 1500
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹5,000 cashback on ICICI cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "M1 Chip",
-                "featureDescription": "Apple's powerful M1 chip for ultra-fast performance."
-            },
-            {
-                "featureName": "Liquid Retina Display",
-                "featureDescription": "10.9-inch display with True Tone and P3 wide color for vibrant visuals."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kf75fgw0/tablet/n/w/f/apple-myh02hn-a-original-imafvpq8beatdnyg.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for users who need a balance of performance and portability.",
-        "highlights": {
-            "Processor": "M1 chip for lightning-fast processing.",
-            "Display": "10.9-inch Liquid Retina display for stunning visuals.",
-            "Storage": "256GB for ample space for apps, photos, and files."
-        },
-        "addedOn": "2025-01-15"
-    },
-    {
-        "name": "Apple iPad Mini 6 (2024)",
-        "brand": "Apple",
-        "category": "Tablet",
-        "description": "The iPad Mini 6 is a compact and powerful tablet with the A15 Bionic chip, ideal for those who need a smaller form factor with premium performance.",
-        "price": {
-            "originalPrice": 60000,
-            "discountedPrice": 58000,
-            "discountPercentage": 3.33
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 4833.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 8000
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple A15 Bionic chip",
-            "ram": "4GB",
-            "storage": "64GB",
-            "graphicsCard": "Apple GPU",
-            "operatingSystem": "iPadOS 16",
-            "screenSize": "8.3 inches",
-            "batteryLife": "10 hours",
-            "weight": "293g",
-            "dimensions": "195.4 x 134.8 x 6.3 mm",
-            "ports": [
-                "USB-C"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.7,
-            "totalRatings": 1600,
-            "reviews": 1400
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹4,000 off on Apple Store purchases.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Compact Power",
-                "featureDescription": "Packed with the A15 Bionic chip for powerful performance in a compact design."
-            },
-            {
-                "featureName": "Liquid Retina Display",
-                "featureDescription": "8.3-inch Liquid Retina display with True Tone and P3 wide color."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/ktop5e80/tablet/y/j/o/mk893hn-a-apple-original-imag6yg2hgqafged.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for those seeking a portable, yet powerful tablet.",
-        "highlights": {
-            "Processor": "A15 Bionic chip for fast performance.",
-            "Display": "8.3-inch Liquid Retina display for vibrant colors.",
-            "Storage": "64GB for your apps, documents, and media."
-        },
-        "addedOn": "2025-01-15"
-    },
-    {
-        "name": "Apple iPad 10.9-inch (2024)",
-        "brand": "Apple",
-        "category": "Tablet",
-        "description": "The iPad 10.9-inch (2024) offers great performance and features at a more affordable price point, equipped with the A14 Bionic chip for smooth multitasking and gaming.",
-        "price": {
-            "originalPrice": 45000,
-            "discountedPrice": 43000,
-            "discountPercentage": 4.44
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 3583.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 5000
-            },
-            "cashOnDelivery": true,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple A14 Bionic chip",
-            "ram": "4GB",
-            "storage": "64GB",
-            "graphicsCard": "Apple GPU",
-            "operatingSystem": "iPadOS 16",
-            "screenSize": "10.9 inches",
-            "batteryLife": "10 hours",
-            "weight": "460g",
-            "dimensions": "247.6 x 178.5 x 6.1 mm",
-            "ports": [
-                "USB-C"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.7,
-            "totalRatings": 1300,
-            "reviews": 1200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹3,000 cashback on SBI Credit Cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "A14 Bionic Chip",
-                "featureDescription": "Provides powerful performance for everyday tasks and games."
-            },
-            {
-                "featureName": "Retina Display",
-                "featureDescription": "10.9-inch Liquid Retina display for vibrant and crisp visuals."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/tablet/z/u/o/-original-imagj72tg8dj3sgx.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for everyday use with great performance and screen quality.",
-        "highlights": {
-            "Processor": "A14 Bionic chip for seamless performance.",
-            "Display": "10.9-inch Retina display for stunning clarity.",
-            "Storage": "64GB for your everyday apps and media."
-        },
-        "addedOn": "2025-01-15"
-    },
-    {
-        "name": "Dell XPS 17 9700",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "Dell XPS 17 9700 features a stunning 17-inch 4K display, powerful Intel Core i9 processor, and NVIDIA RTX 3060 graphics, ideal for professional work like video editing, 3D rendering, and gaming.",
-        "price": {
-            "originalPrice": 250000,
-            "discountedPrice": 230000,
-            "discountPercentage": 8
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 19166.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 30000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11900K",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA RTX 3060",
-            "operatingSystem": "Windows 11",
-            "screenSize": "17 inches",
-            "batteryLife": "8 hours",
-            "weight": "2.1 kg",
-            "dimensions": "374 x 248 x 18 mm",
-            "ports": [
-                "USB-C",
-                "Thunderbolt 4",
-                "HDMI",
-                "SD Card Reader"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.8,
-            "totalRatings": 2300,
-            "reviews": 2100
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹20,000 off on first purchase with HDFC Credit Card.",
-                "validTill": "2025-07-31"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Ultra-HD Display",
-                "featureDescription": "17-inch 4K UHD+ display with minimal bezels for an immersive viewing experience."
-            },
-            {
-                "featureName": "Professional Performance",
-                "featureDescription": "Powered by Intel Core i9 and NVIDIA RTX 3060, perfect for professionals who demand high performance."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/jk01bww0/computer/x/5/z/dell-na-thin-and-light-laptop-original-imaf7fy9v5sbfsxp.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for professionals working with heavy software like Adobe Photoshop and CAD.",
-        "highlights": {
-            "Processor": "Intel Core i9 processor for peak performance.",
-            "Graphics": "NVIDIA RTX 3060 for gaming and graphics-intensive tasks.",
-            "Display": "17-inch 4K UHD+ for vivid, sharp details."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Asus ROG Zephyrus G14",
-        "brand": "Asus",
-        "category": "Laptop",
-        "description": "Asus ROG Zephyrus G14 is a lightweight gaming laptop with AMD Ryzen 9 processor, NVIDIA GeForce RTX 3060 GPU, and a 120Hz display, perfect for gaming and creative professionals.",
-        "price": {
-            "originalPrice": 210000,
-            "discountedPrice": 200000,
-            "discountPercentage": 4.76
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 16666.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 25000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "AMD Ryzen 9 5900HS",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3060",
-            "operatingSystem": "Windows 11",
-            "screenSize": "14 inches",
-            "batteryLife": "10 hours",
-            "weight": "1.7 kg",
-            "dimensions": "324 x 223 x 19.9 mm",
-            "ports": [
-                "USB-C",
-                "HDMI",
-                "USB-A",
-                "Ethernet"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Asus Official Store",
-            "rating": 4.8,
-            "totalRatings": 2000,
-            "reviews": 1800
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹10,000 off on HDFC Credit Card EMI.",
-                "validTill": "2025-05-31"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Compact and Powerful",
-                "featureDescription": "Lightweight and portable with a powerful AMD Ryzen 9 processor and NVIDIA RTX 3060."
-            },
-            {
-                "featureName": "120Hz Display",
-                "featureDescription": "Smooth 120Hz refresh rate display for an immersive gaming experience."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/e/o/z/rog-zephyrus-g14-gaming-laptop-asus-original-imahfcjyjcvuu2hz.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for gamers and creators looking for a balance of power and portability.",
-        "highlights": {
-            "Processor": "AMD Ryzen 9 5900HS for gaming and content creation.",
-            "Graphics": "NVIDIA GeForce RTX 3060 for high-quality visuals.",
-            "Display": "14-inch 120Hz display for a seamless experience."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "HP Omen 15",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "HP Omen 15 is a gaming laptop with Intel Core i7 processor, NVIDIA RTX 3070, and a 144Hz display, offering superior gaming performance and immersive visuals.",
-        "price": {
-            "originalPrice": 230000,
-            "discountedPrice": 215000,
-            "discountPercentage": 6.52
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 17916.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 30000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-11800H",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA RTX 3070",
-            "operatingSystem": "Windows 11",
-            "screenSize": "15.6 inches",
-            "batteryLife": "7 hours",
-            "weight": "2.4 kg",
-            "dimensions": "358 x 240 x 23 mm",
-            "ports": [
-                "USB-C",
-                "HDMI",
-                "USB-A",
-                "Ethernet"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "HP Official Store",
-            "rating": 4.7,
-            "totalRatings": 3000,
-            "reviews": 2700
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹15,000 cashback on Axis Bank credit card.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Gaming Power",
-                "featureDescription": "High-performance gaming with Intel Core i7 and NVIDIA RTX 3070."
-            },
-            {
-                "featureName": "144Hz Display",
-                "featureDescription": "Smooth gaming visuals with 144Hz refresh rate for fast-paced games."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/j6xxgnk0/computer/9/j/k/hp-gaming-laptop-original-imaexaznx4sdxhac.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for gaming enthusiasts and professional gamers.",
-        "highlights": {
-            "Processor": "Intel Core i7-11800H for high performance.",
-            "Graphics": "NVIDIA RTX 3070 for superior gaming.",
-            "Display": "15.6-inch 144Hz for a smooth gaming experience."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Alienware M15 R6",
-        "brand": "Alienware",
-        "category": "Laptop",
-        "description": "Alienware M15 R6 is a high-performance gaming laptop with Intel Core i7 processor, NVIDIA RTX 3060 graphics, and a 360Hz display for professional gamers and streamers.",
-        "price": {
-            "originalPrice": 265000,
-            "discountedPrice": 250000,
-            "discountPercentage": 5.66
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 20833.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 32000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-11800H",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA RTX 3060",
-            "operatingSystem": "Windows 11",
-            "screenSize": "15.6 inches",
-            "batteryLife": "6 hours",
-            "weight": "2.5 kg",
-            "dimensions": "360 x 267 x 20.9 mm",
-            "ports": [
-                "USB-C",
-                "Thunderbolt 4",
-                "HDMI",
-                "Ethernet"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Alienware Official Store",
-            "rating": 4.9,
-            "totalRatings": 2500,
-            "reviews": 2300
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹20,000 off on HDFC credit card purchases.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "360Hz Display",
-                "featureDescription": "Ultra-fast 360Hz display for pro-level gaming and fast-paced action."
-            },
-            {
-                "featureName": "Intel Core i7",
-                "featureDescription": "Powerful Intel Core i7 processor for top-tier gaming and content creation."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/6/y/o/alienware-m16-r7-gaming-laptop-dell-original-imahf2gtsqgerfzc.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Great for gamers who want a smooth, high-fidelity gaming experience.",
-        "highlights": {
-            "Processor": "Intel Core i7 for high-performance gaming.",
-            "Graphics": "NVIDIA RTX 3060 for immersive visuals.",
-            "Display": "360Hz display for professional gamers."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Microsoft Surface Laptop 4",
-        "brand": "Microsoft",
-        "category": "Laptop",
-        "description": "Microsoft Surface Laptop 4 is an ultra-slim laptop with Intel Core i7, 16GB RAM, and a 13.5-inch PixelSense display, providing a premium experience for professionals and creatives.",
-        "price": {
-            "originalPrice": 215000,
-            "discountedPrice": 205000,
-            "discountPercentage": 4.65
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 17083.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 25000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1185G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "13.5 inches",
-            "batteryLife": "11 hours",
-            "weight": "1.3 kg",
-            "dimensions": "295 x 223 x 14.5 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "Surface Connect"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Microsoft Official Store",
-            "rating": 4.7,
-            "totalRatings": 1800,
-            "reviews": 1600
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹10,000 off on first purchase using ICICI Bank cards.",
-                "validTill": "2025-05-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "PixelSense Display",
-                "featureDescription": "Stunning 13.5-inch PixelSense display with 3:2 aspect ratio, perfect for creatives."
-            },
-            {
-                "featureName": "Battery Life",
-                "featureDescription": "Long-lasting battery life up to 11 hours to keep you productive all day."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/j/k/e/qil-00031-thin-and-light-laptop-microsoft-original-imagtyx5sjghg46j.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for business professionals and creatives needing portability and power.",
-        "highlights": {
-            "Processor": "Intel Core i7 for exceptional performance.",
-            "Display": "PixelSense touch display with stunning clarity.",
-            "Battery": "All-day battery life for productivity."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Lenovo ThinkPad X1 Carbon Gen 9",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "The Lenovo ThinkPad X1 Carbon Gen 9 is a premium ultrabook with Intel Core i7 processor, 16GB RAM, and 512GB SSD, designed for professionals looking for high performance and portability.",
-        "price": {
-            "originalPrice": 230000,
-            "discountedPrice": 220000,
-            "discountPercentage": 4.35
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 18333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 28000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1165G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "14 inches",
-            "batteryLife": "10 hours",
-            "weight": "1.13 kg",
-            "dimensions": "314 x 217 x 14.9 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Ethernet",
-                "SD Card Reader"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.6,
-            "totalRatings": 2200,
-            "reviews": 2000
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹12,000 cashback on HDFC credit card.",
-                "validTill": "2025-06-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "Ultralight",
-                "featureDescription": "Ultra-light and thin design, perfect for professionals on the go."
-            },
-            {
-                "featureName": "Performance",
-                "featureDescription": "Intel Core i7 and 16GB RAM provide fast and reliable performance for demanding tasks."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/d/3/p/thinkpad-business-laptop-lenovo-original-imagnjxncfuhmpbg.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Best for business professionals and remote workers requiring portability and reliability.",
-        "highlights": {
-            "Processor": "Intel Core i7 for smooth multitasking.",
-            "Graphics": "Intel Iris Xe for impressive integrated graphics.",
-            "Display": "14-inch 4K UHD with Dolby Vision for vibrant visuals."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Samsung Galaxy Book Pro 360",
-        "brand": "Samsung",
-        "category": "Laptop",
-        "description": "Samsung Galaxy Book Pro 360 is a 2-in-1 laptop with an Intel Core i7, AMOLED 13.3-inch display, and 512GB SSD, offering performance and versatility for professionals and creatives.",
-        "price": {
-            "originalPrice": 200000,
-            "discountedPrice": 190000,
-            "discountPercentage": 5
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 15833.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 25000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1165G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "13.3 inches",
-            "batteryLife": "12 hours",
-            "weight": "1.1 kg",
-            "dimensions": "304.4 x 202.2 x 11.5 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "MicroSD"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Samsung Official Store",
-            "rating": 4.8,
-            "totalRatings": 2100,
-            "reviews": 1900
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹8,000 off on purchases using Samsung credit card.",
-                "validTill": "2025-04-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "AMOLED Display",
-                "featureDescription": "13.3-inch AMOLED display with vivid colors and deep blacks for better viewing experiences."
-            },
-            {
-                "featureName": "Convertible Laptop",
-                "featureDescription": "2-in-1 convertible design for versatility—use it as a laptop or tablet."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/x/1/-original-imahfu5nzzfvw3bz.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for creatives and professionals who need a lightweight, versatile laptop.",
-        "highlights": {
-            "Processor": "Intel Core i7 for efficient performance.",
-            "Display": "13.3-inch AMOLED for vibrant visuals.",
-            "Design": "2-in-1 convertible design for added flexibility."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "HP Spectre x360 14",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "HP Spectre x360 14 is a convertible laptop with Intel Core i7, 16GB RAM, and a 13.5-inch OLED display, offering a premium experience for both work and play.",
-        "price": {
-            "originalPrice": 230000,
-            "discountedPrice": 220000,
-            "discountPercentage": 4.35
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 18333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 28000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1165G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "13.5 inches",
-            "batteryLife": "12 hours",
-            "weight": "1.3 kg",
-            "dimensions": "307.5 x 221.6 x 16.9 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "SD Card Reader"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "HP Official Store",
-            "rating": 4.7,
-            "totalRatings": 2500,
-            "reviews": 2200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹10,000 off on first purchase using ICICI Bank cards.",
-                "validTill": "2025-05-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "OLED Display",
-                "featureDescription": "13.5-inch OLED touch display for vibrant colors and deep contrast."
-            },
-            {
-                "featureName": "Convertible",
-                "featureDescription": "360-degree hinge for versatility—use as a laptop or tablet."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/l/u/t/ef2034tu-thin-and-light-laptop-hp-original-imagzf4uekdghgf8.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Perfect for both work and play, with powerful performance and beautiful design.",
-        "highlights": {
-            "Processor": "Intel Core i7 for powerful multitasking.",
-            "Graphics": "Intel Iris Xe for efficient graphics.",
-            "Display": "13.5-inch OLED for stunning visuals."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "HP Pavilion Intel Core Ultra 5 125U - (16 GB/1 TB SSD/Windows 11 Home) 16-af0056TU Thin and Light Laptop  (16 inch, Natural Silver Aluminum, 1.77 Kg, With MS Office)",
-        "brand": "Alienware",
-        "category": "Laptop",
-        "description": "Alienware X17 is a high-performance gaming laptop with Intel Core i9, 32GB RAM, NVIDIA GeForce RTX 3080, and a 17.3-inch display designed for serious gamers and high-end performance.",
-        "price": {
-            "originalPrice": 350000,
-            "discountedPrice": 340000,
-            "discountPercentage": 2.86
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 28333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 50000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11900K",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080",
-            "operatingSystem": "Windows 11",
-            "screenSize": "17.3 inches",
-            "batteryLife": "8 hours",
-            "weight": "2.5 kg",
-            "dimensions": "402 x 299 x 21 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Ethernet",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.8,
-            "totalRatings": 3000,
-            "reviews": 2500
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹20,000 off on ICICI credit card purchases.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "RTX 3080 GPU",
-                "featureDescription": "NVIDIA GeForce RTX 3080 for seamless gaming performance at ultra-settings."
-            },
-            {
-                "featureName": "High Refresh Rate",
-                "featureDescription": "17.3-inch display with 360Hz refresh rate for ultra-smooth gaming."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/u/s/m/-original-imah4u3gdbcczgmm.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Designed for gaming enthusiasts with powerful specs and cutting-edge technology.",
-        "highlights": {
-            "Graphics": "NVIDIA GeForce RTX 3080 for a cinematic gaming experience.",
-            "Display": "17.3-inch FHD display with 360Hz refresh rate for fast-paced gaming.",
-            "Performance": "Intel Core i9-11900K and 32GB RAM for seamless multitasking and high-end gaming."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "MSI GE76 Raider",
-        "brand": "MSI",
-        "category": "Laptop",
-        "description": "MSI GE76 Raider is a top-of-the-line gaming laptop featuring an Intel Core i9, 64GB RAM, NVIDIA GeForce RTX 3080, and a 17.3-inch display, designed to give the ultimate gaming and creative experience.",
-        "price": {
-            "originalPrice": 380000,
-            "discountedPrice": 370000,
-            "discountPercentage": 2.63
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 30833.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 60000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11980HK",
-            "ram": "64GB",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3080",
-            "operatingSystem": "Windows 11",
-            "screenSize": "17.3 inches",
-            "batteryLife": "6 hours",
-            "weight": "2.9 kg",
-            "dimensions": "397 x 284 x 25 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Ethernet",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "MSI Official Store",
-            "rating": 4.8,
-            "totalRatings": 1500,
-            "reviews": 1300
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹25,000 off on first-time buyers with Axis Bank cards.",
-                "validTill": "2025-08-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "RTX 3080 GPU",
-                "featureDescription": "NVIDIA GeForce RTX 3080 for high-end graphics performance."
-            },
-            {
-                "featureName": "High Refresh Rate",
-                "featureDescription": "17.3-inch display with 360Hz refresh rate for an ultra-smooth gaming experience."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kr3tj0w0/computer/j/3/s/na-notebook-msi-original-imag4z5jfc9bzwyq.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for professional gamers and creators looking for a powerhouse laptop.",
-        "highlights": {
-            "Graphics": "RTX 3080 GPU for intensive gaming and graphics tasks.",
-            "Display": "17.3-inch Full HD with 360Hz refresh rate for immersive gaming.",
-            "Performance": "Intel Core i9 with 64GB RAM for smooth multitasking and powerful performance."
-        },
-        "addedOn": "2025-01-18"
-    },
-    {
-        "name": "Apple MacBook Pro Apple M3 Pro - (36 GB/512 GB SSD/macOS Sonoma) MRW63HN/A  (16 Inch, Silver, 2.14 Kg)",
-        "brand": "Apple",
-        "category": "Laptop",
-        "description": "The MacBook Pro 16-inch is a powerful work laptop with the M1 Pro chip, 64GB RAM, 1TB SSD, and a stunning Retina display, perfect for professionals who need reliability and performance.",
-        "price": {
-            "originalPrice": 400000,
-            "discountedPrice": 390000,
-            "discountPercentage": 2.5
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 32500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 60000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M1 Pro",
-            "ram": "64GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "Apple Integrated",
-            "operatingSystem": "macOS Monterey",
-            "screenSize": "16 inches",
-            "batteryLife": "11 hours",
-            "weight": "2.1 kg",
-            "dimensions": "35.57 x 24.81 x 1.68 cm",
-            "ports": [
-                "USB-C",
-                "HDMI",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Store",
-            "rating": 4.9,
-            "totalRatings": 5000,
-            "reviews": 4500
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹20,000 cashback on HDFC credit cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "M1 Pro Chip",
-                "featureDescription": "The M1 Pro chip offers superior performance for intensive tasks like video editing, coding, and graphic design."
-            },
-            {
-                "featureName": "Retina Display",
-                "featureDescription": "A 16-inch Retina display with P3 color gamut and True Tone for vibrant and color-accurate work."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/v/r/-original-imaguw3hfnudhqym.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "14-day return policy",
-        "importantNotes": "A top choice for professionals in the creative industry and those needing power for demanding applications.",
-        "highlights": {
-            "Processor": "Apple M1 Pro with 10-core CPU for extreme performance.",
-            "Display": "Stunning 16-inch Retina display for true-to-life colors.",
-            "Battery Life": "Up to 11 hours of battery life for extended working hours."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Dell XPS 15",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "Dell XPS 15 is a premium business laptop featuring Intel Core i9, 64GB RAM, 2TB SSD, and a 15.6-inch 4K display, built for high performance in professional environments.",
-        "price": {
-            "originalPrice": 300000,
-            "discountedPrice": 290000,
-            "discountPercentage": 3.33
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 24166.67,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 50000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i9-11900H",
-            "ram": "64GB",
-            "storage": "2TB SSD",
-            "graphicsCard": "NVIDIA GeForce RTX 3050 Ti",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "15.6 inches",
-            "batteryLife": "8 hours",
-            "weight": "2 kg",
-            "dimensions": "344.4 x 230.1 x 18 mm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.8,
-            "totalRatings": 3500,
-            "reviews": 3200
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹15,000 off on purchases with ICICI Bank credit cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "4K Display",
-                "featureDescription": "The 15.6-inch 4K UHD display delivers stunning clarity, making it ideal for design and media creation."
-            },
-            {
-                "featureName": "Intel Core i9",
-                "featureDescription": "Intel Core i9 processor with 8 cores for high performance in demanding applications."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/jk01bww0/computer/x/5/z/dell-na-thin-and-light-laptop-original-imaf7fy9v5sbfsxp.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "A sleek, high-performance laptop for professionals in creative fields and demanding work environments.",
-        "highlights": {
-            "Performance": "Intel Core i9 and 64GB RAM for peak productivity.",
-            "Display": "4K UHD display for precise color accuracy.",
-            "Battery Life": "8 hours of battery life for long working sessions."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "HP Spectre x360 14",
-        "brand": "HP",
-        "category": "Laptop",
-        "description": "HP Spectre x360 14 is a premium convertible laptop featuring Intel Core i7, 16GB RAM, 1TB SSD, and a 13.5-inch OLED display, offering versatile performance and beautiful design for professional users.",
-        "price": {
-            "originalPrice": 230000,
-            "discountedPrice": 220000,
-            "discountPercentage": 4.35
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 18333.33,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 40000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1165G7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "13.5 inches",
-            "batteryLife": "12 hours",
-            "weight": "1.3 kg",
-            "dimensions": "30.5 x 19.3 x 1.69 cm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "HP Official Store",
-            "rating": 4.7,
-            "totalRatings": 4000,
-            "reviews": 3800
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹10,000 off on HDFC credit card purchases.",
-                "validTill": "2025-06-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "OLED Display",
-                "featureDescription": "The 13.5-inch OLED display offers exceptional color accuracy and contrast."
-            },
-            {
-                "featureName": "Convertible Design",
-                "featureDescription": "360-degree hinge for flexible use as both a laptop and a tablet."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/3/k/h/ef2033tu-thin-and-light-laptop-hp-original-imagzf4zn6khkagn.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "An ideal laptop for professionals who need power, portability, and flexibility in design.",
-        "highlights": {
-            "Display": "OLED display for stunning visuals.",
-            "Performance": "Intel Core i7 and 16GB RAM for smooth multitasking.",
-            "Versatility": "Convertible design allows laptop and tablet usage."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Lenovo ThinkPad X1 Carbon Gen 9",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "The Lenovo ThinkPad X1 Carbon Gen 9 is a top-tier business laptop featuring Intel Core i7, 32GB RAM, 1TB SSD, and a 14-inch Full HD display, perfect for executives and business professionals.",
-        "price": {
-            "originalPrice": 250000,
-            "discountedPrice": 240000,
-            "discountPercentage": 4
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 20000,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 40000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1185G7",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11 Pro",
-            "screenSize": "14 inches",
-            "batteryLife": "15 hours",
-            "weight": "1.13 kg",
-            "dimensions": "31.7 x 22.3 x 1.49 cm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Thunderbolt 4"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.6,
-            "totalRatings": 5000,
-            "reviews": 4600
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹15,000 cashback on purchases with SBI credit cards.",
+                "description": "Flat 19% off on Herbal Sleep Aid",
                 "validTill": "2025-05-15"
             }
         ],
         "features": [
             {
-                "featureName": "ThinkPad Reliability",
-                "featureDescription": "Durable, tested for military specifications, designed to handle extreme environments."
-            },
-            {
-                "featureName": "Long Battery Life",
-                "featureDescription": "Up to 15 hours of battery life for all-day productivity."
+                "type": "Dosage",
+                "featureName": "Take 1 tablet before bedtime",
+                "featureDescription": "Helps achieve a deep and relaxing sleep"
             }
         ],
         "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kngd0nk0/computer/k/q/5/na-laptop-lenovo-original-imag24kvhrgqvjut.jpeg?q=70"
+            "https://example.com/sleep_aid.jpg"
         ],
         "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "A high-performance laptop with the reliability needed for business professionals.",
+        "warranty": "No Warranty",
+        "returnPolicy": "Returns accepted within 30 days",
+        "importantNotes": "Not recommended for children under 12 years",
         "highlights": {
-            "Reliability": "Military-grade durability and ThinkPad reliability.",
-            "Battery Life": "Up to 15 hours for uninterrupted productivity.",
-            "Display": "14-inch display with excellent color accuracy."
+            "relaxation": "Promotes calm and restful sleep",
+            "natural_ingredients": "Made with valerian root and chamomile"
         },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Microsoft Surface Laptop 4",
-        "brand": "Microsoft",
-        "category": "Laptop",
-        "description": "Surface Laptop 4 is a premium work laptop featuring Intel Core i7, 16GB RAM, 512GB SSD, and a 13.5-inch PixelSense display, ideal for professionals needing portability and power.",
-        "price": {
-            "originalPrice": 220000,
-            "discountedPrice": 210000,
-            "discountPercentage": 4.55
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 17500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 30000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1185G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "13.5 inches",
-            "batteryLife": "10 hours",
-            "weight": "1.27 kg",
-            "dimensions": "30.7 x 22.1 x 1.49 cm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "Surface Connect"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Microsoft Official Store",
-            "rating": 4.8,
-            "totalRatings": 4000,
-            "reviews": 3700
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "₹10,000 off on purchases using Axis Bank cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "PixelSense Display",
-                "featureDescription": "A high-resolution PixelSense display with ultra-responsive touch."
-            },
-            {
-                "featureName": "Portable Design",
-                "featureDescription": "Slim, lightweight design for easy portability in the office or on-the-go."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/p/1/b/-original-imah2pfgz59j955s.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "A reliable and sleek laptop with excellent portability for professionals on the move.",
-        "highlights": {
-            "Display": "PixelSense display for rich color and clarity.",
-            "Battery Life": "Long-lasting battery life up to 10 hours.",
-            "Design": "Sleek and portable design for easy travel."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Apple MacBook Pro 16-inch (2021)",
-        "brand": "Apple",
-        "category": "Laptop",
-        "description": "The Apple MacBook Pro 16-inch (2021) is powered by the M1 Pro chip and features a stunning Retina display, making it an ideal choice for professionals needing high-end performance and a sleek design.",
-        "price": {
-            "originalPrice": 325000,
-            "discountedPrice": 310000,
-            "discountPercentage": 4.62
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 27500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 50000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Apple M1 Pro Chip",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "graphicsCard": "Integrated Apple GPU",
-            "operatingSystem": "macOS Monterey",
-            "screenSize": "16 inches",
-            "batteryLife": "20 hours",
-            "weight": "2.1 kg",
-            "dimensions": "35.57 x 24.81 x 1.68 cm",
-            "ports": [
-                "Thunderbolt 4",
-                "HDMI",
-                "SDXC card slot",
-                "3.5mm headphone jack"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Apple Official Store",
-            "rating": 4.9,
-            "totalRatings": 8500,
-            "reviews": 8100
-        },
-        "availableOffers": [
-            {
-                "offerType": "Cashback",
-                "description": "₹20,000 cashback on HDFC Bank credit card purchases.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "M1 Pro Chip",
-                "featureDescription": "The M1 Pro chip delivers extraordinary performance for demanding workflows."
-            },
-            {
-                "featureName": "Retina Display",
-                "featureDescription": "A 16-inch Retina display with stunning color accuracy and brightness."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kuyf8nk0/computer/g/z/q/mk1e3hn-a-laptop-apple-original-imag7yzmv57cvg3f.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "Ideal for professionals who need a powerful, portable workstation.",
-        "highlights": {
-            "Performance": "Powered by Apple's M1 Pro chip.",
-            "Display": "16-inch Retina display for unmatched clarity.",
-            "Battery Life": "Up to 20 hours of battery life for all-day productivity."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Apple 2021 Macbook Pro Apple M1 Pro - (16 GB/1 TB SSD/Mac OS Monterey) MKGQ3HN/A  (14.2 inch, Space Grey�, 1.6 kg)",
-        "brand": "Lenovo",
-        "category": "Laptop",
-        "description": "The Lenovo ThinkPad X1 Carbon Gen 9 is a lightweight, high-performance laptop designed for professionals, featuring Intel Core i7, 16GB RAM, 512GB SSD, and a 14-inch UHD display.",
-        "price": {
-            "originalPrice": 220000,
-            "discountedPrice": 210000,
-            "discountPercentage": 4.55
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 17500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 30000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1185G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "14 inches",
-            "batteryLife": "15 hours",
-            "weight": "1.13 kg",
-            "dimensions": "31.8 x 22.3 x 1.49 cm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Ethernet",
-                "3.5mm audio jack"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Lenovo Official Store",
-            "rating": 4.8,
-            "totalRatings": 4200,
-            "reviews": 3900
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Flat ₹10,000 off on purchases with SBI credit cards.",
-                "validTill": "2025-05-15"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "ThinkPad Reliability",
-                "featureDescription": "Durable, tested for military specifications, designed to handle extreme environments."
-            },
-            {
-                "featureName": "Long Battery Life",
-                "featureDescription": "Up to 15 hours of battery life for all-day productivity."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/kuyf8nk0/computer/c/8/u/mkgp3hn-a-thin-and-light-laptop-apple-original-imag7yznc5d2rsuh.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "A high-performance laptop with the reliability needed for business professionals.",
-        "highlights": {
-            "Reliability": "Military-grade durability and ThinkPad reliability.",
-            "Battery Life": "Up to 15 hours for uninterrupted productivity.",
-            "Display": "14-inch display with excellent color accuracy."
-        },
-        "addedOn": "2025-01-19"
-    },
-    {
-        "name": "Dell Latitude 9520 2-in-1",
-        "brand": "Dell",
-        "category": "Laptop",
-        "description": "The Dell Latitude 9520 2-in-1 is a powerful and flexible business laptop with a 15-inch touchscreen display, Intel Core i7, 16GB RAM, and 512GB SSD, perfect for multitasking and remote work.",
-        "price": {
-            "originalPrice": 275000,
-            "discountedPrice": 260000,
-            "discountPercentage": 5.45
-        },
-        "paymentOptions": {
-            "emi": {
-                "emiOptions": [
-                    {
-                        "period": "per month",
-                        "amount": 21500,
-                        "tenure": "12 months"
-                    }
-                ],
-                "downPayment": 45000
-            },
-            "cashOnDelivery": false,
-            "netBanking": true,
-            "debitCreditCard": true
-        },
-        "specifications": {
-            "processor": "Intel Core i7-1185G7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "graphicsCard": "Intel Iris Xe",
-            "operatingSystem": "Windows 11",
-            "screenSize": "15 inches",
-            "batteryLife": "12 hours",
-            "weight": "1.6 kg",
-            "dimensions": "35.3 x 23.3 x 1.62 cm",
-            "ports": [
-                "USB-C",
-                "USB-A",
-                "HDMI",
-                "Thunderbolt 4",
-                "3.5mm audio jack"
-            ],
-            "warranty": "1 year"
-        },
-        "seller": {
-            "name": "Dell Official Store",
-            "rating": 4.6,
-            "totalRatings": 6200,
-            "reviews": 5700
-        },
-        "availableOffers": [
-            {
-                "offerType": "Discount",
-                "description": "Flat ₹12,000 off when purchasing with HDFC credit cards.",
-                "validTill": "2025-06-30"
-            }
-        ],
-        "features": [
-            {
-                "featureName": "2-in-1 Flexibility",
-                "featureDescription": "The 2-in-1 design allows you to use it as a laptop or tablet."
-            },
-            {
-                "featureName": "InfinityEdge Display",
-                "featureDescription": "A near bezel-less display for an immersive viewing experience."
-            }
-        ],
-        "images": [
-            "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/u/q/n/latitude-3440-business-laptop-dell-original-imah5g3fnzybuu6b.jpeg?q=70"
-        ],
-        "availability": "In Stock",
-        "warranty": "1 year",
-        "returnPolicy": "30-day return policy",
-        "importantNotes": "A highly flexible and powerful laptop ideal for multitasking and business professionals.",
-        "highlights": {
-            "Design": "2-in-1 design for maximum versatility.",
-            "Display": "InfinityEdge 15-inch display for a modern look.",
-            "Portability": "Lightweight and durable, ideal for travel and work."
-        },
-        "addedOn": "2025-01-19"
+        "addedOn": "2025-01-20T14:00:00Z"
     }
 ]

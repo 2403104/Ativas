@@ -45,6 +45,26 @@ app.use(session({
         expires: false
     }
 }))
+app.use((req, res, next) => {
+    if (req.method === 'GET') {
+        let prodPath = 'AtivasHome';
+        const query = req.query;
+
+        if (query['category']) {
+            prodPath += `<${query['category']}`;
+        }
+        if (query['brand']) {
+            prodPath += `<${query['brand']}`;
+        }
+        if (query['name']) {
+            prodPath += `<${query['name']}`;
+        }
+
+        req.prodPath=prodPath
+    }
+    next();
+});
+
 app.use(populateCardProduct)
 
 // const calculateDiscountedPercentage = (price) => {

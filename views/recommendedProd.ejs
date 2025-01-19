@@ -84,7 +84,7 @@
             <% if (recProd.length > 0) { %>
             <div class="productRow">
                 <% recProd.forEach((prod) => { %>
-                <div class="productCard" onclick="redirectToProd('<%=prod.name%>', '<%=prod.category%>')">
+                <div class="productCard" onclick="redirectToProd('<%=prod.name%>','<%=prod.brand%>' ,'<%=prod.category%>')">
                     <img src="<%=prod.images[0]%>" alt="Recommended" class="productImage">
                     <p class="productName">
                         <%=prod.name%>
@@ -99,8 +99,8 @@
         </div>
     </div>
     <script>
-        function redirectToProd(name, category) {
-            window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+        function redirectToProd(name,brand, category) {
+            window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
         }
     </script>
 </body>

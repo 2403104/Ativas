@@ -187,7 +187,7 @@
                 <% if (wishlistProducts.length> 0) { %>
                     <% wishlistProducts.forEach(function(product) { %>
                         <div class="wishlistItem"
-                            onclick="goToProduct('<%= product.name %>', '<%= product.category %>')">
+                            onclick="goToProduct('<%= product.name %>','<%= product.brand %>', '<%= product.category %>')">
                             <div class="image">
                                 <img src="<%= product.images[0] %>" alt="<%= product.name %>">
                             </div>
@@ -221,9 +221,9 @@
             </div>
         </div>
         <script>
-            function goToProduct(name, category) {
+            function goToProduct(name,brand, category) {
                 console.log(name, category)
-                window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
             }
         </script>
 </body>

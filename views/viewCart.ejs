@@ -145,7 +145,7 @@
         <div class="cartMain">
             <div class="cartItemList">
                 <% cartProd.forEach((prod)=>{%>
-                    <div class="item" onclick="goToProduct('<%=prod.name%>','<%=prod.category%>')">
+                    <div class="item" onclick="goToProduct('<%=prod.name%>','<%=prod.brand%>','<%=prod.category%>')">
                         <div class="image">
                             <img src="<%=prod.images[0]%>" alt="<%=prod.name%>">
                         </div>
@@ -233,9 +233,9 @@
             </div>
         </footer>
         <script>
-            function goToProduct(name, category) {
+            function goToProduct(name,brand, category) {
                 console.log(name, category)
-                window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
             }
         </script>
 </body>

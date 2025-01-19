@@ -13,6 +13,8 @@ router.route('/randomImage')
     .get(productController.getRandomImage)
 router.route('/wishlistProducts')
     .get(productController.wishlistProdInfo)
+router.route('/prodFromPath')
+    .get(productController.productFromPath)
 
 
 module.exports=router;

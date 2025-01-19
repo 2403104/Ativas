@@ -29,7 +29,7 @@ exports.prodInfo = async (req, res) => {
 
     const reviews = await Review.find({ productId: new ObjectId('6777ee3e9f6eddc9566583f2') })
     const wishlistProducts = req.wishlistProducts;
-    return res.render('product', { product: findedProduct, reviews: reviews, userId: req.session.user._id, wishlistProducts })
+    return res.render('product', { product: findedProduct, reviews: reviews, userId: req.session.user._id, wishlistProducts,prodPath:req.prodPath })
 }
 
 exports.prodTypeInfo = async (req, res) => {
@@ -188,4 +188,11 @@ exports.wishlistProdInfo = async (req, res) => {
         })
     )
     return res.render('wishlistProducts', { wishlistProducts: wishlist })
+}
+exports.productFromPath = async (req, res) => {
+    const offerList = ['Discount', 'Cashback', 'Combo', 'Free Shipping', 'Buy One Get One']
+
+    const query=req.query
+    const prodsFromPath = await Product.find(query);
+    return res.render('productFromPath', { prodsFromPath,offerList })
 }

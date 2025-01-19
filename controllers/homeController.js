@@ -12,7 +12,7 @@ exports.ativasHome = async (req, res) => {
   const recentActProd = await recentActivity.findOne({ userId: req.session.user._id })
   let recentActivityProd = [];
   if (recentActProd && recentActProd.activity) {
-    const limitedActivity = recentActProd.activity.slice(0, 8)
+    const limitedActivity = recentActProd.activity.slice(0, 11)
     recentActivityProd = await Promise.all(
       limitedActivity.map(async (prod) => {
         return await Product.findOne({ _id: prod.productId });

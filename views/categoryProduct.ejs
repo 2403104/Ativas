@@ -27,6 +27,7 @@
         }
 
         .singleCard img {
+            height: 60%;
             padding: 10px;
             width: 100%;
             margin: 0 auto;
@@ -68,7 +69,9 @@
         #heartIcon {
             font-size: 22px;
         }
-
+        .singleCard:hover .prodName{
+            color: blue;
+        }
         @media (max-width: 768px) {
             .singleCard {
                 flex: 1 1 calc(50% - 20px);
@@ -88,14 +91,14 @@
         <div class="fourItemBox">
             <% for (let j=i; j < i + 5 && j < categoryProduct.length; j++) { %>
                 <div class="singleCard" id="<%=categoryProduct[j]._id%>"
-                    onclick="goToDetails('<%= categoryProduct[j].name %>', '<%= categoryProduct[j].category %>')">
+                    onclick="goToDetails('<%= categoryProduct[j].name %>','<%=categoryProduct[j].brand%>', '<%= categoryProduct[j].category %>')">
 
                     <div class="like" id="<%=categoryProduct[j]._id%>" onclick="addWishlist('<%=categoryProduct[j]._id%>','<%=userId%>')"><i
                             style="color: <%= wishlistProducts.includes(categoryProduct[j]._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;"
                             class="fa-solid fa-heart" id="heartIcon"></i></div>
 
                     <img src="<%=categoryProduct[j].images[0]%>" alt="<%=categoryProduct[j].name%>">
-                    <strong style="display: block; font-size: 20px; text-align: center; color:black; margin: 10px;">
+                    <strong class="prodName" style="display: block; font-size: 18px; text-align: center; color:grey; margin: 10px;">
                         <%=categoryProduct[j].name%>
                     </strong>
                     <div style="display: flex;">
@@ -128,12 +131,12 @@
                         </div>
                         <% if (categoryProduct[j].paymentOptions.cashOnDelivery){%>
                             <strong
-                                style="display: block; font-size: 18px; text-align: center; color: green; margin-top: 10px;">Cash
+                                style="display: block; font-size: 16px; text-align: center; color: green; margin-top: 10px;">Cash
                                 On Delivery Available</strong>
                             <%}%>
                                 <% categoryProduct[j].availableOffers.forEach((offer)=>{%>
                                     <strong
-                                        style="display: block; text-align: center; font-size: 18px; color: rgb(2, 161, 2);">
+                                        style="display: block; text-align: center; font-size: 16px; color: rgb(2, 161, 2);">
                                         <%=offer.description%>
                                     </strong>
                                     <%})%>
@@ -169,8 +172,8 @@
                             alert('An error occurred while adding the product to wishlist.');
                         });
                 }
-                function goToDetails(name, category) {
-                    window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                function goToDetails(name,brand, category) {
+                    window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
                 }
                 let activity = [];
 

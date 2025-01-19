@@ -103,68 +103,92 @@
         #heartIcon.active {
             color: red;
         }
+
+        .prodPath a {
+            text-decoration: none;
+            color: rgb(133, 133, 133);
+            position: relative;
+        }
+
+        .prodPath a::before {
+            content: attr(data-shortname);
+        }
+
+        .prodPath a:hover {
+            color: blue;
+        }
+
+        .prodPath a:hover::before {
+            content: attr(data-fullname);
+        }
+
         @media (max-width: 768px) {
             .container {
-            flex-direction: column;
-            align-items: center;
-            margin-left: 0;
-            width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                width: 100%;
             }
 
             .product {
-            grid-template-columns: 1fr;
-            grid-gap: 10px;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
             }
 
-            .image, .productContent {
-            width: 100%;
-            height: auto;
+            .image,
+            .productContent {
+                width: 100%;
+                height: auto;
             }
 
-            .cart, .buy {
-            width: 80%;
-            height: 40px;
-            font-size: 14px;
+            .cart,
+            .buy {
+                width: 80%;
+                height: 40px;
+                font-size: 14px;
             }
 
             .like {
-            margin-left: auto;
-            margin-right: 10px;
+                margin-left: auto;
+                margin-right: 10px;
             }
 
             p {
-            font-size: 1.2rem;
-            margin-left: 10px;
+                font-size: 1.2rem;
+                margin-left: 10px;
             }
 
             .ratings {
-            width: auto;
-            height: auto;
-            font-size: 0.9rem;
-            margin-left: 10px;
-            padding: 2px 5px;
+                width: auto;
+                height: auto;
+                font-size: 0.9rem;
+                margin-left: 10px;
+                padding: 2px 5px;
             }
 
-            .productSpecifications, .paymentOptions {
-            flex-direction: column;
-            width: 100%;
+            .productSpecifications,
+            .paymentOptions {
+                flex-direction: column;
+                width: 100%;
             }
 
             .specifications {
-            flex-direction: column;
+                flex-direction: column;
             }
 
-            .specificationOptions, .paymentOptions {
-            margin-left: 0;
+            .specificationOptions,
+            .paymentOptions {
+                margin-left: 0;
             }
 
             .features div {
-            flex-direction: column;
-            align-items: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .features strong, .features p {
-            margin-left: 0;
+            .features strong,
+            .features p {
+                margin-left: 0;
             }
         }
     </style>
@@ -175,18 +199,53 @@
     <%-include('navbar')%>
         <div class="container">
             <div class="image">
-                <div class="like" id="<%=product._id%>" onclick="addWishlist('<%=product._id%>','<%=userId%>')"><i style="color: <%= wishlistProducts.includes(product._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;" class="fa-solid fa-heart" id="heartIcon"></i></div>
+                <div class="like" id="<%=product._id%>" onclick="addWishlist('<%=product._id%>','<%=userId%>')"><i
+                        style="color: <%= wishlistProducts.includes(product._id.toString()) ? 'red' : 'rgb(196, 196, 196)' %>;"
+                        class="fa-solid fa-heart" id="heartIcon"></i></div>
                 <img src="<%=product.images[0]%>" alt="<%=product.name%>"
                     style="width: 100%; height: 100%; object-fit: contain; padding: 30px;" />
 
                 <div style="display: flex; justify-content: space-evenly; margin-top: 10px;">
-                    <button class="cart" id="<%=product._id%>" onclick="addToCart('<%=product._id%>')" style="background-color: orange;"><i
-                            class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
-                    <button class="buy" id="<%=product._id%>" onclick="buyNow('<%=product.name%>','<%=product.category%>')" style="background-color: rgb(255, 75, 10);"><i
-                            class="fa-solid fa-bolt"></i> BUY NOW</button>
+                    <button class="cart" id="<%=product._id%>" onclick="addToCart('<%=product._id%>')"
+                        style="background-color: orange;"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    <button class="buy" id="<%=product._id%>"
+                        onclick="buyNow('<%=product.name%>','<%=product.category%>')"
+                        style="background-color: rgb(255, 75, 10);"><i class="fa-solid fa-bolt"></i> BUY NOW</button>
                 </div>
             </div>
             <div class="productContent">
+                <strong class="prodPath"
+                style="color: rgb(133, 133, 133); font-size: 15px; margin-left: 10px; margin-top: 5px;">
+                <% prodPath.split('<').forEach((segment, index, array) => {
+                    const words = segment.trim().split(' ');
+                    const displayText = words.length > 2 ? words.slice(0, 2).join(' ') + '...' : segment.trim();
+                    let href = "";
+                    if (index === 0) {
+                        href = "/login/ativasHome";
+                    } else if (index === 1) {
+                        href = `/prodFromPath?category=${encodeURIComponent(array[1].trim())}`;
+                    } else if (index === 2) {
+                        href =
+                            `/prodFromPath?category=${encodeURIComponent(array[1].trim())}&brand=${encodeURIComponent(array[2].trim())}`;
+                    } else if (index === 3) {
+                        href =
+                            `/product?category=${encodeURIComponent(array[1].trim())}&brand=${encodeURIComponent(array[2].trim())}&name=${encodeURIComponent(array[3].trim())}`;
+                    }
+                %>
+                    <a href="<%= href %>"
+                        class="path-link"
+                        data-shortname="<%= displayText %>"
+                        data-fullname="<%= segment.trim() %>">
+                    </a>
+                    <% if (index < array.length - 1) { %>
+                        &nbsp;<span style="color: black;">&lt;</span>&nbsp;
+                    <% } %>
+                <% }); %>
+            </strong>
+            
+            
+
+
                 <p>
                     <%=product.name%> (<%=product.category%>)
                 </p>
@@ -347,93 +406,114 @@
                                                 </div>
 
                                                 <% if (product.features.length>0){%>
-                                                <div
-                                                    style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
-                                                    <strong style=" font-size: 20px; color: green; ">Features</strong>
-                                                    <div class="features">
-                                                        <% product.features.forEach(feature=> { %>
-                                                            <div style="display: flex;">
+                                                    <div
+                                                        style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
+                                                        <strong
+                                                            style=" font-size: 20px; color: green; ">Features</strong>
+                                                        <div class="features">
+                                                            <% product.features.forEach(feature=> { %>
+                                                                <div style="display: flex;">
 
-                                                                <strong style="margin-top: 8px;   font-size: 18px;">
-                                                                    <%=feature.featureName%>
-                                                                </strong>
-                                                                <p
-                                                                    style="margin-left: 5px; margin-top: 10px; font-size: 18px;">
-                                                                    <%=feature.featureDescription%>
-                                                                </p>
-                                                            </div>
-                                                            <% }) %>
-                                                    </div>
-                                                </div>
-                                                <%}%>
-
-                                                <div
-                                                    style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
-                                                    <strong style=" font-size: 20px; color: green; ">Highlights</strong>
-                                                    <div class="features">
-                                                        <% product.highlights.forEach(function(highlight, index) { %>
-                                                            <div style="display: flex;">
-                                                                <strong style="font-size: 19px; margin-top: 5px;">
-                                                                    <%= index %>
-                                                                </strong>
-                                                                <p
-                                                                    style="font-size: 17px; margin-top: 5px; margin-left: 5px;">
-                                                                    <%= highlight %>
-                                                                </p>
-                                                            </div>
-                                                            <% }); %>
-                                                    </div>
-                                                </div>
-                                                <div style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); ">
-                                                    <strong
-                                                        style="margin-left: 20px; font-size: 20px; padding-top: 20px;  color: green;">Description</strong>
-                                                    <p style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
-                                                        <%=product.description%>
-                                                    </p>
-                                                    <p style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
-                                                        <%=product.importantNotes%>
-                                                    </p>
-                                                </div>
-                                                
-                                                <div class="reviews" id="review-container">
-                                                    <div style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
-                                                        <strong style="font-size: 20px; color: green;">Reviews and Ratings</strong>
-                                                        <% reviews.slice(0, 3).forEach(review => { %>
-                                                            <div style="display: flex; align-items: center;">
-                                                                <div class="ratings">
-                                                                    <%= review.rating %> <i class="fa-solid fa-star" style="font-size: 14px;"></i>
+                                                                    <strong style="margin-top: 8px;   font-size: 18px;">
+                                                                        <%=feature.featureName%>
+                                                                    </strong>
+                                                                    <p
+                                                                        style="margin-left: 5px; margin-top: 10px; font-size: 18px;">
+                                                                        <%=feature.featureDescription%>
+                                                                    </p>
                                                                 </div>
-                                                                <% if (review.rating === 1) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Poor</strong>
-                                                                <% } else if (review.rating === 2) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Fair</strong>
-                                                                <% } else if (review.rating === 3) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Good</strong>
-                                                                <% } else if (review.rating === 4) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Very Good</strong>
-                                                                <% } else if (review.rating === 5) { %>
-                                                                    <strong style="margin-top: 10px; margin-left: 10px;">Excellent</strong>
-                                                                <% } %>
-                                                            </div>
-                                                            <div style="margin-top: 10px;">
-                                                                <p style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
-                                                                    <%= review.description %>
-                                                                </p>
-                                                            </div>
-                                                            <hr>
-                                                        <% }) %>
-                                                
-                                                        <% if (reviews.length > 3) { %>
-                                                            <div style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
-                                                                <button id="toggle-reviews-btn" onclick="toggleReviews()"
-                                                                        style="background-color: transparent; color: blue; font-size: 20px; border: none;">
-                                                                    Show All
-                                                                </button>
-                                                            </div>
-                                                        <% } %>
+                                                                <% }) %>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                
+                                                    <%}%>
+
+                                                        <div
+                                                            style="margin-top: 20px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);padding: 10px;">
+                                                            <strong
+                                                                style=" font-size: 20px; color: green; ">Highlights</strong>
+                                                            <div class="features">
+                                                                <% product.highlights.forEach(function(highlight, index)
+                                                                    { %>
+                                                                    <div style="display: flex;">
+                                                                        <strong
+                                                                            style="font-size: 19px; margin-top: 5px;">
+                                                                            <%= index %>
+                                                                        </strong>
+                                                                        <p
+                                                                            style="font-size: 17px; margin-top: 5px; margin-left: 5px;">
+                                                                            <%= highlight %>
+                                                                        </p>
+                                                                    </div>
+                                                                    <% }); %>
+                                                            </div>
+                                                        </div>
+                                                        <div style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); ">
+                                                            <strong
+                                                                style="margin-left: 20px; font-size: 20px; padding-top: 20px;  color: green;">Description</strong>
+                                                            <p
+                                                                style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
+                                                                <%=product.description%>
+                                                            </p>
+                                                            <p
+                                                                style="margin-left: 20px; margin-top: 10px; font-size: 18px;">
+                                                                <%=product.importantNotes%>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="reviews" id="review-container">
+                                                            <div
+                                                                style="margin-top: 20px; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); padding: 10px;">
+                                                                <strong style="font-size: 20px; color: green;">Reviews
+                                                                    and Ratings</strong>
+                                                                <% reviews.slice(0, 3).forEach(review=> { %>
+                                                                    <div style="display: flex; align-items: center;">
+                                                                        <div class="ratings">
+                                                                            <%= review.rating %> <i
+                                                                                    class="fa-solid fa-star"
+                                                                                    style="font-size: 14px;"></i>
+                                                                        </div>
+                                                                        <% if (review.rating===1) { %>
+                                                                            <strong
+                                                                                style="margin-top: 10px; margin-left: 10px;">Poor</strong>
+                                                                            <% } else if (review.rating===2) { %>
+                                                                                <strong
+                                                                                    style="margin-top: 10px; margin-left: 10px;">Fair</strong>
+                                                                                <% } else if (review.rating===3) { %>
+                                                                                    <strong
+                                                                                        style="margin-top: 10px; margin-left: 10px;">Good</strong>
+                                                                                    <% } else if (review.rating===4) {
+                                                                                        %>
+                                                                                        <strong
+                                                                                            style="margin-top: 10px; margin-left: 10px;">Very
+                                                                                            Good</strong>
+                                                                                        <% } else if (review.rating===5)
+                                                                                            { %>
+                                                                                            <strong
+                                                                                                style="margin-top: 10px; margin-left: 10px;">Excellent</strong>
+                                                                                            <% } %>
+                                                                    </div>
+                                                                    <div style="margin-top: 10px;">
+                                                                        <p
+                                                                            style="font-size: 16px; margin-top: 5px; margin-bottom: 15px;">
+                                                                            <%= review.description %>
+                                                                        </p>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <% }) %>
+
+                                                                        <% if (reviews.length> 3) { %>
+                                                                            <div
+                                                                                style="box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); padding: 2px 0px 2px 20px;">
+                                                                                <button id="toggle-reviews-btn"
+                                                                                    onclick="toggleReviews()"
+                                                                                    style="background-color: transparent; color: blue; font-size: 20px; border: none;">
+                                                                                    Show All
+                                                                                </button>
+                                                                            </div>
+                                                                            <% } %>
+                                                            </div>
+                                                        </div>
+
 
 
             </div>
@@ -605,7 +685,7 @@
 
 
             </script>
-            
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Products</title>
+    <title>Product Recommendations</title>
     <style>
         .recommendationSection {
             font-family: Arial, sans-serif;
@@ -32,13 +32,13 @@
         .recommendationSection .productRow {
             background-color: #f8f8f8;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
         }
 
+
         .recommendationSection .productCard {
             background-color: #fff;
-            border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             padding: 10px;
@@ -64,46 +64,52 @@
         }
 
         .recommendationSection .productPrice {
-            font-size: 14px;
+            font-size: 20px;
             color: green;
             margin: 5px 0;
         }
 
         .recommendationSection .discount {
             color: red;
-            font-size: 12px;
+            font-size: 17px;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="recommendationSection">
-        <div class="containerRecommend">
-            <h2 class="sectionTitle">Recently Viewed Products</h2>
-            <% if (recentActivityProd.length > 0) { %>
-            <div class="productRow">
-                <% recentActivityProd.forEach((prod) => { %>
-                <div class="productCard" onclick="redirectToProd('<%=prod.name%>','<%=prod.brand%>', '<%=prod.category%>')">
-                    <img src="<%=prod.images[0]%>" alt="Recommended" class="productImage">
-                    <p class="productName">
-                        <%=prod.brand%> - <%=prod.name%>
-                    </p>
-                    <p class="productPrice">₹<%=prod.price.discountedPrice%> <span class="discount">
-                            <%=Math.round(prod.price.discountPercentage)%>% off
-                        </span></p>
+    <%-include('navbar')%>
+        <div style="display: flex;">
+            <%-include('sidebar',{categoryProduct:prodsFromPath,})%>
+            <div class="recommendationSection">
+                <div class="containerRecommend">
+                    <h2 class="sectionTitle">
+                        <%=prodsFromPath[0].category%> Items
+                    </h2>
+                    <% if (prodsFromPath.length> 0) { %>
+                        <div class="productRow">
+                            <% prodsFromPath.forEach((prod)=> { %>
+                                <div class="productCard"
+                                    onclick="redirectToProd('<%=prod.name%>','<%=prod.brand%>' ,'<%=prod.category%>')">
+                                    <img src="<%=prod.images[0]%>" alt="Recommended" class="productImage">
+                                    <p class="productName">
+                                        <%=prod.name%>
+                                    </p>
+                                    <strong class="productPrice">₹<%=prod.price.discountedPrice%> <span class="discount">
+                                                <%=Math.round(prod.price.discountPercentage)%>% off
+                                            </span></strong>
+                                </div>
+                                <% }) %>
+                        </div>
+                        <% } %>
                 </div>
-                <% }) %>
             </div>
-            <% } %>
         </div>
-    </div>
 
-    <script>
-        function redirectToProd(name,brand, category) {
-            window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
-        }
-    </script>
+        <script>
+            function redirectToProd(name, brand, category) {
+                window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`, '_blank');
+            }
+        </script>
 </body>
 
 </html>

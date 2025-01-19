@@ -122,7 +122,7 @@
                 <div class="allProductContainer">
                     <% products.forEach((product)=>{%>
                         <div class="item" id="<%=product._id%>"
-                            onclick="goToProduct('<%=product.name%>','<%=product.category%>')">
+                            onclick="goToProduct('<%=product.name%>','<%=product.brand%>','<%=product.category%>')">
                             <div class="img">
                                 <img src="<%=product.images[0]%>" alt="<%=product.name%>" width="180px"
                                     style="border-radius: 15px; margin-left:40px; margin-top: 30px;">
@@ -206,8 +206,8 @@
         <%-include('categoryProduct')%>
             <%-include('footer')%>
                 <script>
-                    function goToProduct(name, category) {
-                        window.location.href = `/product?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}`;
+                    function goToProduct(name,brand, category) {
+                        window.open(`/product?name=${encodeURIComponent(name)}&brand=${encodeURIComponent(brand)}&category=${encodeURIComponent(category)}`,'_blank');
                     }
 
                     document.querySelectorAll('.item').forEach((item) => {
